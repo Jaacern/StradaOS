@@ -1,0 +1,5 @@
+--------- beginning of main
+11-16 19:23:20.241  2329  2329 W StradaNav: nav-ir desde 10.4768,-73.24339833333333 a nav-ir:10.4350,-73.2495,Aeropuerto
+11-16 19:23:22.335  2329  2637 W StradaNav: ruta https://router.project-osrm.org/route/v1/driving/ → java.lang.Exception: HTTP 400
+11-16 19:23:23.741  2329  2637 W StradaNav: ruta https://routing.openstreetmap.de/routed-car/route/v1/driving/ → java.lang.Exception: HTTP 400
+11-16 19:23:52.554  2329  2329 W StradaNav: nav-ir desde 10.4768,-73.24339833333333 a nav-ir:10.4350,-73.2495,Aeropuerto

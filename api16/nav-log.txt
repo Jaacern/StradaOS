@@ -1,0 +1,16 @@
+W/PackageManager( 1367): Package com.android.camera desires unavailable shared library com.google.android.media.effects; ignoring!
+W/PackageManager( 1367): Package com.example.android.apis desires unavailable shared library com.example.will.never.exist; ignoring!
+I/ActivityManager( 1367): Config changed: {1.0 0mcc0mnc en_US sw600dp w1024dp h575dp lrg long land ?uimode ?night -touch -keyb/h/h -nav/h s.2}
+I/CommonTimeManagementService( 1367): No common time service detected on this platform.  Common time services will be unavailable.
+I/dalvikvm( 1962): Could not find method android.speech.tts.TextToSpeech.speak, referenced from method com.stradaos.launcher.Nav.doSpeak
+I/AudioService( 1367):  AudioFocus  requestAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  abandonAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  requestAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  abandonAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  requestAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  abandonAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  requestAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  requestAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  abandonAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  requestAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848
+I/AudioService( 1367):  AudioFocus  abandonAudioFocus() from android.media.AudioManager@96c03400com.stradaos.launcher.Nav$1@96c62848

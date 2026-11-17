@@ -1085,3 +1085,20 @@ En 150 metros	Tra 150 metri
 En 500 pies	Tra 500 piedi
 En un cuarto de milla	Tra un quarto di miglio
 Parada intermedia	Tappa intermedia
+# 2.24: Personalización (temas)
+Personalización	Personalizzazione
+Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.	Cambia l'aspetto della schermata iniziale con un tocco. Puoi regolare ogni dettaglio nelle altre sezioni.
+Temas gratis	Temi gratuiti
+Temas premium	Temi premium
+Próximamente	Prossimamente
+Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.	Temi esclusivi per chi sostiene StradaOS con una donazione. Tutte le funzioni restano gratuite.
+En uso	In uso
+Tema aplicado:	Tema applicato:
+Clásico	Classico
+Vehículo, mapa y música: como viene StradaOS	Veicolo, mappa e musica: StradaOS così com'è
+Música a la izquierda	Musica a sinistra
+El reproductor del lado del conductor	Il lettore dal lato del conducente
+Mapa amplio	Mappa ampia
+Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Senza scheda del veicolo: il tachimetro va sulla mappa
+Minimalista	Minimalista
+Mapa grande, música a la izquierda y barra compacta	Mappa grande, musica a sinistra e barra compatta

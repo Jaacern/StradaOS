@@ -1085,3 +1085,20 @@ En 150 metros	150 metre sonra
 En 500 pies	500 fit sonra
 En un cuarto de milla	Çeyrek mil sonra
 Parada intermedia	Ara durak
+# 2.24: Personalización (temas)
+Personalización	Kişiselleştirme
+Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.	Ana ekranın görünümünü tek dokunuşla değiştirin. Her ayrıntıyı diğer bölümlerde ayarlamaya devam edebilirsiniz.
+Temas gratis	Ücretsiz temalar
+Temas premium	Premium temalar
+Próximamente	Yakında
+Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.	StradaOS'u bağışla destekleyenlere özel temalar. Tüm özellikler ücretsiz kalır.
+En uso	Kullanımda
+Tema aplicado:	Tema uygulandı:
+Clásico	Klasik
+Vehículo, mapa y música: como viene StradaOS	Araç, harita ve müzik: StradaOS'un geldiği hali
+Música a la izquierda	Müzik solda
+El reproductor del lado del conductor	Çalar sürücü tarafında
+Mapa amplio	Geniş harita
+Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Araç kartı yok: hız göstergesi haritanın üzerinde
+Minimalista	Sade
+Mapa grande, música a la izquierda y barra compacta	Büyük harita, solda müzik ve kompakt çubuk

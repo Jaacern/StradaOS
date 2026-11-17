@@ -5820,9 +5820,12 @@ public class Main extends Activity {
 
     // 2.20: Ajustes reordenados (Andrés): cada opción en el apartado donde uno la busca
     static final String[] CAT_NAMES = {"Volver al inicio", "Tu vehículo", "Mantenimientos", "Pantalla de inicio", "Barra de apps", "Apariencia",
-        "Conexión", "Mapa y clima", "Música", "Sistema", "Acerca de"};
-    static final String[] CAT_ICONS = {"arrow_back", "directions_car", "car_repair", "dehaze", "apps", "palette", "usb", "map", "music_note", "tune", "info"};
-    static final int C_VEHICLE = 1, C_MAINT = 2, C_HOME = 3, C_DOCK = 4, C_LOOK = 5, C_CONN = 6, C_MAP = 7, C_MUSIC = 8, C_SYS = 9, C_ABOUT = 10;
+        "Conexión", "Mapa y clima", "Música", "Sistema", "Acerca de", "Personalización"};
+    static final String[] CAT_ICONS = {"arrow_back", "directions_car", "car_repair", "dehaze", "apps", "palette", "usb", "map", "music_note", "tune", "info", "star"};
+    static final int C_VEHICLE = 1, C_MAINT = 2, C_HOME = 3, C_DOCK = 4, C_LOOK = 5, C_CONN = 6, C_MAP = 7, C_MUSIC = 8, C_SYS = 9, C_ABOUT = 10,
+        C_STYLE = 11;
+    /** Orden en pantalla (los números de categoría no cambian: los usan los ganchos de prueba «ajustes:N»). */
+    static final int[] CAT_ORDER = {0, C_STYLE, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     private android.widget.ScrollView settingsScroll;
     private int settingsScrollCat = -1;
@@ -5881,7 +5884,8 @@ public class Main extends Activity {
         bt.setPadding((int) (10 * s), 0, 0, 0);
         brand.addView(bt);
         side.addView(brand);
-        for (int i = 0; i < CAT_NAMES.length; i++) {
+        for (int k = 0; k < CAT_ORDER.length; k++) {
+            final int i = CAT_ORDER[k];
             final int idx = i;
             boolean sel = i == cat;
             LinearLayout it = new LinearLayout(this);
@@ -5895,7 +5899,7 @@ public class Main extends Activity {
             TextView lt = tv(CAT_NAMES[i], 14, sel ? RED : SOFT, sel);
             lt.setPadding((int) (12 * s), 0, 0, 0);
             it.addView(lt);
-            LinearLayout.LayoutParams ilp = new LinearLayout.LayoutParams(-1, (int) (40 * s));
+            LinearLayout.LayoutParams ilp = new LinearLayout.LayoutParams(-1, (int) (38 * s));
             ilp.bottomMargin = (int) (3 * s);
             side.addView(it, ilp);
             if (i == 0) {
@@ -5949,6 +5953,7 @@ public class Main extends Activity {
             case C_MUSIC: catMusic(body); break;
             case C_SYS: catSystem(body); break;
             case C_ABOUT: catAbout(body); break;
+            case C_STYLE: catStyle(body); break;
         }
     }
 
@@ -5957,7 +5962,8 @@ public class Main extends Activity {
         final LinearLayout tabs = new LinearLayout(this);
         tabs.setGravity(Gravity.CENTER_VERTICAL);
         final View[] chosen = new View[1];
-        for (int i = 0; i < CAT_NAMES.length; i++) {
+        for (int k = 0; k < CAT_ORDER.length; k++) {
+            final int i = CAT_ORDER[k];
             final int idx = i;
             boolean sel = i == cat;
             LinearLayout it = new LinearLayout(this);
@@ -5998,6 +6004,96 @@ public class Main extends Activity {
     }
 
     // ── piezas de diseño ──
+
+    // ───────────────────────── Personalización (2.24, Bloque 14) ─────────────────────────
+    // Temas gratis: aplican con un toque combinaciones de lo que ya existe en Ajustes. No guardan nada propio:
+    // el tema «en uso» es el que coincide con los ajustes actuales (si el usuario cambia algo, ninguno queda marcado).
+
+    static final class FreeTheme {
+        final String name, desc; final boolean car, left, gauge, compact;
+        FreeTheme(String name, String desc, boolean car, boolean left, boolean gauge, boolean compact) {
+            this.name = name; this.desc = desc; this.car = car; this.left = left; this.gauge = gauge; this.compact = compact;
+        }
+    }
+
+    static final FreeTheme[] FREE_THEMES = {
+        new FreeTheme("Clásico", "Vehículo, mapa y música: como viene StradaOS", true, false, false, false),
+        new FreeTheme("Música a la izquierda", "El reproductor del lado del conductor", true, true, false, false),
+        new FreeTheme("Mapa amplio", "Sin tarjeta del vehículo: el velocímetro va sobre el mapa", false, false, true, false),
+        new FreeTheme("Minimalista", "Mapa grande, música a la izquierda y barra compacta", false, true, true, true),
+    };
+
+    private boolean themeInUse(FreeTheme t) {
+        return prefs.getBoolean("show_car", true) == t.car && prefs.getBoolean("show_player", true)
+            && "left".equals(prefs.getString("player_side", "right")) == t.left
+            && (t.car || prefs.getBoolean("map_gauge", false) == t.gauge)
+            && (t.compact ? "compact" : "normal").equals(prefs.getString("dock_mode", "normal"));
+    }
+
+    private void applyFreeTheme(FreeTheme t) {
+        SharedPreferences.Editor e = prefs.edit()
+            .putBoolean("show_car", t.car).putBoolean("show_player", true)
+            .putString("player_side", t.left ? "left" : "right")
+            .putString("dock_mode", t.compact ? "compact" : "normal");
+        if (!t.car) e.putBoolean("map_gauge", t.gauge).putBoolean("car_speed", true);
+        e.apply();
+        rebuild();
+        showSettings(C_STYLE);
+        toast(I18n.t("Tema aplicado:") + " " + I18n.t(t.name));
+    }
+
+    private void catStyle(LinearLayout body) {
+        TextView intro = tv("Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.", 13, MUTED, false);
+        intro.setPadding((int) (6 * s), 0, (int) (6 * s), (int) (6 * s));
+        body.addView(intro);
+        TextView h2 = tv(I18n.t("Temas gratis").toUpperCase(I18n.loc), 11, MUTED, true);
+        h2.setPadding((int) (6 * s), (int) (10 * s), 0, (int) (8 * s));
+        body.addView(h2);
+        float contentW = vertical ? 688 : 736, cellGap = 12;
+        float cellW = (contentW - cellGap) / 2, thumbW = cellW - 20;
+        LinearLayout rowL = null;
+        for (int i = 0; i < FREE_THEMES.length; i++) {
+            final FreeTheme t = FREE_THEMES[i];
+            if (i % 2 == 0) {
+                rowL = new LinearLayout(this);
+                rowL.setOrientation(LinearLayout.HORIZONTAL);
+                LinearLayout.LayoutParams rlp = new LinearLayout.LayoutParams(-1, -2);
+                rlp.bottomMargin = (int) (cellGap * s);
+                body.addView(rowL, rlp);
+            }
+            boolean inUse = themeInUse(t);
+            LinearLayout cell = new LinearLayout(this);
+            cell.setOrientation(LinearLayout.VERTICAL);
+            cell.setBackground(round(inUse ? RED_DARK : CARD, 16));
+            cell.setPadding((int) (10 * s), (int) (10 * s), (int) (10 * s), (int) (12 * s));
+            ThemeThumb th = new ThemeThumb(this, s, t.car, t.left, t.gauge, t.compact);
+            th.selected = inUse;
+            cell.addView(th, new LinearLayout.LayoutParams((int) (thumbW * s), (int) (thumbW * 0.586f * s)));
+            LinearLayout nameRow = new LinearLayout(this);
+            nameRow.setGravity(Gravity.CENTER_VERTICAL);
+            nameRow.setPadding((int) (4 * s), (int) (10 * s), (int) (4 * s), 0);
+            TextView nm = tv(t.name, 15, TEXT, true);
+            nameRow.addView(nm, new LinearLayout.LayoutParams(0, -2, 1));
+            if (inUse) {
+                TextView badge = tv("En uso", 11, 0xFFFFFFFF, true);
+                badge.setBackground(round(RED, 10));
+                badge.setPadding((int) (8 * s), (int) (2 * s), (int) (8 * s), (int) (2 * s));
+                nameRow.addView(badge);
+            }
+            cell.addView(nameRow);
+            TextView ds = tv(t.desc, 12, MUTED, false);
+            ds.setPadding((int) (4 * s), (int) (3 * s), (int) (4 * s), 0);
+            cell.addView(ds);
+            LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams((int) (cellW * s), -1);
+            if (i % 2 == 0) clp.rightMargin = (int) (cellGap * s);
+            rowL.addView(cell, clp);
+            cell.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) { applyFreeTheme(t); }
+            });
+        }
+        LinearLayout pr = section(body, "Temas premium");
+        rowBase(pr, "Próximamente", "Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.");
+    }
 
     private LinearLayout section(LinearLayout body, String name) {
         TextView h2 = tv(I18n.t(name).toUpperCase(I18n.loc), 11, MUTED, true);

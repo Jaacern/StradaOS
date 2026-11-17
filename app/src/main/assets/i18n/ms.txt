@@ -1085,3 +1085,20 @@ En 150 metros	Dalam 150 meter
 En 500 pies	Dalam 500 kaki
 En un cuarto de milla	Dalam suku batu
 Parada intermedia	Perhentian di laluan
+# 2.24: Personalización (temas)
+Personalización	Pemperibadian
+Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.	Tukar rupa skrin utama dengan satu ketikan. Anda masih boleh laraskan setiap butiran di bahagian lain.
+Temas gratis	Tema percuma
+Temas premium	Tema premium
+Próximamente	Akan datang
+Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.	Tema eksklusif untuk mereka yang menyokong StradaOS dengan derma. Semua fungsi kekal percuma.
+En uso	Digunakan
+Tema aplicado:	Tema digunakan:
+Clásico	Klasik
+Vehículo, mapa y música: como viene StradaOS	Kenderaan, peta dan muzik: StradaOS seperti asal
+Música a la izquierda	Muzik di kiri
+El reproductor del lado del conductor	Pemain muzik di sebelah pemandu
+Mapa amplio	Peta luas
+Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Tanpa kad kenderaan: meter kelajuan di atas peta
+Minimalista	Minimalis
+Mapa grande, música a la izquierda y barra compacta	Peta besar, muzik di kiri dan bar padat

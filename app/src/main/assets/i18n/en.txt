@@ -1108,3 +1108,20 @@ Tráfico detenido	Stopped traffic
 Incidente en la vía	Road incident
 Radar de velocidad adelante	Speed camera ahead
 
+# 2.24: Personalización (temas)
+Personalización	Personalization
+Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.	Change the look of the home screen with one tap. You can still fine-tune every detail in the other sections.
+Temas gratis	Free themes
+Temas premium	Premium themes
+Próximamente	Coming soon
+Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.	Exclusive themes for those who support StradaOS with a donation. Every feature stays free.
+En uso	In use
+Tema aplicado:	Theme applied:
+Clásico	Classic
+Vehículo, mapa y música: como viene StradaOS	Vehicle, map and music: StradaOS as it comes
+Música a la izquierda	Music on the left
+El reproductor del lado del conductor	The player on the driver's side
+Mapa amplio	Wide map
+Sin tarjeta del vehículo: el velocímetro va sobre el mapa	No vehicle card: the speedometer goes on the map
+Minimalista	Minimal
+Mapa grande, música a la izquierda y barra compacta	Big map, music on the left and compact bar

@@ -1085,3 +1085,20 @@ En 150 metros	In 150 Metern
 En 500 pies	In 500 Fuß
 En un cuarto de milla	In einer Viertelmeile
 Parada intermedia	Zwischenstopp
+# 2.24: Personalización (temas)
+Personalización	Personalisierung
+Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.	Ändere das Aussehen des Startbildschirms mit einem Tippen. Jedes Detail lässt sich weiter in den anderen Bereichen anpassen.
+Temas gratis	Kostenlose Designs
+Temas premium	Premium-Designs
+Próximamente	Demnächst
+Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.	Exklusive Designs für alle, die StradaOS mit einer Spende unterstützen. Alle Funktionen bleiben kostenlos.
+En uso	Aktiv
+Tema aplicado:	Design angewendet:
+Clásico	Klassisch
+Vehículo, mapa y música: como viene StradaOS	Fahrzeug, Karte und Musik: StradaOS wie geliefert
+Música a la izquierda	Musik links
+El reproductor del lado del conductor	Der Player auf der Fahrerseite
+Mapa amplio	Große Karte
+Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Ohne Fahrzeugkarte: der Tacho liegt auf der Karte
+Minimalista	Minimal
+Mapa grande, música a la izquierda y barra compacta	Große Karte, Musik links und kompakte Leiste

@@ -1085,3 +1085,20 @@ En 150 metros	150 米后
 En 500 pies	500 英尺后
 En un cuarto de milla	四分之一英里后
 Parada intermedia	途经点
+# 2.24: Personalización (temas)
+Personalización	个性化
+Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.	轻点一下即可更改主屏幕的外观。你仍可在其他部分调整每个细节。
+Temas gratis	免费主题
+Temas premium	高级主题
+Próximamente	即将推出
+Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.	为通过捐赠支持 StradaOS 的用户提供的专属主题。所有功能仍然免费。
+En uso	使用中
+Tema aplicado:	已应用主题：
+Clásico	经典
+Vehículo, mapa y música: como viene StradaOS	车辆、地图和音乐：StradaOS 默认样式
+Música a la izquierda	音乐在左侧
+El reproductor del lado del conductor	播放器在驾驶员一侧
+Mapa amplio	宽地图
+Sin tarjeta del vehículo: el velocímetro va sobre el mapa	不显示车辆卡片：车速表显示在地图上
+Minimalista	极简
+Mapa grande, música a la izquierda y barra compacta	大地图、音乐在左侧、紧凑栏

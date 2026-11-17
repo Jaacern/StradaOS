@@ -1085,3 +1085,20 @@ En 150 metros	بعد 150 مترًا
 En 500 pies	بعد 500 قدم
 En un cuarto de milla	بعد ربع ميل
 Parada intermedia	محطة على الطريق
+# 2.24: Personalización (temas)
+Personalización	التخصيص
+Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.	غيّر مظهر الشاشة الرئيسية بلمسة واحدة. يمكنك ضبط كل تفصيل في الأقسام الأخرى.
+Temas gratis	سمات مجانية
+Temas premium	سمات مميزة
+Próximamente	قريبًا
+Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.	سمات حصرية لمن يدعم StradaOS بتبرع. كل الميزات تبقى مجانية.
+En uso	مستخدم
+Tema aplicado:	تم تطبيق السمة:
+Clásico	كلاسيكي
+Vehículo, mapa y música: como viene StradaOS	المركبة والخريطة والموسيقى: StradaOS كما هو
+Música a la izquierda	الموسيقى على اليسار
+El reproductor del lado del conductor	المشغل في جهة السائق
+Mapa amplio	خريطة واسعة
+Sin tarjeta del vehículo: el velocímetro va sobre el mapa	بدون بطاقة المركبة: عداد السرعة على الخريطة
+Minimalista	بسيط
+Mapa grande, música a la izquierda y barra compacta	خريطة كبيرة وموسيقى على اليسار وشريط مضغوط

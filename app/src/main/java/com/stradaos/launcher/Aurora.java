@@ -25,12 +25,15 @@ final class Aurora {
     static final int VIOLET = 0xFF7C5CFF;
 
     // Colores propios del tema (el resto de StradaOS sigue con su paleta normal: Ajustes, ventanas, etc.)
-    static int base(boolean light) { return light ? 0xFFF1ECF4 : 0xFF110E17; }
-    static int glass(boolean light) { return light ? 0x9EFFFFFF : 0x1FFFFFFF; }
-    static int glassEdge(boolean light) { return light ? 0xD9FFFFFF : 0x26FFFFFF; }
-    static int pill(boolean light) { return light ? 0xF2262130 : 0xE01B1724; }
-    static int pillEdge(boolean light) { return light ? 0x33FFFFFF : 0x24FFFFFF; }
-    static int pillIcon() { return 0xFFEDEAF2; }
+    static int base(boolean light) { return light ? 0xFFE6DFEE : 0xFF110E17; }
+    static int glass(boolean light) { return light ? 0x8CFFFFFF : 0x1FFFFFFF; }
+    static int glassEdge(boolean light) { return light ? 0xCCFFFFFF : 0x26FFFFFF; }
+    // claro: píldora gris translúcida (deja ver el fondo) con íconos oscuros; oscuro: casi negra con íconos claros
+    static int pill(boolean light) { return light ? 0x529C93AD : 0xE01B1724; }
+    static int pillEdge(boolean light) { return light ? 0xA6FFFFFF : 0x24FFFFFF; }
+    static int pillIcon(boolean light) { return light ? 0xFF2A2533 : 0xFFEDEAF2; }
+    /** Opacidad de las teselas del mapa: se alcanza a ver el fondo sin perder la lectura del mapa. */
+    static float mapAlpha(boolean light) { return light ? 0.84f : 0.86f; }
     /** Botones dentro de las tarjetas translúcidas (anterior/siguiente, fondo de la barrita del mantenimiento). */
     static int soft(boolean light) { return light ? 0x14000000 : 0x1AFFFFFF; }
 
@@ -68,14 +71,16 @@ final class Aurora {
         Paint p = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
         boolean tall = h > w * 1.05f;
         float big = Math.max(w, h);
-        glow(c, p, w * 0.86f, -h * 0.08f, big * (tall ? 0.62f : 0.52f), accent, light ? 0.24f : 0.26f);
+        glow(c, p, w * 0.86f, -h * 0.08f, big * (tall ? 0.62f : 0.52f), accent, light ? 0.36f : 0.26f);
+        // claro: un resplandor violeta grande detrás de la cabecera (como la referencia), para que el fondo se note
+        if (light) glow(c, p, w * (tall ? 0.45f : 0.55f), h * (tall ? 0.12f : 0.18f), big * (tall ? 0.55f : 0.42f), VIOLET, 0.42f);
         // arco: centro fuera de la pantalla, abajo a la izquierda; el anillo pasa por detrás de las tarjetas y el mapa
         float cx = tall ? -w * 0.35f : w * 0.18f, cy = tall ? h * 0.92f : h * 1.32f, R = tall ? w * 1.55f : big * 0.95f;
         p.setShader(new RadialGradient(cx, cy, R,
-            new int[]{0, 0, a(VIOLET, light ? 0.26f : 0.50f), a(accent, light ? 0.20f : 0.26f), 0},
+            new int[]{0, 0, a(VIOLET, light ? 0.46f : 0.50f), a(accent, light ? 0.32f : 0.26f), 0},
             new float[]{0f, 0.58f, 0.74f, 0.86f, 1f}, Shader.TileMode.CLAMP));
         c.drawRect(0, 0, w, h, p);
-        glow(c, p, w * 0.04f, h * 0.98f, big * 0.42f, VIOLET, light ? 0.16f : 0.30f);
+        glow(c, p, w * 0.04f, h * 0.98f, big * 0.42f, VIOLET, light ? 0.32f : 0.30f);
         p.setShader(null);
     }
 
@@ -231,7 +236,13 @@ final class Aurora {
             // barra tipo píldora con íconos sin círculos
             float pw = cw * (portrait ? 0.78f : 0.52f), px = (w - pw) / 2;
             rr(c, px, pillY, px + pw, pillY + pillH, pillH / 2, pill(light));
-            p.setColor(a(pillIcon(), 0.9f));
+            p.setStyle(Paint.Style.STROKE);
+            p.setStrokeWidth(Math.max(1f, s * 0.8f));
+            p.setColor(pillEdge(light));
+            r.set(px, pillY, px + pw, pillY + pillH);
+            c.drawRoundRect(r, pillH / 2, pillH / 2, p);
+            p.setStyle(Paint.Style.FILL);
+            p.setColor(a(pillIcon(light), 0.9f));
             for (int i = 0; i < 7; i++) {
                 float ix = px + pw * (i + 0.5f) / 7f;
                 c.drawCircle(ix, pillY + pillH / 2, pillH * 0.16f, p);
@@ -285,7 +296,7 @@ final class Aurora {
         }
 
         private void map(Canvas c, float l, float t, float rt, float b, float crad, float u) {
-            int mapBg = light ? 0xFFE6E2EA : 0xFF1F1B29, road = light ? 0xFFFFFFFF : 0xFF3A3448;
+            int mapBg = light ? 0xD6EDE9F1 : 0xDB1F1B29, road = light ? 0xFFFFFFFF : 0xFF3A3448;
             rr(c, l, t, rt, b, crad, mapBg);
             float mw = rt - l, mh = b - t;
             c.save();

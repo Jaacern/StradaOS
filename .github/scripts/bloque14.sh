@@ -38,6 +38,11 @@ shot a01-galeria-premium
 go tema-premium:aurora 6; shot a02-aplicado-ajustes
 adb shell input swipe 600 520 600 80 400; sleep 2; adb shell input swipe 600 520 600 80 400; sleep 2; shot a03-galeria-en-uso
 demo; shot a10-aurora-oscuro
+go pref:speedo=2 4; demo; shot a10b-mixto
+go solo-mapa-anim 1; shot a10c-transicion
+sleep 2; go pista-demo 2; go vel:62 3; shot a10d-solo-mapa-mixto
+go solo-mapa-anim 1; shot a10e-transicion-vuelta
+sleep 3
 go solo-mapa:1 6; go pista-demo 3; go vel:62 3; shot a11-solo-mapa
 go solo-mapa:0 6; go tema:claro 7; demo; shot a12-aurora-claro
 go solo-mapa:1 6; shot a13-claro-solo-mapa

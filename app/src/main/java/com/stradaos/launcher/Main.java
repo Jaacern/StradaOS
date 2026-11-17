@@ -702,6 +702,7 @@ public class Main extends Activity {
                     // tema-premium:aurora lo aplica; «tema-premium:» lo quita
                     applyPremium(v.length() > 13);
                 }
+                else if ("solo-mapa-anim".equals(v)) toggleMapOnly();
                 else if (v.startsWith("solo-mapa:")) {
                     prefs.edit().putBoolean("prem_map_only", v.endsWith("1")).apply();
                     rebuild();
@@ -1159,11 +1160,11 @@ public class Main extends Activity {
         getWindow().setBackgroundDrawable(new ColorDrawable(sim > 0 ? Color.BLACK : premium ? Aurora.base(LIGHT) : BG));
         if (premium) {
             // fondo con el arco difuminado y el grano (pintado una vez, a media resolución)
-            android.graphics.drawable.BitmapDrawable ab = new android.graphics.drawable.BitmapDrawable(getResources(),
-                Aurora.background(Math.max(1, W), Math.max(1, H), LIGHT, RED));
-            if (sim > 0 && root.getChildCount() > 0) root.getChildAt(0).setBackground(ab);
-            else root.setBackground(ab);
-        }
+            premBg = Aurora.background(Math.max(1, W), Math.max(1, H), LIGHT, RED);
+            android.graphics.drawable.BitmapDrawable ab = new android.graphics.drawable.BitmapDrawable(getResources(), premBg);
+            premBgHolder = sim > 0 && root.getChildCount() > 0 ? root.getChildAt(0) : root;
+            premBgHolder.setBackground(ab);
+        } else { premBg = null; premBgHolder = null; }
         board = new FrameLayout(this);
         FrameLayout.LayoutParams blp = new FrameLayout.LayoutParams((int) ((dw + ex) * s), (int) (dh * s));
         blp.gravity = Gravity.CENTER;
@@ -2568,11 +2569,14 @@ public class Main extends Activity {
         }
         FrameLayout card = new FrameLayout(this);
         place(board, card, mapX, mapY, mapW, mapH);
+        mapCardView = card;
         // fondo decorativo mientras no hay GPS; encima, el mapa en vivo
         card.addView(new MapView(this, s, 20 * s), new FrameLayout.LayoutParams(-1, -1));
         if (!prefs.getBoolean("map_live", true)) { liveMap = null; seedLastLocation(); buildAaCardRest(card); return; }
         liveMap = new LiveMapView(this, s, 20 * s);
         card.addView(liveMap, new FrameLayout.LayoutParams(-1, -1));
+        // Aurora: esquinas redondas de verdad sobre el fondo y el mapa un poco translúcido
+        if (premium && premBg != null) liveMap.setBackdrop(premBg, premBgHolder, Aurora.mapAlpha(LIGHT));
         liveMap.setVisibility(View.INVISIBLE);
         liveMap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) { liveMap.cycleZoom(); }
@@ -2698,21 +2702,25 @@ public class Main extends Activity {
         // 2.20 (Daniel): mini velocímetro sobre el mapa cuando la tarjeta del vehículo está oculta
         mapGauge = null;
         boolean gaugeTopLeft = false;
-        if (!premium && !showCar && carSpeed && prefs.getBoolean("map_gauge", false)) {
+        // Aurora con «Solo mapa»: velocímetro mixto abajo a la izquierda (horizontal y vertical)
+        final boolean premGauge = premium && mapOnly && carSpeed;
+        if (premGauge || (!premium && !showCar && carSpeed && prefs.getBoolean("map_gauge", false))) {
             FrameLayout gb = new FrameLayout(this);
             gb.setBackground(round((CARD & 0x00FFFFFF) | 0xE0000000, 66));
             mapGauge = new Gauge(this, s);
             mapGauge.setColors(RED, TEXT, SOFT);
             mapGauge.setUnit(useMph());
             mapGauge.setSmall(true);
+            if (premGauge) mapGauge.setNumber(true);
             gb.addView(mapGauge, new FrameLayout.LayoutParams(-1, -1));
             // tamaño (pequeño/normal/grande) limitado para que en pantallas bajas no tape el mapa
-            int gsz = prefs.getInt("map_gauge_size", 1);
+            int gsz = premGauge ? 1 : prefs.getInt("map_gauge_size", 1);
             float gs = gsz == 0 ? 108 : gsz == 2 ? 160 : 132;
             gs = Math.min(gs, Math.min(mapH * 0.45f, mapW * 0.42f));
             gb.setBackground(round((CARD & 0x00FFFFFF) | 0xE0000000, gs / 2));
+            if (premGauge) gb.setBackground(round(LIGHT ? 0xD9FFFFFF : 0xD91B1724, gs / 2));
             // esquina: automático = arriba, en el lado contrario al botón del navegador (como antes)
-            String corner = prefs.getString("map_gauge_corner", "auto");
+            String corner = premGauge ? "bl" : prefs.getString("map_gauge_corner", "auto");
             if ("auto".equals(corner)) corner = nbLeft ? "tr" : "tl";
             boolean gLeft = corner.endsWith("l"), gBottom = corner.startsWith("b");
             gaugeTopLeft = gLeft && !gBottom;
@@ -3602,6 +3610,74 @@ public class Main extends Activity {
      *  a la derecha con todo el alto; con la cabecera arriba el mapa quedaba como una franja. */
     private boolean premWide;
     private float premColW;
+    private View mapCardView;
+    private Bitmap premBg;
+    private View premBgHolder;
+    /** Hora y tarjetas de la cabecera: se animan al entrar y salir de «Solo mapa». */
+    private final List<View> premHeadViews = new ArrayList<View>();
+
+    /**
+     * «Solo mapa» con transición: se toma una foto del inicio actual, se arma el nuevo debajo y la foto se desvanece
+     * subiendo, mientras la cabecera baja y aparece (al volver) o el mapa sube a su sitio (al agrandarlo). Todo con
+     * animaciones de vista (API 16) y sin volver a medir el mapa en cada cuadro: fluido también en el Picanto.
+     */
+    /** Mueve la tarjeta del mapa hasta su sitio redibujando el mapa en cada cuadro (el fondo de las esquinas y la
+     *  transparencia se recalculan con la posición: así no se ve corrido mientras se mueve). */
+    private void slideMap(float from, android.animation.TimeInterpolator in) {
+        final View v = mapCardView;
+        v.setTranslationY(from);
+        android.animation.ValueAnimator va = android.animation.ValueAnimator.ofFloat(from, 0f);
+        va.setDuration(380);
+        va.setInterpolator(in);
+        va.addUpdateListener(new android.animation.ValueAnimator.AnimatorUpdateListener() {
+            public void onAnimationUpdate(android.animation.ValueAnimator a) {
+                v.setTranslationY((Float) a.getAnimatedValue());
+                if (liveMap != null) liveMap.invalidate();
+            }
+        });
+        va.start();
+    }
+
+    private void toggleMapOnly() {
+        Bitmap snap = null;
+        FrameLayout.LayoutParams olp = null;
+        try {
+            if (board != null && board.getWidth() > 0 && board.getHeight() > 0) {
+                snap = Bitmap.createBitmap(board.getWidth(), board.getHeight(), Bitmap.Config.ARGB_8888);
+                board.draw(new android.graphics.Canvas(snap));
+                FrameLayout.LayoutParams bl = (FrameLayout.LayoutParams) board.getLayoutParams();
+                olp = new FrameLayout.LayoutParams(bl.width, bl.height, bl.gravity);
+            }
+        } catch (Throwable e) { if (snap != null) snap.recycle(); snap = null; }
+        mapOnly = !mapOnly;
+        prefs.edit().putBoolean("prem_map_only", mapOnly).apply();
+        rebuild();
+        if (snap == null || olp == null) return;
+        final Bitmap shot = snap;
+        final ImageView ov = new ImageView(this);
+        ov.setImageBitmap(shot);
+        root.addView(ov, olp);
+        android.view.animation.DecelerateInterpolator dec = new android.view.animation.DecelerateInterpolator(1.6f);
+        ov.animate().alpha(0f).translationY((mapOnly ? -26 : 14) * s).setDuration(340).setInterpolator(dec)
+            .withEndAction(new Runnable() { public void run() {
+                root.removeView(ov);
+                ov.setImageDrawable(null);
+                shot.recycle();
+            }});
+        if (mapOnly) {
+            // el mapa sube desde donde estaba (debajo de la cabecera) hasta arriba
+            if (mapCardView != null) slideMap(premHeadH * 0.55f * s, dec);
+        } else {
+            // la cabecera baja desde arriba, una tarjeta tras otra, y el mapa baja a su sitio
+            int k = 0;
+            for (View v : premHeadViews) {
+                v.setAlpha(0f);
+                v.setTranslationY(-22 * s);
+                v.animate().alpha(1f).translationY(0).setStartDelay(60 + 45 * k++).setDuration(320).setInterpolator(dec);
+            }
+            if (mapCardView != null) slideMap(-premHeadH * 0.45f * s, dec);
+        }
+    }
 
     /** Tema premium elegido y desbloqueado. */
     private boolean premiumActive() {
@@ -3675,12 +3751,7 @@ public class Main extends Activity {
             row.addView(dateTv);
             if (vertical) dateTv.setVisibility(View.GONE);
         } else row.addView(greetTv);
-        topSpeedTv = null;
-        if (mapOnly && carSpeed) {
-            topSpeedTv = tv("", 15, TEXT, true);
-            topSpeedTv.setPadding((int) (16 * s), 0, 0, 0);
-            row.addView(topSpeedTv);
-        }
+        topSpeedTv = null;   // con «Solo mapa» la velocidad va en el velocímetro del mapa
         topOilTv = null;
         topIconName = null;
         if (mapOnly && oilHome) {
@@ -3762,11 +3833,7 @@ public class Main extends Activity {
         cr.inward = mapOnly;
         tg.addView(cr, new FrameLayout.LayoutParams(-1, -1));
         place(board, tg, bx, 12, 40, 40);
-        tg.setOnClickListener(new View.OnClickListener() { public void onClick(View v) {
-            mapOnly = !mapOnly;
-            prefs.edit().putBoolean("prem_map_only", mapOnly).apply();
-            rebuild();
-        }});
+        tg.setOnClickListener(new View.OnClickListener() { public void onClick(View v) { toggleMapOnly(); } });
         if (noDock) {
             bx -= 50;
             View appsBtn = circleIcon("apps", 40, 22, 0);
@@ -3790,6 +3857,7 @@ public class Main extends Activity {
 
     /** Cabecera: hora grande con la fecha en el acento, y las tarjetas de música, vehículo y clima. */
     private void buildPremiumHeader() {
+        premHeadViews.clear();
         float cw = premW() - 32, y = premHeadY, gap = 12;
         boolean wxOn = prefs.getBoolean("weather_on", true);
         int k = wxOn ? 3 : 2;
@@ -3801,6 +3869,7 @@ public class Main extends Activity {
         clock.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
         clock.addView(timeTv);
         clock.addView(dateTv);
+        premHeadViews.add(clock);
         float wy, wh, wW, wx0;
         if (premWide) {
             // columna izquierda: la hora, la música a lo ancho y debajo el vehículo y el clima
@@ -3839,14 +3908,17 @@ public class Main extends Activity {
         final FrameLayout card = new FrameLayout(this);
         card.setBackground(glass(18));
         place(board, card, x, y, w, hh);
+        premHeadViews.add(card);
         float m = 14;
         placeWrap(card, tv("Música", 11, MUTED, true), m, 12);
         sourceTv = tv("", 10, RED, true);
         sourceTv.setGravity(Gravity.RIGHT);
         sourceTv.setPadding(0, 0, (int) (4 * s), 0);
         place(card, sourceTv, w * 0.38f, 12, w * 0.62f - m + 4, 16);
-        float A = Math.min(hh * 0.42f, w * 0.34f), ay = 34;
+        float A = Math.min(hh * 0.46f, w * 0.36f), ay = 32;
         playerArt = new PlayerArt(this, s, asset("ic/music_note.png"));
+        // carátula cuadrada con esquinas redondas y el avance alrededor con la misma forma (como la referencia)
+        playerArt.setSquare(LIGHT ? 0x1F000000 : 0x2EFFFFFF, LIGHT ? 0x14000000 : 0x1AFFFFFF);
         place(card, playerArt, m, ay, A, A);
         float tx = m + A + 10, tw = w - tx - m + 2;
         trackTv = tv("Nada sonando", 14, TEXT, true);
@@ -3854,7 +3926,7 @@ public class Main extends Activity {
         artistTv = tv("Radio, Bluetooth o USB", 11, MUTED, false);
         place(card, artistTv, tx, ay + A * 0.5f + 3, tw, 16);
         timePosTv = tv("", 10, MUTED, false);   // no se muestra: el avance va en el anillo de la carátula
-        float rowTop = ay + A + 4, rowH = hh - rowTop - 8, ps = Math.min(40, rowH), bs = ps;
+        float rowTop = ay + A + 2, rowH = hh - rowTop - 6, ps = Math.min(40, rowH), bs = ps;
         float cx = w / 2, ry = rowTop + (rowH - ps) / 2, sp = Math.min(14, (w - 3 * ps) / 4);
         final View prev = circleIcon("skip_previous", bs, bs * 0.58f, 0), next = circleIcon("skip_next", bs, bs * 0.58f, 0);
         prev.setBackground(round(Aurora.soft(LIGHT), bs / 2));
@@ -3893,9 +3965,12 @@ public class Main extends Activity {
         FrameLayout card = new FrameLayout(this);
         card.setBackground(glass(18));
         place(board, card, x, y, w, hh);
+        premHeadViews.add(card);
         float m = 14;
+        // velocímetro elegido en Pantalla de inicio: digital (número) o analógico / mixto (el aro de StradaOS)
+        final int speedo = carSpeed ? prefs.getInt("speedo", 0) : 0;
+        float stripH = 34, stripY = hh - stripH - 8;
         carTv = tv(prefs.getString("car_name", "Mi vehículo"), 11, MUTED, true);
-        place(card, carTv, m, 12, w - 2 * m - 70, 16);
         LinearLayout g = new LinearLayout(this);
         g.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
         gpsDot = new View(this);
@@ -3904,7 +3979,6 @@ public class Main extends Activity {
         gpsTv = tv("GPS", 10, MUTED, false);
         gpsTv.setPadding((int) (5 * s), 0, 0, 0);
         g.addView(gpsTv);
-        place(card, g, w - m - 100, 12, 100, 16);
         LinearLayout sv = new LinearLayout(this);
         sv.setBaselineAligned(true);
         speedTv = tv("0", oilHome ? 44 : 54, TEXT, true);
@@ -3912,9 +3986,24 @@ public class Main extends Activity {
         unit.setPadding((int) (6 * s), 0, 0, 0);
         sv.addView(speedTv);
         sv.addView(unit);
-        float stripH = 38, stripY = hh - stripH - 10;
-        if (oilHome) placeWrap(card, sv, m, 34 + Math.max(0, (stripY - 34 - 50) / 2));
-        else placeWrap(card, sv, m, 34 + Math.max(0, (hh - 34 - 64) / 2));
+        carGauge = null;
+        if (speedo > 0) {
+            // el aro ocupa la tarjeta (sin el nombre, que no cabría); el GPS queda como un punto en la esquina
+            float gb = oilHome ? stripY - 2 : hh - 6;
+            carGauge = new Gauge(this, s);
+            carGauge.setColors(RED, TEXT, SOFT);
+            carGauge.setUnit(useMph());
+            carGauge.setNumber(speedo == 2);
+            carGauge.setCompact(true);
+            place(card, carGauge, 6, 6, w - 12, gb - 6);
+            gpsTv.setVisibility(View.GONE);
+            place(card, g, w - 22, 12, 12, 12);
+        } else {
+            place(card, carTv, m, 12, w - 2 * m - 70, 16);
+            place(card, g, w - m - 100, 12, 100, 16);
+            if (oilHome) placeWrap(card, sv, m, 34 + Math.max(0, (stripY - 34 - 50) / 2));
+            else placeWrap(card, sv, m, 34 + Math.max(0, (hh - 34 - 64) / 2));
+        }
         if (!carSpeed) {
             // carros sin GPS: la foto del vehículo (o su ícono) en lugar de la velocidad
             sv.setVisibility(View.GONE);
@@ -3981,6 +4070,7 @@ public class Main extends Activity {
         card.setBackground(glass(18));
         card.setPadding((int) (10 * s), (int) (12 * s), (int) (10 * s), (int) (8 * s));
         place(board, card, x, y, w, hh);
+        premHeadViews.add(card);
         TextView wl = tv("Clima", 11, MUTED, true);
         wl.setGravity(Gravity.CENTER_HORIZONTAL);
         card.addView(wl);
@@ -4037,7 +4127,7 @@ public class Main extends Activity {
             } else {
                 String id = t.startsWith("fn:") ? t.substring(3) : dockDefault(i);
                 iv = icon(dockFn(id)[2], ic);
-                iv.setColorFilter(Aurora.pillIcon());
+                iv.setColorFilter(Aurora.pillIcon(LIGHT));
             }
             FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams((int) (sz * s), (int) (sz * s));
             lp.gravity = Gravity.CENTER;

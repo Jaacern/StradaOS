@@ -3642,13 +3642,47 @@ public class Main extends Activity {
         if (end != null) va.addListener(new android.animation.AnimatorListenerAdapter() {
             @Override public void onAnimationEnd(android.animation.Animator a) { end.run(); }
         });
+        final boolean slow = slowScreen();
+        if (slow) {
+            // pantallas modestas (Android 4.x, como el Picanto): el mapa se dibuja una vez en una capa y solo se mueve
+            // esa capa; al terminar se redibuja en su sitio (esquinas y transparencia alineadas otra vez)
+            v.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+            va.addListener(new android.animation.AnimatorListenerAdapter() {
+                @Override public void onAnimationEnd(android.animation.Animator a) {
+                    v.setLayerType(View.LAYER_TYPE_NONE, null);
+                    if (liveMap != null) liveMap.invalidate();
+                }
+            });
+        }
         va.addUpdateListener(new android.animation.ValueAnimator.AnimatorUpdateListener() {
             public void onAnimationUpdate(android.animation.ValueAnimator a) {
                 v.setTranslationY((Float) a.getAnimatedValue());
-                if (liveMap != null) liveMap.invalidate();
+                if (!slow && liveMap != null) liveMap.invalidate();
             }
         });
         va.start();
+    }
+
+    /** Android 4.x: pantallas de carro de gama baja. Animaciones un poco más largas y con capas. */
+    private static boolean slowScreen() { return SDK < 21; }
+
+    /** Duración de una animación de Aurora: un 40 % más larga en pantallas lentas para que se aprecie. */
+    private static long dur(long ms) { return slowScreen() ? ms * 7 / 5 : ms; }
+
+    /**
+     * Arranca las animaciones después del primer cuadro del inicio nuevo (el más pesado: armar las vistas y pedir el
+     * mapa). Si arrancan antes, en pantallas lentas ese cuadro se come el comienzo y parecen un salto.
+     */
+    private void afterFirstFrame(final Runnable r) {
+        final View b = board;
+        if (b == null) { r.run(); return; }
+        b.getViewTreeObserver().addOnPreDrawListener(new android.view.ViewTreeObserver.OnPreDrawListener() {
+            public boolean onPreDraw() {
+                b.getViewTreeObserver().removeOnPreDrawListener(this);
+                b.post(r);
+                return true;
+            }
+        });
     }
 
     /**
@@ -3673,9 +3707,10 @@ public class Main extends Activity {
         mapOnly = true;
         prefs.edit().putBoolean("prem_map_only", true).apply();
         rebuild();
-        android.view.animation.DecelerateInterpolator dec = new android.view.animation.DecelerateInterpolator(1.6f);
-        android.view.animation.AccelerateInterpolator acc = new android.view.animation.AccelerateInterpolator(1.2f);
-        int n = shots.size();
+        final android.view.animation.DecelerateInterpolator dec = new android.view.animation.DecelerateInterpolator(1.6f);
+        final android.view.animation.AccelerateInterpolator acc = new android.view.animation.AccelerateInterpolator(1.2f);
+        final int n = shots.size();
+        final List<ImageView> leaving = new ArrayList<ImageView>();
         for (int i = n - 1; i >= 0; i--) {
             final Bitmap b = shots.get(i);
             int[] bx = boxes.get(i);
@@ -3686,62 +3721,77 @@ public class Main extends Activity {
             lp.leftMargin = bx[0];
             lp.topMargin = bx[1];
             board.addView(iv, 0, lp);   // debajo de todo: el mapa que sube las tapa, como al volver las trae
-            iv.animate().alpha(0f).translationY(-36 * s).setStartDelay(45L * (n - 1 - i)).setDuration(300).setInterpolator(acc)
-                .withEndAction(new Runnable() { public void run() {
-                    board.removeView(iv);
-                    iv.setImageDrawable(null);
-                    b.recycle();
-                }});
+            iv.setTag(b);
+            leaving.add(iv);
         }
-        // el mapa sube por encima de las tarjetas (que quedaron debajo) dentro de su marco
-        if (mapCardView != null && rise > 0) slideMap(mapCardView, rise, dec, 40, 420, null);
-        // la hora pequeña de arriba aparece cuando la grande ya se fue (sin dos horas a la vez)
-        if (premTopRow != null) {
-            premTopRow.setAlpha(0f);
-            premTopRow.animate().alpha(1f).setStartDelay(200).setDuration(220);
-        }
+        // estado inicial ya puesto (el primer cuadro se ve como antes); las animaciones arrancan después de él
+        if (mapCardView != null && rise > 0) mapCardView.setTranslationY(rise);
+        if (premTopRow != null) premTopRow.setAlpha(0f);
+        final View mapV = mapCardView, topV = premTopRow;
+        afterFirstFrame(new Runnable() { public void run() {
+            for (int j = 0; j < leaving.size(); j++) {
+                final ImageView iv = leaving.get(j);
+                final Bitmap b = (Bitmap) iv.getTag();
+                iv.animate().alpha(0f).translationY(-36 * s).setStartDelay(dur(45L * j)).setDuration(dur(300)).setInterpolator(acc)
+                    .withLayer().withEndAction(new Runnable() { public void run() {
+                        if (iv.getParent() instanceof ViewGroup) ((ViewGroup) iv.getParent()).removeView(iv);
+                        iv.setImageDrawable(null);
+                        b.recycle();
+                    }});
+            }
+            // el mapa sube por encima de las tarjetas (que quedaron debajo) dentro de su marco
+            if (mapV != null && rise > 0 && mapV == mapCardView) slideMap(mapV, rise, dec, dur(40), dur(420), null);
+            // la hora pequeña de arriba aparece cuando la grande ya se fue (sin dos horas a la vez)
+            if (topV != null) topV.animate().alpha(1f).setStartDelay(dur(200)).setDuration(dur(220));
+        }});
     }
 
     private void toggleMapOnly() {
         if (!mapOnly) { enterMapOnly(); return; }
         Bitmap snap = null;
         FrameLayout.LayoutParams olp = null;
+        // Volver: solo se funde la barra de arriba (hora chica → saludo). Antes era una foto del inicio entero que
+        // bajaba al desvanecerse, y por eso la barra de apps salía duplicada un instante. La barra no se toca.
         try {
-            if (board != null && board.getWidth() > 0 && board.getHeight() > 0) {
-                snap = Bitmap.createBitmap(board.getWidth(), board.getHeight(), Bitmap.Config.ARGB_8888);
+            int sh = Math.min(board != null ? board.getHeight() : 0, (int) ((premHeadY - 4) * s));
+            if (board != null && board.getWidth() > 0 && sh > 0) {
+                snap = Bitmap.createBitmap(board.getWidth(), sh, Bitmap.Config.ARGB_8888);
                 board.draw(new android.graphics.Canvas(snap));
-                FrameLayout.LayoutParams bl = (FrameLayout.LayoutParams) board.getLayoutParams();
-                olp = new FrameLayout.LayoutParams(bl.width, bl.height, bl.gravity);
+                olp = new FrameLayout.LayoutParams(board.getWidth(), sh);
+                olp.gravity = Gravity.TOP | Gravity.LEFT;
             }
         } catch (Throwable e) { if (snap != null) snap.recycle(); snap = null; }
         mapOnly = !mapOnly;
         prefs.edit().putBoolean("prem_map_only", mapOnly).apply();
         rebuild();
-        if (snap == null || olp == null) return;
-        final Bitmap shot = snap;
+        final Bitmap shot = olp != null ? snap : null;
         final ImageView ov = new ImageView(this);
-        ov.setImageBitmap(shot);
-        root.addView(ov, olp);
-        android.view.animation.DecelerateInterpolator dec = new android.view.animation.DecelerateInterpolator(1.6f);
-        ov.animate().alpha(0f).translationY((mapOnly ? -26 : 14) * s).setDuration(340).setInterpolator(dec)
-            .withEndAction(new Runnable() { public void run() {
-                root.removeView(ov);
+        if (shot != null) {
+            ov.setImageBitmap(shot);
+            ov.setScaleType(ImageView.ScaleType.MATRIX);
+            board.addView(ov, olp);
+        }
+        final android.view.animation.DecelerateInterpolator dec = new android.view.animation.DecelerateInterpolator(1.6f);
+        // estado inicial (lo que se ve en el primer cuadro del inicio nuevo)
+        final List<View> heads = new ArrayList<View>(premHeadViews);
+        for (View v : heads) { v.setAlpha(0f); v.setTranslationY(-22 * s); }
+        // al volver baja el marco del mapa completo, con todo lo de adentro: el panel de Android Auto / CarPlay
+        // se mueve junto con el mapa si está abierto y sigue escondido si está plegado
+        final View mv = mapClipView != null ? mapClipView : mapCardView;
+        final float from = -premHeadH * 0.45f * s;
+        if (mv != null) mv.setTranslationY(from);
+        afterFirstFrame(new Runnable() { public void run() {
+            if (shot != null) ov.animate().alpha(0f).setDuration(dur(240)).withEndAction(new Runnable() { public void run() {
+                if (ov.getParent() instanceof ViewGroup) ((ViewGroup) ov.getParent()).removeView(ov);
                 ov.setImageDrawable(null);
                 shot.recycle();
             }});
-        {
             // la cabecera baja desde arriba, una tarjeta tras otra, y el mapa baja a su sitio
             int k = 0;
-            for (View v : premHeadViews) {
-                v.setAlpha(0f);
-                v.setTranslationY(-22 * s);
-                v.animate().alpha(1f).translationY(0).setStartDelay(60 + 45 * k++).setDuration(320).setInterpolator(dec);
-            }
-            // al volver baja el marco del mapa completo, con todo lo de adentro: el panel de Android Auto / CarPlay
-            // se mueve junto con el mapa si está abierto y sigue escondido si está plegado
-            View mv = mapClipView != null ? mapClipView : mapCardView;
-            if (mv != null) slideMap(mv, -premHeadH * 0.45f * s, dec, 0, 380, null);
-        }
+            for (View v : heads)
+                v.animate().alpha(1f).translationY(0).setStartDelay(dur(60 + 45 * k++)).setDuration(dur(320)).setInterpolator(dec).withLayer();
+            if (mv != null && (mv == mapClipView || mv == mapCardView)) slideMap(mv, from, dec, 0, dur(380), null);
+        }});
     }
 
     /** Tema premium elegido y desbloqueado. */

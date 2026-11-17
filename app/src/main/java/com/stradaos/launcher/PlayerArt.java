@@ -77,8 +77,10 @@ public class PlayerArt extends View {
     }
 
     private void drawSquare(Canvas c, float w, float h) {
-        float side = Math.min(w, h), l = (w - side) / 2 + 2 * s, t = (h - side) / 2 + 2 * s;
-        float r = l + side - 4 * s, b = t + side - 4 * s, k = side * 0.22f;
+        // margen = radio del puntito + un poco: así el puntito del avance nunca se corta en el borde de la vista
+        float in = 5.5f * s;
+        float side = Math.min(w, h), l = (w - side) / 2 + in, t = (h - side) / 2 + in;
+        float r = l + side - 2 * in, b = t + side - 2 * in, k = side * 0.22f;
         if (w != sqW || h != sqH) { buildSquarePath(l, t, r, b, k); sqW = w; sqH = h; }
         ring.setStrokeWidth(3 * s);
         prog.setStrokeWidth(3 * s);
@@ -90,9 +92,9 @@ public class PlayerArt extends View {
             pm.getSegment(0, len, sqSeg, true);
             sqSeg.rLineTo(0, 0);   // Android 4.4 y antes: sin esto el tramo no se dibuja
             c.drawPath(sqSeg, prog);
-            if (pm.getPosTan(len, sqPos, null)) c.drawCircle(sqPos[0], sqPos[1], 4.5f * s, knob);
+            if (pm.getPosTan(len, sqPos, null)) c.drawCircle(sqPos[0], sqPos[1], 4f * s, knob);
         }
-        float g = 7 * s, ik = Math.max(2 * s, k - g);
+        float g = 6 * s, ik = Math.max(2 * s, k - g);
         box.set(l + g, t + g, r - g, b - g);
         if (bitmap != null && !bitmap.isRecycled()) {
             BitmapShader sh = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);

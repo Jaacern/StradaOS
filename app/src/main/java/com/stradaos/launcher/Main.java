@@ -3620,6 +3620,7 @@ public class Main extends Activity {
     private float premColW;
     private View mapCardView;
     private FrameLayout mapClipView;
+    private View premTopRow;
     private Bitmap premBg;
     private View premBgHolder;
     /** Hora y tarjetas de la cabecera: se animan al entrar y salir de «Solo mapa». */
@@ -3632,8 +3633,7 @@ public class Main extends Activity {
      */
     /** Mueve la tarjeta del mapa hasta su sitio redibujando el mapa en cada cuadro (el fondo de las esquinas y la
      *  transparencia se recalculan con la posición: así no se ve corrido mientras se mueve). */
-    private void slideMap(float from, android.animation.TimeInterpolator in, long delay, long dur, final Runnable end) {
-        final View v = mapCardView;
+    private void slideMap(final View v, float from, android.animation.TimeInterpolator in, long delay, long dur, final Runnable end) {
         v.setTranslationY(from);
         android.animation.ValueAnimator va = android.animation.ValueAnimator.ofFloat(from, 0f);
         va.setDuration(dur);
@@ -3685,15 +3685,21 @@ public class Main extends Activity {
             lp.gravity = Gravity.TOP | Gravity.LEFT;
             lp.leftMargin = bx[0];
             lp.topMargin = bx[1];
-            board.addView(iv, lp);
-            iv.animate().alpha(0f).translationY(-22 * s).setStartDelay(45L * (n - 1 - i)).setDuration(260).setInterpolator(acc)
+            board.addView(iv, 0, lp);   // debajo de todo: el mapa que sube las tapa, como al volver las trae
+            iv.animate().alpha(0f).translationY(-36 * s).setStartDelay(45L * (n - 1 - i)).setDuration(300).setInterpolator(acc)
                 .withEndAction(new Runnable() { public void run() {
                     board.removeView(iv);
                     iv.setImageDrawable(null);
                     b.recycle();
                 }});
         }
-        if (mapCardView != null && rise > 0) slideMap(rise, dec, 60, 420, null);
+        // el mapa sube por encima de las tarjetas (que quedaron debajo) dentro de su marco
+        if (mapCardView != null && rise > 0) slideMap(mapCardView, rise, dec, 40, 420, null);
+        // la hora pequeña de arriba aparece cuando la grande ya se fue (sin dos horas a la vez)
+        if (premTopRow != null) {
+            premTopRow.setAlpha(0f);
+            premTopRow.animate().alpha(1f).setStartDelay(200).setDuration(220);
+        }
     }
 
     private void toggleMapOnly() {
@@ -3731,15 +3737,10 @@ public class Main extends Activity {
                 v.setTranslationY(-22 * s);
                 v.animate().alpha(1f).translationY(0).setStartDelay(60 + 45 * k++).setDuration(320).setInterpolator(dec);
             }
-            if (mapCardView != null) {
-                // al volver el mapa baja desde arriba: mientras tanto puede dibujarse fuera de su marco
-                final FrameLayout clip = mapClipView;
-                final FrameLayout bd = board;
-                if (clip != null) { clip.setClipChildren(false); bd.setClipChildren(false); }
-                slideMap(-premHeadH * 0.45f * s, dec, 0, 380, new Runnable() { public void run() {
-                    if (clip != null) { clip.setClipChildren(true); bd.setClipChildren(true); }
-                }});
-            }
+            // al volver baja el marco del mapa completo, con todo lo de adentro: el panel de Android Auto / CarPlay
+            // se mueve junto con el mapa si está abierto y sigue escondido si está plegado
+            View mv = mapClipView != null ? mapClipView : mapCardView;
+            if (mv != null) slideMap(mv, -premHeadH * 0.45f * s, dec, 0, 380, null);
         }
     }
 
@@ -3849,6 +3850,7 @@ public class Main extends Activity {
         topNavPill = pill;
         row.addView(pill, plp);
         placeWrap(board, row, 24, mapOnly ? 10 : 20);
+        premTopRow = row;
 
         LinearLayout right = new LinearLayout(this);
         right.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);

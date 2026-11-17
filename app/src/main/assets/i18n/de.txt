@@ -1118,3 +1118,7 @@ Quitar el tema premium	Premium-Design entfernen
 Aplicar	Anwenden
 Versión de prueba: se puede aplicar sin código.	Testversion: ohne Code anwendbar.
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Bald mit einer Spende erhältlich. Alle Funktionen bleiben kostenlos.
+Cobalto	Kobalt
+Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, un deportivo en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Nachtblau in drei Spalten: Die Karte blendet zum Player mit rundem Cover aus, dein Fahrzeug zeigt oben den Tacho, in der Mitte einen Sportwagen und unten die Wartung. Die Temperatur steht über der Karte.
+Foto de tu vehículo en Cobalto	Foto deines Fahrzeugs in Kobalt
+Apagado: el deportivo de StradaOS. Encendido: la foto que elegiste en Tu vehículo	Aus: der Sportwagen von StradaOS. An: das Foto aus Dein Fahrzeug

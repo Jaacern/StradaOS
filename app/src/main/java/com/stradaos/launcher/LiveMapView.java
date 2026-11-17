@@ -127,6 +127,35 @@ public class LiveMapView extends View {
     private final android.graphics.Matrix backM = new android.graphics.Matrix();
     private final int[] locA = new int[2], locB = new int[2];
 
+    // Tema Cobalto: el mapa se difumina hacia un borde (1 = derecha, 2 = abajo) hasta quedar en el fondo.
+    private int fadeEdge;
+    private float fadeLen;
+
+    void setFade(int edge, float len) {
+        fadeEdge = edge;
+        fadeLen = len;
+        invalidate();
+    }
+
+    /** Franjas del fondo con opacidad creciente (sin capas ni ComposeShader: barato también en Android 4.1). */
+    private void drawFade(Canvas c, float w, float h) {
+        if (fadeEdge == 0 || fadeLen <= 0) return;
+        int n = 24;
+        float len = Math.min(fadeLen, fadeEdge == 1 ? w : h), step = len / n;
+        for (int i = 0; i < n; i++) {
+            float t = (i + 1f) / n;
+            back.setAlpha(Math.round(255 * t * t * (3 - 2 * t)));   // curva suave
+            if (fadeEdge == 1) {
+                float x = w - len + i * step;
+                c.drawRect(x, 0, (i == n - 1 ? w : x + step + 1), h, back);
+            } else {
+                float y = h - len + i * step;
+                c.drawRect(0, y, w, (i == n - 1 ? h : y + step + 1), back);
+            }
+        }
+        back.setAlpha(255);
+    }
+
     /** holder: la vista que tiene el fondo estirado a su tamaño. alpha: opacidad de las teselas (1 = como siempre). */
     void setBackdrop(Bitmap bmp, View holder, float alpha) {
         backdrop = bmp;
@@ -419,6 +448,7 @@ public class LiveMapView extends View {
             drawRoute(c, fx, fy, cx, cy, ts, n);
             if (rot) c.restore();
             drawMarker(c, cx, cy, rot);
+            if (bd) drawFade(c, w, h);
             String attr = anyFile ? I18n.t("© colaboradores de OpenStreetMap") + " · mapsforge"
                     : provider == 5 ? "© Esri, HERE, Garmin, © OpenStreetMap" : provider == 4 ? "© OpenStreetMap, SRTM · © OpenTopoMap" : I18n.t("© colaboradores de OpenStreetMap");
             c.drawText(attr, w - text.measureText(attr) - 10 * s, (Nav.active != null ? 96 : 14) * s, text);

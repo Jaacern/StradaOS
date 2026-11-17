@@ -1118,3 +1118,7 @@ Quitar el tema premium	移除高级主题
 Aplicar	应用
 Versión de prueba: se puede aplicar sin código.	测试版：无需代码即可应用。
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	即将通过捐赠提供。所有功能仍然免费。
+Cobalto	钴蓝
+Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, un deportivo en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	三栏夜蓝风格：地图渐隐到圆形封面的播放器，车辆卡片上方是车速表、中间是一辆跑车、下方是保养。温度显示在地图上方。
+Foto de tu vehículo en Cobalto	在钴蓝中使用你的车辆照片
+Apagado: el deportivo de StradaOS. Encendido: la foto que elegiste en Tu vehículo	关闭：StradaOS 跑车。开启：你在「你的车辆」中选择的照片

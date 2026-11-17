@@ -3598,6 +3598,10 @@ public class Main extends Activity {
 
     private boolean premium, mapOnly;
     private float premHeadY = 60, premHeadH, premPillH;
+    /** Pantallas muy anchas y bajas (1280×480, 1920×720): hora y tarjetas en una columna a la izquierda y el mapa
+     *  a la derecha con todo el alto; con la cabecera arriba el mapa quedaba como una franja. */
+    private boolean premWide;
+    private float premColW;
 
     /** Tema premium elegido y desbloqueado. */
     private boolean premiumActive() {
@@ -3631,6 +3635,13 @@ public class Main extends Activity {
         mapX = 16;
         mapW = premW() - 32;
         mapY = mapOnly ? premHeadY : premHeadY + premHeadH + 12;
+        premWide = !vertical && !mapOnly && ex >= 380;
+        if (premWide) {
+            premColW = 372 + Math.min(120, (ex - 380) / 3f);
+            mapX = 16 + premColW + 12;
+            mapW = premW() - 32 - premColW - 12;
+            mapY = premHeadY;
+        }
         mapH = Math.max(120, dockTop - (noDock ? 16 : 12) - mapY);
         cardH = mapH; rowY = mapY; insL = insR = 0;
         carX = audX = 16; audW = 248;
@@ -3791,6 +3802,17 @@ public class Main extends Activity {
         clock.addView(timeTv);
         clock.addView(dateTv);
         float wy, wh, wW, wx0;
+        if (premWide) {
+            // columna izquierda: la hora, la música a lo ancho y debajo el vehículo y el clima
+            float colW = premColW, bottom = dockTop - (noDock ? 16 : 12), wy0 = y + 96;
+            float rowH = (bottom - wy0 - gap) / 2;
+            place(board, clock, 24, y, colW - 8, 88);
+            buildPremMusic(16, wy0, colW, rowH);
+            float hw = wxOn ? (colW - gap) / 2 : colW;
+            buildPremCar(16, wy0 + rowH + gap, hw, rowH);
+            if (wxOn) buildPremWeather(16 + hw + gap, wy0 + rowH + gap, hw, rowH);
+            return;
+        }
         if (vertical) {
             place(board, clock, 24, y, cw - 16, 92);
             wy = y + 100;
@@ -3959,7 +3981,9 @@ public class Main extends Activity {
         card.setBackground(glass(18));
         card.setPadding((int) (10 * s), (int) (12 * s), (int) (10 * s), (int) (8 * s));
         place(board, card, x, y, w, hh);
-        card.addView(tv("Clima", 11, MUTED, true));
+        TextView wl = tv("Clima", 11, MUTED, true);
+        wl.setGravity(Gravity.CENTER_HORIZONTAL);
+        card.addView(wl);
         float is = hh >= 170 ? 46 : 40;
         panelWxIc = icon("cloud", is);
         LinearLayout.LayoutParams ilp = new LinearLayout.LayoutParams((int) (is * s), (int) (is * s));
@@ -3967,12 +3991,15 @@ public class Main extends Activity {
         card.addView(panelWxIc, ilp);
         panelWxTemp = tv("--°", hh >= 170 ? 30 : 26, TEXT, true);
         panelWxTemp.setPadding(0, (int) (4 * s), 0, 0);
+        panelWxTemp.setGravity(Gravity.CENTER_HORIZONTAL);
         card.addView(panelWxTemp);
         panelWxDesc = tv("Clima", 12, TEXT, false);
         panelWxDesc.setPadding(0, (int) (4 * s), 0, 0);
+        panelWxDesc.setGravity(Gravity.CENTER_HORIZONTAL);
         card.addView(panelWxDesc);
         panelWxHiLo = tv("", 11, MUTED, false);
         panelWxHiLo.setPadding(0, (int) (3 * s), 0, 0);
+        panelWxHiLo.setGravity(Gravity.CENTER_HORIZONTAL);
         card.addView(panelWxHiLo);
         panelWxHours = null;
         panelWx = card;
@@ -4095,6 +4122,8 @@ public class Main extends Activity {
         info.addView(mode);
         if (unlocked) {
             TextView btn = tv(inUse ? "Quitar el tema premium" : "Aplicar", 14, inUse ? TEXT : 0xFFFFFFFF, true);
+            btn.setText(btn.getText() + " ");   // en negrita la última letra se recortaba
+            btn.setEllipsize(null);
             btn.setGravity(Gravity.CENTER);
             btn.setBackground(round(inUse ? BTN : RED, 18));
             btn.setPadding((int) (18 * s), (int) (9 * s), (int) (18 * s), (int) (9 * s));

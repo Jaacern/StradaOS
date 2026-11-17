@@ -68,11 +68,11 @@ final class Aurora {
         Paint p = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG);
         boolean tall = h > w * 1.05f;
         float big = Math.max(w, h);
-        glow(c, p, w * 0.86f, -h * 0.08f, big * (tall ? 0.62f : 0.52f), accent, light ? 0.26f : 0.34f);
+        glow(c, p, w * 0.86f, -h * 0.08f, big * (tall ? 0.62f : 0.52f), accent, light ? 0.24f : 0.26f);
         // arco: centro fuera de la pantalla, abajo a la izquierda; el anillo pasa por detrás de las tarjetas y el mapa
         float cx = tall ? -w * 0.35f : w * 0.18f, cy = tall ? h * 0.92f : h * 1.32f, R = tall ? w * 1.55f : big * 0.95f;
         p.setShader(new RadialGradient(cx, cy, R,
-            new int[]{0, 0, a(VIOLET, light ? 0.26f : 0.50f), a(accent, light ? 0.20f : 0.32f), 0},
+            new int[]{0, 0, a(VIOLET, light ? 0.26f : 0.50f), a(accent, light ? 0.20f : 0.26f), 0},
             new float[]{0f, 0.58f, 0.74f, 0.86f, 1f}, Shader.TileMode.CLAMP));
         c.drawRect(0, 0, w, h, p);
         glow(c, p, w * 0.04f, h * 0.98f, big * 0.42f, VIOLET, light ? 0.16f : 0.30f);

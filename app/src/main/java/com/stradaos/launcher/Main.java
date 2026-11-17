@@ -2568,7 +2568,15 @@ public class Main extends Activity {
             return;
         }
         FrameLayout card = new FrameLayout(this);
-        place(board, card, mapX, mapY, mapW, mapH);
+        mapClipView = null;
+        if (premium) {
+            // Aurora: el mapa va dentro de un marco con su tamaño final; al entrar a «Solo mapa» la tarjeta sube
+            // dentro del marco y el borde de abajo se queda quieto (no se asoma por debajo junto a la barra)
+            FrameLayout clip = new FrameLayout(this);
+            place(board, clip, mapX, mapY, mapW, mapH);
+            place(clip, card, 0, 0, mapW, mapH);
+            mapClipView = clip;
+        } else place(board, card, mapX, mapY, mapW, mapH);
         mapCardView = card;
         // fondo decorativo mientras no hay GPS; encima, el mapa en vivo
         card.addView(new MapView(this, s, 20 * s), new FrameLayout.LayoutParams(-1, -1));
@@ -3611,6 +3619,7 @@ public class Main extends Activity {
     private boolean premWide;
     private float premColW;
     private View mapCardView;
+    private FrameLayout mapClipView;
     private Bitmap premBg;
     private View premBgHolder;
     /** Hora y tarjetas de la cabecera: se animan al entrar y salir de «Solo mapa». */
@@ -3623,12 +3632,16 @@ public class Main extends Activity {
      */
     /** Mueve la tarjeta del mapa hasta su sitio redibujando el mapa en cada cuadro (el fondo de las esquinas y la
      *  transparencia se recalculan con la posición: así no se ve corrido mientras se mueve). */
-    private void slideMap(float from, android.animation.TimeInterpolator in) {
+    private void slideMap(float from, android.animation.TimeInterpolator in, long delay, long dur, final Runnable end) {
         final View v = mapCardView;
         v.setTranslationY(from);
         android.animation.ValueAnimator va = android.animation.ValueAnimator.ofFloat(from, 0f);
-        va.setDuration(380);
+        va.setDuration(dur);
+        va.setStartDelay(delay);
         va.setInterpolator(in);
+        if (end != null) va.addListener(new android.animation.AnimatorListenerAdapter() {
+            @Override public void onAnimationEnd(android.animation.Animator a) { end.run(); }
+        });
         va.addUpdateListener(new android.animation.ValueAnimator.AnimatorUpdateListener() {
             public void onAnimationUpdate(android.animation.ValueAnimator a) {
                 v.setTranslationY((Float) a.getAnimatedValue());
@@ -3638,7 +3651,53 @@ public class Main extends Activity {
         va.start();
     }
 
+    /**
+     * Entrar a «Solo mapa» (pedido de Andrés: sin desvanecer todo): la hora y las tarjetas se van hacia arriba una tras
+     * otra, en el orden contrario al de volver, y el mapa sube hasta arriba. Las tarjetas que se van son fotos de las
+     * de antes (el inicio nuevo ya está armado debajo); el mapa sube dentro de su marco con el borde de abajo quieto.
+     */
+    private void enterMapOnly() {
+        final List<View> heads = new ArrayList<View>(premHeadViews);
+        final List<Bitmap> shots = new ArrayList<Bitmap>();
+        final List<int[]> boxes = new ArrayList<int[]>();
+        for (View v : heads) {
+            try {
+                if (v.getWidth() <= 0 || v.getHeight() <= 0) continue;
+                Bitmap b = Bitmap.createBitmap(v.getWidth(), v.getHeight(), Bitmap.Config.ARGB_8888);
+                v.draw(new android.graphics.Canvas(b));
+                shots.add(b);
+                boxes.add(new int[]{v.getLeft(), v.getTop(), v.getWidth(), v.getHeight()});
+            } catch (Throwable ignored) { }
+        }
+        final float rise = premWide ? 0 : (premHeadH + 12) * s;
+        mapOnly = true;
+        prefs.edit().putBoolean("prem_map_only", true).apply();
+        rebuild();
+        android.view.animation.DecelerateInterpolator dec = new android.view.animation.DecelerateInterpolator(1.6f);
+        android.view.animation.AccelerateInterpolator acc = new android.view.animation.AccelerateInterpolator(1.2f);
+        int n = shots.size();
+        for (int i = n - 1; i >= 0; i--) {
+            final Bitmap b = shots.get(i);
+            int[] bx = boxes.get(i);
+            final ImageView iv = new ImageView(this);
+            iv.setImageBitmap(b);
+            FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(bx[2], bx[3]);
+            lp.gravity = Gravity.TOP | Gravity.LEFT;
+            lp.leftMargin = bx[0];
+            lp.topMargin = bx[1];
+            board.addView(iv, lp);
+            iv.animate().alpha(0f).translationY(-22 * s).setStartDelay(45L * (n - 1 - i)).setDuration(260).setInterpolator(acc)
+                .withEndAction(new Runnable() { public void run() {
+                    board.removeView(iv);
+                    iv.setImageDrawable(null);
+                    b.recycle();
+                }});
+        }
+        if (mapCardView != null && rise > 0) slideMap(rise, dec, 60, 420, null);
+    }
+
     private void toggleMapOnly() {
+        if (!mapOnly) { enterMapOnly(); return; }
         Bitmap snap = null;
         FrameLayout.LayoutParams olp = null;
         try {
@@ -3664,10 +3723,7 @@ public class Main extends Activity {
                 ov.setImageDrawable(null);
                 shot.recycle();
             }});
-        if (mapOnly) {
-            // el mapa sube desde donde estaba (debajo de la cabecera) hasta arriba
-            if (mapCardView != null) slideMap(premHeadH * 0.55f * s, dec);
-        } else {
+        {
             // la cabecera baja desde arriba, una tarjeta tras otra, y el mapa baja a su sitio
             int k = 0;
             for (View v : premHeadViews) {
@@ -3675,7 +3731,15 @@ public class Main extends Activity {
                 v.setTranslationY(-22 * s);
                 v.animate().alpha(1f).translationY(0).setStartDelay(60 + 45 * k++).setDuration(320).setInterpolator(dec);
             }
-            if (mapCardView != null) slideMap(-premHeadH * 0.45f * s, dec);
+            if (mapCardView != null) {
+                // al volver el mapa baja desde arriba: mientras tanto puede dibujarse fuera de su marco
+                final FrameLayout clip = mapClipView;
+                final FrameLayout bd = board;
+                if (clip != null) { clip.setClipChildren(false); bd.setClipChildren(false); }
+                slideMap(-premHeadH * 0.45f * s, dec, 0, 380, new Runnable() { public void run() {
+                    if (clip != null) { clip.setClipChildren(true); bd.setClipChildren(true); }
+                }});
+            }
         }
     }
 
@@ -3915,7 +3979,8 @@ public class Main extends Activity {
         sourceTv.setGravity(Gravity.RIGHT);
         sourceTv.setPadding(0, 0, (int) (4 * s), 0);
         place(card, sourceTv, w * 0.38f, 12, w * 0.62f - m + 4, 16);
-        float A = Math.min(hh * 0.46f, w * 0.36f), ay = 32;
+        // horizontal: carátula un poco más chica para dejar aire entre la línea de tiempo y los botones
+        float A = vertical ? Math.min(hh * 0.46f, w * 0.36f) : Math.min(hh * 0.39f, w * 0.34f), ay = vertical ? 32 : 30;
         playerArt = new PlayerArt(this, s, asset("ic/music_note.png"));
         // carátula cuadrada con esquinas redondas y el avance alrededor con la misma forma (como la referencia)
         playerArt.setSquare(LIGHT ? 0x1F000000 : 0x2EFFFFFF, LIGHT ? 0x14000000 : 0x1AFFFFFF);
@@ -3926,7 +3991,7 @@ public class Main extends Activity {
         artistTv = tv("Radio, Bluetooth o USB", 11, MUTED, false);
         place(card, artistTv, tx, ay + A * 0.5f + 3, tw, 16);
         timePosTv = tv("", 10, MUTED, false);   // no se muestra: el avance va en el anillo de la carátula
-        float rowTop = ay + A + 2, rowH = hh - rowTop - 6, ps = Math.min(40, rowH), bs = ps;
+        float rowTop = ay + A + (vertical ? 2 : 10), rowH = hh - rowTop - (vertical ? 6 : 8), ps = Math.min(40, rowH), bs = ps;
         float cx = w / 2, ry = rowTop + (rowH - ps) / 2, sp = Math.min(14, (w - 3 * ps) / 4);
         final View prev = circleIcon("skip_previous", bs, bs * 0.58f, 0), next = circleIcon("skip_next", bs, bs * 0.58f, 0);
         prev.setBackground(round(Aurora.soft(LIGHT), bs / 2));

@@ -33,7 +33,7 @@ final class Aurora {
     static int pillEdge(boolean light) { return light ? 0xA6FFFFFF : 0x24FFFFFF; }
     static int pillIcon(boolean light) { return light ? 0xFF2A2533 : 0xFFEDEAF2; }
     /** Opacidad de las teselas del mapa: se alcanza a ver el fondo sin perder la lectura del mapa. */
-    static float mapAlpha(boolean light) { return light ? 0.84f : 0.86f; }
+    static float mapAlpha(boolean light) { return light ? 0.70f : 0.72f; }
     /** Botones dentro de las tarjetas translúcidas (anterior/siguiente, fondo de la barrita del mantenimiento). */
     static int soft(boolean light) { return light ? 0x14000000 : 0x1AFFFFFF; }
 

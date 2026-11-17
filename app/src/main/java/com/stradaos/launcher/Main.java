@@ -1111,7 +1111,7 @@ public class Main extends Activity {
         // 2.24: tema premium «Aurora»: su propia distribución (la barra lateral y la compacta no aplican)
         premium = premiumActive();
         Prem.style = premium ? prefs.getString("premium_theme", Aurora.ID) : Aurora.ID;
-        mapOnly = premium && prefs.getBoolean("prem_map_only", false);
+        mapOnly = premium && !Prem.cob() && prefs.getBoolean("prem_map_only", false);   // Cobalto es fijo: sin «Solo mapa»
         if (premium) { sideDock = false; compactDock = false; }
         // Lienzo virtual: 1024x600. Con la barra lateral los botones salen de abajo y el lienzo queda más bajo
         // (1128x460): en pantallas bajas y anchas como 1280x480 todo se ve ~30 % más grande.
@@ -2587,7 +2587,7 @@ public class Main extends Activity {
         // Aurora: esquinas redondas de verdad sobre el fondo y el mapa un poco translúcido
         if (premium && premBg != null) liveMap.setBackdrop(premBg, premBgHolder, Prem.mapAlpha(LIGHT));
         // Cobalto: el mapa se difumina hasta donde empieza el reproductor (abajo, hacia las tarjetas, en vertical)
-        if (premium && Prem.cob() && !mapOnly && premBg != null) liveMap.setFade(vertical ? 2 : 1, (vertical ? 160 : 170) * s);
+        if (premium && Prem.cob() && !mapOnly && premBg != null) liveMap.setFade(vertical ? 2 : 1, (vertical ? 230 : Math.max(260, mapW * 0.5f)) * s);
         liveMap.setVisibility(View.INVISIBLE);
         liveMap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) { liveMap.cycleZoom(); }
@@ -3759,6 +3759,7 @@ public class Main extends Activity {
     }
 
     private void toggleMapOnly() {
+        if (Prem.cob()) return;   // Cobalto no tiene «Solo mapa»
         if (!mapOnly) { enterMapOnly(); return; }
         Bitmap snap = null;
         FrameLayout.LayoutParams olp = null;
@@ -3949,33 +3950,39 @@ public class Main extends Activity {
     }
 
     /** Reproductor: carátula redonda con el avance alrededor, canción y artista centrados y los controles abajo. */
+    /** Inclinación de las tarjetas de Cobalto (el borde de arriba corrido a la derecha), en unidades del lienzo. */
+    private float cobSkew(float w, float hh) { return Math.min(20, Math.min(w * 0.075f, hh * 0.05f)); }
+
     private void buildCobMusic(float x, float y, float w, float hh) {
         final FrameLayout card = new FrameLayout(this);
-        card.setBackground(glass(22));
+        final float sk = cobSkew(w, hh);
+        card.setBackground(new Cobalto.SkewCard(LIGHT, 24 * s, sk * s, s));
         place(board, card, x, y, w, hh);
         premHeadViews.add(card);
         float m = 16;
-        placeWrap(card, tv("Música", 11, MUTED, true), m, 14);
-        sourceTv = tv("", 10, RED, true);
+        placeWrap(card, tv("Música", 12, MUTED, true), m + sk, 14);
+        sourceTv = tv("", 11, RED, true);
         sourceTv.setGravity(Gravity.RIGHT);
         place(card, sourceTv, w * 0.38f, 14, w * 0.62f - m, 16);
-        float d = Math.min(w * (vertical ? 0.56f : 0.68f), hh * 0.40f);
-        float ps = vertical ? 44 : 48, bs = ps - 6;
-        float block = d + 14 + 22 + 4 + 18 + 6 + 14, avail = hh - 38 - 16, total = block + 18 + ps;
+        // elementos grandes: carátula, títulos y botones
+        float d = vertical ? Math.min(w * 0.58f, hh * 0.40f) : Math.min(w * 0.80f, hh * 0.46f);
+        float ps = vertical ? 54 : 60, bs = ps - 8;
+        float tH = vertical ? 24 : 28, aH = vertical ? 20 : 22;
+        float block = d + 14 + tH + 2 + aH + 4 + 16, avail = hh - 38 - 16, total = block + 16 + ps;
         float y0 = 38 + Math.max(0, (avail - total) / 2);
         playerArt = new PlayerArt(this, s, asset("ic/music_note.png"));
         place(card, playerArt, (w - d) / 2, y0, d, d);
         float ty = y0 + d + 14;
-        trackTv = tv("Nada sonando", vertical ? 15 : 16, TEXT, true);
+        trackTv = tv("Nada sonando", vertical ? 18 : 20, TEXT, true);
         trackTv.setGravity(Gravity.CENTER_HORIZONTAL);
-        place(card, trackTv, m, ty, w - 2 * m, 22);
-        artistTv = tv("Radio, Bluetooth o USB", 12, MUTED, false);
+        place(card, trackTv, m, ty, w - 2 * m, tH);
+        artistTv = tv("Radio, Bluetooth o USB", vertical ? 14 : 15, MUTED, false);
         artistTv.setGravity(Gravity.CENTER_HORIZONTAL);
-        place(card, artistTv, m, ty + 26, w - 2 * m, 18);
-        timePosTv = tv("", 10, MUTED, false);
+        place(card, artistTv, m, ty + tH + 2, w - 2 * m, aH);
+        timePosTv = tv("", 11, MUTED, false);
         timePosTv.setGravity(Gravity.CENTER_HORIZONTAL);
-        place(card, timePosTv, m, ty + 48, w - 2 * m, 14);
-        float ry = y0 + block + 18, cx = w / 2, sp = Math.min(18, (w - ps - 2 * bs) / 4);
+        place(card, timePosTv, m, ty + tH + 2 + aH + 4, w - 2 * m, 16);
+        float ry = y0 + block + 16, cx = w / 2, sp = Math.min(20, (w - ps - 2 * bs) / 4);
         final View prev = circleIcon("skip_previous", bs, bs * 0.56f, 0), next = circleIcon("skip_next", bs, bs * 0.56f, 0);
         prev.setBackground(round(Prem.soft(LIGHT), bs / 2));
         next.setBackground(round(Prem.soft(LIGHT), bs / 2));
@@ -4011,12 +4018,13 @@ public class Main extends Activity {
     /** Vehículo: velocímetro arriba (digital, analógico o mixto), el auto en el medio y el mantenimiento abajo. */
     private void buildCobCar(float x, float y, float w, float hh) {
         FrameLayout card = new FrameLayout(this);
-        card.setBackground(glass(22));
+        final float sk = cobSkew(w, hh);
+        card.setBackground(new Cobalto.SkewCard(LIGHT, 24 * s, sk * s, s));
         place(board, card, x, y, w, hh);
         premHeadViews.add(card);
         float m = 14;
-        carTv = tv(prefs.getString("car_name", "Mi vehículo"), 11, MUTED, true);
-        place(card, carTv, m + 2, 14, w - 2 * m - 70, 16);
+        carTv = tv(prefs.getString("car_name", "Mi vehículo"), 12, MUTED, true);
+        place(card, carTv, m + 2 + sk, 14, w - 2 * m - 70 - sk, 16);
         LinearLayout g = new LinearLayout(this);
         g.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
         gpsDot = new View(this);
@@ -4045,9 +4053,9 @@ public class Main extends Activity {
             carGauge.setUnit(useMph());
             carGauge.setNumber(speedo == 2);
             carGauge.setCompact(gh < 170);
-            place(card, carGauge, 10, top, w - 20, gh);
+            place(card, carGauge, 10 + sk * 0.5f, top, w - 20 - sk * 0.5f, gh);
         } else if (carSpeed) {
-            place(card, sv, 10, top, w - 20, gh);
+            place(card, sv, 10 + sk * 0.5f, top, w - 20 - sk * 0.5f, gh);
         }
         // el auto: el deportivo de StradaOS o, si se elige en Pantalla de inicio, la foto de Tu vehículo
         float cy = top + gh + (carSpeed ? 4 : 0), ch = (oilHome ? stripY - 8 : hh - 12) - cy;
@@ -4061,9 +4069,10 @@ public class Main extends Activity {
             car.setScaleType(ImageView.ScaleType.FIT_CENTER);
             place(card, car, m, cy, w - 2 * m, ch);
         } else {
-            place(card, new Cobalto.CarSketch(this, LIGHT, RED), 8, cy, w - 16, ch);
+            // el auto del tema pegado a la derecha, cortado por el borde inclinado de la tarjeta, con su sombra
+            place(card, new Cobalto.CarCut(this, Cobalto.car(this), sk * s, 24 * s, cy * s, (cy + ch) * s), 0, 0, w, hh);
         }
-        if (oilHome) premOilStrip(card, m - 4, stripY, w - 2 * m + 8, stripH);
+        if (oilHome) premOilStrip(card, m - 4, stripY, w - 2 * m + 8 - sk, stripH);
         else { oilValTv = null; oilBar = null; oilBarBg = null; oilLblTv = null; oilIc = null; }
         card.setOnClickListener(new View.OnClickListener() { public void onClick(View v) {
             if (oilHome) badgeMenu(); else showSettings(C_VEHICLE);
@@ -4166,14 +4175,16 @@ public class Main extends Activity {
         gear.setBackground(glass(20));
         place(board, gear, bx, 12, 40, 40);
         gear.setOnClickListener(new View.OnClickListener() { public void onClick(View v) { openSettings(); } });
-        bx -= 50;
-        FrameLayout tg = new FrameLayout(this);
-        tg.setBackground(glass(20));
-        Aurora.Corners cr = new Aurora.Corners(this, ICON, 2.2f * s);
-        cr.inward = mapOnly;
-        tg.addView(cr, new FrameLayout.LayoutParams(-1, -1));
-        place(board, tg, bx, 12, 40, 40);
-        tg.setOnClickListener(new View.OnClickListener() { public void onClick(View v) { toggleMapOnly(); } });
+        if (!Prem.cob()) {
+            bx -= 50;
+            FrameLayout tg = new FrameLayout(this);
+            tg.setBackground(glass(20));
+            Aurora.Corners cr = new Aurora.Corners(this, ICON, 2.2f * s);
+            cr.inward = mapOnly;
+            tg.addView(cr, new FrameLayout.LayoutParams(-1, -1));
+            place(board, tg, bx, 12, 40, 40);
+            tg.setOnClickListener(new View.OnClickListener() { public void onClick(View v) { toggleMapOnly(); } });
+        }
         if (noDock) {
             bx -= 50;
             View appsBtn = circleIcon("apps", 40, 22, 0);

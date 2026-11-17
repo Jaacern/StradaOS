@@ -35,7 +35,8 @@ final class Cobalto {
     static int pillEdge(boolean light) { return light ? 0xB3FFFFFF : 0x4D6E9BFF; }
     static int pillIcon(boolean light) { return light ? 0xFF1C2740 : 0xFFE4ECFF; }
     static int soft(boolean light) { return light ? 0x14000000 : 0x1F8FB4FF; }
-    static float mapAlpha(boolean light) { return light ? 0.84f : 0.86f; }
+    // el mapa casi transparente: domina el color del tema y se leen las calles (como la referencia)
+    static float mapAlpha(boolean light) { return light ? 0.50f : 0.45f; }
 
     /** Fondo: azul noche con un resplandor detrás de las tarjetas y un reflejo suave abajo, como un piso brillante. */
     static void paint(Canvas c, float w, float h, boolean light, int accent) {
@@ -62,123 +63,116 @@ final class Cobalto {
         c.drawRect(0, 0, c.getWidth(), c.getHeight(), p);
     }
 
-    /**
-     * Auto deportivo de perfil, diseño propio y genérico (no es ningún modelo real). Se dibuja con trazos, así se ve
-     * nítido en cualquier tamaño. Mira a la izquierda; faros en el color de acento claro, pilotos en el acento.
-     */
-    static final class CarSketch extends View {
-        private final Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
-        private final Path body = new Path(), glass = new Path();
-        private final RectF r = new RectF();
-        private final boolean light;
-        private final int accent;
-        private float lw = -1, lh;
+    /** Paralelogramo redondeado (tarjeta inclinada): el borde de arriba corrido sk a la derecha respecto al de abajo. */
+    static Path para(float l, float t, float r, float b, float sk, float rad) {
+        float[] xs = {l + sk, r, r - sk, l}, ys = {t, t, b, b};
+        Path p = new Path();
+        for (int i = 0; i < 4; i++) {
+            float px = xs[(i + 3) % 4], py = ys[(i + 3) % 4], cx = xs[i], cy = ys[i], nx = xs[(i + 1) % 4], ny = ys[(i + 1) % 4];
+            float d1 = (float) Math.hypot(cx - px, cy - py), d2 = (float) Math.hypot(nx - cx, ny - cy);
+            float k1 = Math.min(rad, d1 / 2) / d1, k2 = Math.min(rad, d2 / 2) / d2;
+            float ax = cx + (px - cx) * k1, ay = cy + (py - cy) * k1, bx = cx + (nx - cx) * k2, by = cy + (ny - cy) * k2;
+            if (i == 0) p.moveTo(ax, ay); else p.lineTo(ax, ay);
+            p.quadTo(cx, cy, bx, by);
+        }
+        p.close();
+        return p;
+    }
 
-        CarSketch(Context c, boolean light, int accent) {
-            super(c);
+    /** Fondo de tarjeta inclinada: vidrio azul con degradado vertical y borde fino de luz. */
+    static final class SkewCard extends android.graphics.drawable.Drawable {
+        private final Paint fill = new Paint(Paint.ANTI_ALIAS_FLAG), edge = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final boolean light;
+        private final float rad, sk;
+        private Path path;
+
+        SkewCard(boolean light, float rad, float sk, float stroke) {
             this.light = light;
-            this.accent = accent;
+            this.rad = rad;
+            this.sk = sk;
+            edge.setStyle(Paint.Style.STROKE);
+            edge.setStrokeWidth(Math.max(1f, stroke));
+            edge.setColor(glassEdge(light));
         }
 
-        // coordenadas de diseño: 100 de largo por 40 de alto
-        private float k, ox, oy;
-        private float X(float x) { return ox + x * k; }
-        private float Y(float y) { return oy + y * k; }
+        @Override protected void onBoundsChange(android.graphics.Rect b) {
+            float e = edge.getStrokeWidth() / 2;
+            path = para(b.left + e, b.top + e, b.right - e, b.bottom - e, sk, rad);
+            fill.setShader(new LinearGradient(0, b.top, 0, b.bottom, glassTop(light), glassBottom(light), Shader.TileMode.CLAMP));
+        }
 
-        private void build(float w, float h) {
-            k = Math.min(w / 100f, h / 40f);
-            ox = (w - 100 * k) / 2;
-            oy = (h - 40 * k) / 2;
-            body.reset();
-            body.moveTo(X(5), Y(30));
-            body.quadTo(X(2.5f), Y(29), X(3), Y(25.5f));
-            body.quadTo(X(4), Y(22), X(11), Y(21));
-            body.quadTo(X(26), Y(18.6f), X(40), Y(17.4f));
-            body.quadTo(X(46), Y(12.5f), X(53), Y(10.4f));
-            body.quadTo(X(62), Y(8.8f), X(70), Y(10.6f));
-            body.quadTo(X(82), Y(14), X(91), Y(17.4f));
-            body.quadTo(X(97), Y(18.6f), X(97.5f), Y(23));
-            body.quadTo(X(98), Y(28.5f), X(95), Y(30));
-            body.lineTo(X(87.5f), Y(30));
-            r.set(X(72.5f), Y(22.5f), X(87.5f), Y(37.5f));
-            body.arcTo(r, 0, -180, false);
-            body.lineTo(X(27.5f), Y(30));
-            r.set(X(12.5f), Y(22.5f), X(27.5f), Y(37.5f));
-            body.arcTo(r, 0, -180, false);
-            body.close();
-            glass.reset();
-            glass.moveTo(X(43), Y(17.6f));
-            glass.quadTo(X(48), Y(13.2f), X(54), Y(11.6f));
-            glass.quadTo(X(62), Y(10.3f), X(68.5f), Y(11.8f));
-            glass.quadTo(X(75), Y(13.8f), X(80), Y(16.4f));
-            glass.close();
-            lw = w;
-            lh = h;
+        @Override public void draw(Canvas c) {
+            if (path == null) return;
+            c.drawPath(path, fill);
+            c.drawPath(path, edge);
+        }
+
+        @Override public void setAlpha(int a) { }
+        @Override public void setColorFilter(android.graphics.ColorFilter f) { }
+        @Override public int getOpacity() { return android.graphics.PixelFormat.TRANSLUCENT; }
+    }
+
+    private static Bitmap carBmp;
+
+    /** Foto del auto del tema (assets/cobalto_car.png, fondo transparente). Se carga una vez. */
+    static Bitmap car(Context c) {
+        if (carBmp != null && !carBmp.isRecycled()) return carBmp;
+        try {
+            java.io.InputStream in = c.getAssets().open("cobalto_car.png");
+            carBmp = android.graphics.BitmapFactory.decodeStream(in);
+            in.close();
+        } catch (Throwable e) { carBmp = null; }
+        return carBmp;
+    }
+
+    /**
+     * El auto pegado a la derecha de la tarjeta y cortado por su borde inclinado, con su sombra en el piso. Se compone
+     * una sola vez en un Bitmap (lienzo por software: ahí sí sirve recortar con un Path, también en Android 4.1).
+     */
+    static final class CarCut extends View {
+        private final Bitmap car;
+        private final float sk, rad, areaTop, areaBottom;
+        private Bitmap out;
+
+        /** areaTop/areaBottom: franja vertical (px) donde va el auto dentro de la tarjeta. */
+        CarCut(Context c, Bitmap car, float sk, float rad, float areaTop, float areaBottom) {
+            super(c);
+            this.car = car;
+            this.sk = sk;
+            this.rad = rad;
+            this.areaTop = areaTop;
+            this.areaBottom = areaBottom;
+        }
+
+        @Override protected void onSizeChanged(int w, int h, int ow, int oh) {
+            if (out != null) { out.recycle(); out = null; }
+            if (w <= 0 || h <= 0 || car == null) return;
+            try { out = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888); } catch (Throwable e) { return; }
+            Canvas c = new Canvas(out);
+            c.clipPath(para(1, 1, w - 1, h - 1, sk, rad));
+            float aspect = car.getWidth() / (float) car.getHeight();
+            float ah = Math.max(10, areaBottom - areaTop), cw = w * 1.08f, ch = cw / aspect;
+            if (ch > ah) { ch = ah; cw = ch * aspect; }
+            float left = w - cw * 0.92f, top = areaBottom - ch;   // se sale un 8 % por la derecha
+            Paint p = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.FILTER_BITMAP_FLAG);
+            // sombra: una mancha ancha y suave y otra más oscura justo bajo las ruedas
+            float sy = top + ch * 0.92f;
+            shadow(c, p, left + cw * 0.48f, sy, cw * 0.56f, ch * 0.14f, 0x99000000);
+            shadow(c, p, left + cw * 0.46f, sy, cw * 0.44f, ch * 0.06f, 0xCC000000);
+            c.drawBitmap(car, null, new RectF(left, top, left + cw, top + ch), p);
+        }
+
+        private static void shadow(Canvas c, Paint p, float cx, float cy, float rx, float ry, int color) {
+            p.setShader(new RadialGradient(cx, cy, rx, new int[]{color, color & 0x40FFFFFF, 0}, new float[]{0f, 0.55f, 1f}, Shader.TileMode.CLAMP));
+            c.save();
+            c.scale(1f, ry / rx, cx, cy);
+            c.drawCircle(cx, cy, rx, p);
+            c.restore();
+            p.setShader(null);
         }
 
         @Override protected void onDraw(Canvas c) {
-            float w = getWidth(), h = getHeight();
-            if (w <= 0 || h <= 0) return;
-            if (w != lw || h != lh) build(w, h);
-            p.setStyle(Paint.Style.FILL);
-            // sombra en el piso
-            p.setShader(new RadialGradient(X(50), Y(37.5f), 52 * k, new int[]{light ? 0x40000000 : 0x8C000000, 0},
-                null, Shader.TileMode.CLAMP));
-            c.save();
-            c.scale(1f, 0.12f, X(50), Y(37.5f));
-            c.drawCircle(X(50), Y(37.5f), 52 * k, p);
-            c.restore();
-            // carrocería metálica
-            p.setShader(new LinearGradient(0, Y(9), 0, Y(31),
-                light ? new int[]{0xFFF4F7FC, 0xFFB9C3D6, 0xFF6F7C95} : new int[]{0xFFD6DEEC, 0xFF5D6B86, 0xFF1D2639},
-                new float[]{0f, 0.45f, 1f}, Shader.TileMode.CLAMP));
-            c.drawPath(body, p);
-            p.setShader(null);
-            // ventanas
-            p.setColor(light ? 0xFF2A3550 : 0xFF0A1122);
-            c.drawPath(glass, p);
-            p.setStyle(Paint.Style.STROKE);
-            p.setStrokeWidth(Math.max(1f, 1.1f * k));
-            p.setColor(light ? 0xFF8C97AD : 0xFF4A5875);
-            c.drawLine(X(63), Y(10.6f), X(64.5f), Y(17.2f), p);   // pilar
-            // línea de carácter y reflejo del techo
-            p.setColor(light ? 0x99FFFFFF : 0x66E4ECFF);
-            c.drawLine(X(12), Y(23.2f), X(90), Y(21.2f), p);
-            c.drawLine(X(55), Y(10.2f), X(68), Y(10.6f), p);
-            p.setStyle(Paint.Style.FILL);
-            // faro (acento claro con brillo) y piloto (acento)
-            p.setShader(new RadialGradient(X(6.5f), Y(23), 9 * k, new int[]{Aurora.a(ICE, 0.55f), 0}, null, Shader.TileMode.CLAMP));
-            c.drawCircle(X(6.5f), Y(23), 9 * k, p);
-            p.setShader(null);
-            p.setColor(0xFFE8F7FF);
-            r.set(X(4.5f), Y(22.2f), X(11.5f), Y(23.6f));
-            c.drawRoundRect(r, k, k, p);
-            p.setColor(accent);
-            r.set(X(92.5f), Y(19.2f), X(97.2f), Y(20.8f));
-            c.drawRoundRect(r, k, k, p);
-            // ruedas
-            wheel(c, 20, 30);
-            wheel(c, 80, 30);
-        }
-
-        private void wheel(Canvas c, float cx, float cy) {
-            p.setShader(null);
-            p.setStyle(Paint.Style.FILL);
-            p.setColor(0xFF0B0F18);
-            c.drawCircle(X(cx), Y(cy), 6.2f * k, p);
-            p.setShader(new RadialGradient(X(cx), Y(cy), 4.2f * k, new int[]{0xFFC9D2E2, 0xFF55617A}, null, Shader.TileMode.CLAMP));
-            c.drawCircle(X(cx), Y(cy), 4.2f * k, p);
-            p.setShader(null);
-            p.setColor(0xFF1A2232);
-            p.setStyle(Paint.Style.STROKE);
-            p.setStrokeWidth(Math.max(1f, 0.9f * k));
-            for (int i = 0; i < 5; i++) {
-                double a = Math.PI * 2 * i / 5 - Math.PI / 2;
-                c.drawLine(X(cx), Y(cy), X(cx) + (float) Math.cos(a) * 3.9f * k, Y(cy) + (float) Math.sin(a) * 3.9f * k, p);
-            }
-            p.setStyle(Paint.Style.FILL);
-            p.setColor(0xFF2A3348);
-            c.drawCircle(X(cx), Y(cy), 1.1f * k, p);
+            if (out != null) c.drawBitmap(out, 0, 0, null);
         }
     }
 
@@ -212,15 +206,15 @@ final class Cobalto {
         }
 
         private void card(Canvas c, float l, float t, float rt, float b, float rad) {
+            Path path = para(l, t, rt, b, Math.min((rt - l) * 0.07f, (b - t) * 0.06f), rad * 1.3f);
             p.setStyle(Paint.Style.FILL);
             p.setShader(new LinearGradient(0, t, 0, b, glassTop(light), glassBottom(light), Shader.TileMode.CLAMP));
-            r.set(l, t, rt, b);
-            c.drawRoundRect(r, rad, rad, p);
+            c.drawPath(path, p);
             p.setShader(null);
             p.setStyle(Paint.Style.STROKE);
             p.setStrokeWidth(Math.max(1f, s * 0.8f));
             p.setColor(glassEdge(light));
-            c.drawRoundRect(r, rad, rad, p);
+            c.drawPath(path, p);
         }
 
         @Override protected void onDraw(Canvas c) {
@@ -288,8 +282,7 @@ final class Cobalto {
         }
 
         private void map(Canvas c, float l, float t, float rt, float b, float crad, float u, boolean fadeRight) {
-            int mapBg = light ? 0xFFE9EEF6 : 0xFF14203A, road = light ? 0xFFFFFFFF : 0xFF2E3D5E;
-            rr(c, l, t, rt, b, crad, mapBg);
+            int road = light ? 0xCCFFFFFF : 0x804E6A9E;
             float mw = rt - l, mh = b - t;
             c.save();
             c.clipRect(l, t, rt, b);
@@ -306,11 +299,11 @@ final class Cobalto {
             p.setStyle(Paint.Style.FILL);
             int bc = base(light);
             if (fadeRight) {
-                float fx = rt - mw * 0.32f;
+                float fx = rt - mw * 0.5f;
                 p.setShader(new LinearGradient(fx, 0, rt, 0, bc & 0x00FFFFFF, bc, Shader.TileMode.CLAMP));
                 c.drawRect(fx, t, rt + 1, b, p);
             } else {
-                float fy = b - mh * 0.30f;
+                float fy = b - mh * 0.4f;
                 p.setShader(new LinearGradient(0, fy, 0, b, bc & 0x00FFFFFF, bc, Shader.TileMode.CLAMP));
                 c.drawRect(l, fy, rt, b + 1, p);
             }

@@ -79,9 +79,7 @@ go pref:speedo=2 4; demo; shot c11-cobalto-mixto
 go pref:speedo=1 4; demo; shot c12-cobalto-analogico
 go pref:speedo=0 4; demo; shot c13-cobalto-digital
 go pref:speedo=2 4
-go solo-mapa-anim 1; shot c14-transicion
-sleep 3; go pista-demo 2; go vel:62 3; shot c15-solo-mapa
-go solo-mapa-anim 4; go tema:claro 7; demo; shot c16-cobalto-claro
+go tema:claro 7; demo; shot c16-cobalto-claro
 go ajustes:11 5; adb shell input swipe 600 520 600 80 400; sleep 2; adb shell input swipe 600 520 600 80 400; sleep 2; adb shell input swipe 600 520 600 80 400; sleep 2; shot c17-galeria
 go tema:oscuro 6
 if [ "$API" -ge 18 ]; then

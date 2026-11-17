@@ -1107,3 +1107,14 @@ Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquier
 Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	الموسيقى على اليسار وعداد السرعة أسفل اليمين ولوحة الاتصال مطوية وشريط مضغوط
 Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	خريطة شبه كاملة: عداد السرعة أسفل اليمين ولوحة الاتصال مطوية والموسيقى بعرض الشاشة وشريط مضغوط
 Cada tema se adapta solo a la orientación de la pantalla.	يتكيف كل مظهر تلقائيًا مع اتجاه الشاشة.
+Tema premium	سمة مميزة
+Aurora en uso	Aurora قيد الاستخدام
+El tema arma la pantalla de inicio. Las tarjetas, la barra y el velocímetro de aquí se usan otra vez al quitarlo en Personalización.	السمة ترتب الشاشة الرئيسية. تُستخدم البطاقات والشريط وعداد السرعة هنا مجددًا عند إزالتها من التخصيص.
+Tema premium quitado	تمت إزالة السمة المميزة
+Premium	مميز
+Fondo con un arco de color difuminado y granulado, tarjetas translúcidas, la hora en grande con música, vehículo y clima arriba, el mapa a lo ancho y una barra tipo píldora. El botón «Solo mapa» agranda el mapa.	خلفية بقوس لوني ناعم ومحبب، وبطاقات شفافة، والساعة كبيرة مع الموسيقى والمركبة والطقس في الأعلى، والخريطة بعرض الشاشة وشريط على شكل كبسولة. زر «الخريطة فقط» يكبّر الخريطة.
+Sigue el modo claro u oscuro de Apariencia.	تتبع الوضع الفاتح أو الداكن من المظهر.
+Quitar el tema premium	إزالة السمة المميزة
+Aplicar	تطبيق
+Versión de prueba: se puede aplicar sin código.	نسخة تجريبية: يمكن تطبيقها دون رمز.
+Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	قريبًا مع تبرع. تبقى كل الميزات مجانية.

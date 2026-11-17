@@ -30,36 +30,46 @@ go() { adb shell am start -n $ACT --es prueba "$1" >/dev/null; sleep "${2:-5}"; 
 back() { adb shell input keyevent 4; sleep 2; }
 adb shell am start -n $ACT --es prueba saltar >/dev/null; sleep 25
 go idioma:es 6; go tema:oscuro 6; go inicio 4
-go idioma:es 6; go tema:oscuro 6; go inicio 4; go pista-demo 4; go vel:62 3
-shot p01-inicio
-# ajustes «sucios» como los de un usuario que ya movió cosas: el tema debe fijar todo lo que muestra su miniatura
-go pref:map_gauge_corner=tl 3; go pref:nav_btn_side=right 3; go pref:aa_panel_open=false 3
-go ajustes:11 5; shot p02-personalizacion
-adb shell input swipe 600 500 600 150 400; sleep 2; shot p03-personalizacion-abajo
-go vista-temas:v 5; shot p04-vista-vertical
-go vista-temas:h 4
-for t in 1 2 3 4; do
-  go tema-gratis:$t 5; shot p1$t-tema-$t-ajustes
-  go inicio 4; go pista-demo 3; go vel:62 3; shot p2$t-tema-$t-inicio
-done
-go tema:claro 6; go ajustes:11 5; shot p30-claro
-go vista-temas:v 4; shot p30b-claro-vertical
+go idioma:es 6; go tema:oscuro 6; go inicio 4
+demo() { go inicio 4; go pista-demo 3; go vel:62 3; }
+# Fase 2: tema premium «Aurora» (en la versión de prueba se aplica sin código)
+go ajustes:11 5; adb shell input swipe 600 520 600 80 400; sleep 2; adb shell input swipe 600 520 600 80 400; sleep 2
+shot a01-galeria-premium
+go tema-premium:aurora 6; shot a02-aplicado-ajustes
+adb shell input swipe 600 520 600 80 400; sleep 2; adb shell input swipe 600 520 600 80 400; sleep 2; shot a03-galeria-en-uso
+demo; shot a10-aurora-oscuro
+go solo-mapa:1 6; go pista-demo 3; go vel:62 3; shot a11-solo-mapa
+go solo-mapa:0 6; go tema:claro 7; demo; shot a12-aurora-claro
+go solo-mapa:1 6; shot a13-claro-solo-mapa
+go solo-mapa:0 5
+go ajustes:3 5; shot a14-pantalla-inicio-aviso
+go ajustes:11 5; go vista-temas:v 4; adb shell input swipe 600 520 600 80 400; sleep 2; adb shell input swipe 600 520 600 80 400; sleep 2; shot a15-galeria-vista-vertical
 go vista-temas:h 3
-go idioma:en 6; go ajustes:11 5; shot p31-ingles
-go idioma:ar 6; go ajustes:11 5; shot p32-arabe
-go idioma:zh 6; go ajustes:11 5; shot p33-chino
-go idioma:es 6; go tema:oscuro 5
-# vertical: misma prueba con la pantalla alta
-if [ "$API" -ge 18 ]; then size 1080x1920; else go sim:7 6; fi
-go pref:map_gauge_corner=tl 3; go pref:nav_btn_side=right 3
-go ajustes:11 6; shot p40-vertical
-go vista-temas:h 4; shot p41-vertical-vista-horizontal
-for t in 1 2 3 4; do
-  go tema-gratis:$t 5
-  go inicio 4; go pista-demo 3; go vel:62 3; shot p5$t-vertical-tema-$t-inicio
-done
-go ajustes:11 5; shot p59-vertical-ajustes-final
-if [ "$API" -ge 18 ]; then size 1024x600; else go sim:0 6; fi
+go tema:oscuro 6
+go pref:weather_on=false 4; demo; shot a16-sin-clima
+go pref:weather_on=true 4
+go pref:dock_count=10 4; demo; shot a17-diez-botones
+go pref:dock_count=7 4
+go idioma:en 6; demo; shot a18-ingles
+go idioma:ar 6; demo; shot a19-arabe
+go idioma:es 6
+if [ "$API" -ge 18 ]; then
+  size 1280x480; demo; shot a20-1280x480
+  size 1920x720; demo; shot a21-1920x720
+  size 1080x1920; demo; shot a30-vertical
+  go solo-mapa:1 6; shot a31-vertical-solo-mapa
+  go solo-mapa:0 5; go tema:claro 7; demo; shot a32-vertical-claro
+  go tema:oscuro 6
+  go ajustes:11 6; adb shell input swipe 500 1700 500 300 400; sleep 2; adb shell input swipe 500 1700 500 300 400; sleep 2; shot a33-vertical-galeria
+  size 768x880; demo; shot a34-vertical-bajo
+  size 1024x600
+else
+  go sim:7 6; demo; shot a30-vertical
+  go solo-mapa:1 6; shot a31-vertical-solo-mapa
+  go solo-mapa:0 5; go sim:0 6
+fi
+# un tema gratis quita el premium y todo vuelve a lo de siempre
+go tema-gratis:1 6; demo; shot a40-gratis-quita-premium
 go inicio 5
 adb logcat -d | grep -E "FATAL EXCEPTION|AndroidRuntime: (java|Caused|\tat com.stradaos)" | tail -60 > $OUT/logcat.txt
 if grep -q "com.stradaos" $OUT/logcat.txt; then echo "CIERRE" > $OUT/CIERRES.txt; fi

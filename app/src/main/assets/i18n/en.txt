@@ -1130,3 +1130,14 @@ Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquier
 Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Music on the left, speedometer bottom right, connection panel folded and compact bar
 Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Almost full map: speedometer bottom right, connection panel folded, full-width music and compact bar
 Cada tema se adapta solo a la orientación de la pantalla.	Each theme adapts on its own to the screen orientation.
+Tema premium	Premium theme
+Aurora en uso	Aurora in use
+El tema arma la pantalla de inicio. Las tarjetas, la barra y el velocímetro de aquí se usan otra vez al quitarlo en Personalización.	The theme lays out the home screen. The cards, bar and speedometer here are used again when you remove it in Personalization.
+Tema premium quitado	Premium theme removed
+Premium	Premium
+Fondo con un arco de color difuminado y granulado, tarjetas translúcidas, la hora en grande con música, vehículo y clima arriba, el mapa a lo ancho y una barra tipo píldora. El botón «Solo mapa» agranda el mapa.	Background with a soft, grainy color arc, translucent cards, a big clock with music, vehicle and weather on top, a full-width map and a pill-shaped bar. The «Map only» button enlarges the map.
+Sigue el modo claro u oscuro de Apariencia.	Follows the light or dark mode from Appearance.
+Quitar el tema premium	Remove the premium theme
+Aplicar	Apply
+Versión de prueba: se puede aplicar sin código.	Test version: can be applied without a code.
+Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Coming soon with a donation. All features stay free.

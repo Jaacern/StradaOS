@@ -1107,3 +1107,14 @@ Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquier
 Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Musik links, Tacho unten rechts, Verbindungsleiste eingeklappt und kompakte Leiste
 Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Fast ganze Karte: Tacho unten rechts, Verbindungsleiste eingeklappt, Musik über die ganze Breite und kompakte Leiste
 Cada tema se adapta solo a la orientación de la pantalla.	Jedes Design passt sich selbst an die Ausrichtung des Bildschirms an.
+Tema premium	Premium-Design
+Aurora en uso	Aurora aktiv
+El tema arma la pantalla de inicio. Las tarjetas, la barra y el velocímetro de aquí se usan otra vez al quitarlo en Personalización.	Das Design ordnet den Startbildschirm an. Karten, Leiste und Tacho von hier werden wieder genutzt, wenn du es unter Personalisierung entfernst.
+Tema premium quitado	Premium-Design entfernt
+Premium	Premium
+Fondo con un arco de color difuminado y granulado, tarjetas translúcidas, la hora en grande con música, vehículo y clima arriba, el mapa a lo ancho y una barra tipo píldora. El botón «Solo mapa» agranda el mapa.	Hintergrund mit weichem, körnigem Farbbogen, durchscheinende Karten, große Uhr mit Musik, Fahrzeug und Wetter oben, Karte über die ganze Breite und eine Pillen-Leiste. Die Taste «Nur Karte» vergrößert die Karte.
+Sigue el modo claro u oscuro de Apariencia.	Folgt dem hellen oder dunklen Modus aus Darstellung.
+Quitar el tema premium	Premium-Design entfernen
+Aplicar	Anwenden
+Versión de prueba: se puede aplicar sin código.	Testversion: ohne Code anwendbar.
+Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Bald mit einer Spende erhältlich. Alle Funktionen bleiben kostenlos.

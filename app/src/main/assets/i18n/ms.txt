@@ -1107,3 +1107,14 @@ Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquier
 Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Muzik di kiri, meter kelajuan di bawah kanan, panel sambungan dilipat dan bar padat
 Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Peta hampir penuh: meter kelajuan di bawah kanan, panel sambungan dilipat, muzik selebar skrin dan bar padat
 Cada tema se adapta solo a la orientación de la pantalla.	Setiap tema menyesuaikan diri dengan orientasi skrin.
+Tema premium	Tema premium
+Aurora en uso	Aurora digunakan
+El tema arma la pantalla de inicio. Las tarjetas, la barra y el velocímetro de aquí se usan otra vez al quitarlo en Personalización.	Tema ini menyusun skrin utama. Kad, bar dan meter laju di sini digunakan semula apabila anda membuangnya dalam Pemperibadian.
+Tema premium quitado	Tema premium dibuang
+Premium	Premium
+Fondo con un arco de color difuminado y granulado, tarjetas translúcidas, la hora en grande con música, vehículo y clima arriba, el mapa a lo ancho y una barra tipo píldora. El botón «Solo mapa» agranda el mapa.	Latar dengan lengkung warna lembut dan berbutir, kad lut sinar, jam besar dengan muzik, kenderaan dan cuaca di atas, peta selebar skrin dan bar berbentuk pil. Butang «Peta sahaja» membesarkan peta.
+Sigue el modo claro u oscuro de Apariencia.	Mengikut mod cerah atau gelap dalam Penampilan.
+Quitar el tema premium	Buang tema premium
+Aplicar	Guna
+Versión de prueba: se puede aplicar sin código.	Versi ujian: boleh digunakan tanpa kod.
+Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Akan datang dengan derma. Semua ciri kekal percuma.

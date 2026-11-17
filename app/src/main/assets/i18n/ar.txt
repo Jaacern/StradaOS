@@ -1095,10 +1095,15 @@ Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funci
 En uso	مستخدم
 Tema aplicado:	تم تطبيق السمة:
 Clásico	كلاسيكي
-Vehículo, mapa y música: como viene StradaOS	المركبة والخريطة والموسيقى: StradaOS كما هو
 Música a la izquierda	الموسيقى على اليسار
-El reproductor del lado del conductor	المشغل في جهة السائق
 Mapa amplio	خريطة واسعة
-Sin tarjeta del vehículo: el velocímetro va sobre el mapa	بدون بطاقة المركبة: عداد السرعة على الخريطة
 Minimalista	بسيط
-Mapa grande, música a la izquierda y barra compacta	خريطة كبيرة وموسيقى على اليسار وشريط مضغوط
+Vehículo a la izquierda, mapa en el centro y música a la derecha	المركبة على اليسار والخريطة في الوسط والموسيقى على اليمين
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	الخريطة في الأعلى؛ وفي الأسفل المركبة على اليسار والموسيقى على اليمين
+Música a la izquierda, mapa en el centro y vehículo a la derecha	الموسيقى على اليسار والخريطة في الوسط والمركبة على اليمين
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	الخريطة في الأعلى؛ وفي الأسفل الموسيقى على اليسار والمركبة على اليمين
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	بدون بطاقة المركبة: خريطة أعرض وعداد السرعة أسفل اليسار والموسيقى على اليمين
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	بدون بطاقة المركبة: خريطة أطول مع عداد السرعة أسفل اليسار والموسيقى بعرض الشاشة
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	الموسيقى على اليسار وعداد السرعة أسفل اليمين ولوحة الاتصال مطوية وشريط مضغوط
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	خريطة شبه كاملة: عداد السرعة أسفل اليمين ولوحة الاتصال مطوية والموسيقى بعرض الشاشة وشريط مضغوط
+Cada tema se adapta solo a la orientación de la pantalla.	يتكيف كل مظهر تلقائيًا مع اتجاه الشاشة.

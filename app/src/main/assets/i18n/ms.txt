@@ -1095,10 +1095,15 @@ Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funci
 En uso	Digunakan
 Tema aplicado:	Tema digunakan:
 Clásico	Klasik
-Vehículo, mapa y música: como viene StradaOS	Kenderaan, peta dan muzik: StradaOS seperti asal
 Música a la izquierda	Muzik di kiri
-El reproductor del lado del conductor	Pemain muzik di sebelah pemandu
 Mapa amplio	Peta luas
-Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Tanpa kad kenderaan: meter kelajuan di atas peta
 Minimalista	Minimalis
-Mapa grande, música a la izquierda y barra compacta	Peta besar, muzik di kiri dan bar padat
+Vehículo a la izquierda, mapa en el centro y música a la derecha	Kenderaan di kiri, peta di tengah dan muzik di kanan
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	Peta di atas; di bawah, kenderaan di kiri dan muzik di kanan
+Música a la izquierda, mapa en el centro y vehículo a la derecha	Muzik di kiri, peta di tengah dan kenderaan di kanan
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	Peta di atas; di bawah, muzik di kiri dan kenderaan di kanan
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	Tanpa kad kenderaan: peta lebih lebar, meter kelajuan di bawah kiri dan muzik di kanan
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	Tanpa kad kenderaan: peta lebih tinggi dengan meter kelajuan di bawah kiri dan muzik selebar skrin
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Muzik di kiri, meter kelajuan di bawah kanan, panel sambungan dilipat dan bar padat
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Peta hampir penuh: meter kelajuan di bawah kanan, panel sambungan dilipat, muzik selebar skrin dan bar padat
+Cada tema se adapta solo a la orientación de la pantalla.	Setiap tema menyesuaikan diri dengan orientasi skrin.

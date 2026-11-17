@@ -1118,10 +1118,15 @@ Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funci
 En uso	In use
 Tema aplicado:	Theme applied:
 Clásico	Classic
-Vehículo, mapa y música: como viene StradaOS	Vehicle, map and music: StradaOS as it comes
 Música a la izquierda	Music on the left
-El reproductor del lado del conductor	The player on the driver's side
 Mapa amplio	Wide map
-Sin tarjeta del vehículo: el velocímetro va sobre el mapa	No vehicle card: the speedometer goes on the map
 Minimalista	Minimal
-Mapa grande, música a la izquierda y barra compacta	Big map, music on the left and compact bar
+Vehículo a la izquierda, mapa en el centro y música a la derecha	Vehicle on the left, map in the middle and music on the right
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	Map on top; below, vehicle on the left and music on the right
+Música a la izquierda, mapa en el centro y vehículo a la derecha	Music on the left, map in the middle and vehicle on the right
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	Map on top; below, music on the left and vehicle on the right
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	No vehicle card: wider map, speedometer bottom left and music on the right
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	No vehicle card: taller map with the speedometer bottom left and full-width music
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Music on the left, speedometer bottom right, connection panel folded and compact bar
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Almost full map: speedometer bottom right, connection panel folded, full-width music and compact bar
+Cada tema se adapta solo a la orientación de la pantalla.	Each theme adapts on its own to the screen orientation.

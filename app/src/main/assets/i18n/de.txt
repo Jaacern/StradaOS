@@ -1095,10 +1095,15 @@ Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funci
 En uso	Aktiv
 Tema aplicado:	Design angewendet:
 Clásico	Klassisch
-Vehículo, mapa y música: como viene StradaOS	Fahrzeug, Karte und Musik: StradaOS wie geliefert
 Música a la izquierda	Musik links
-El reproductor del lado del conductor	Der Player auf der Fahrerseite
 Mapa amplio	Große Karte
-Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Ohne Fahrzeugkarte: der Tacho liegt auf der Karte
 Minimalista	Minimal
-Mapa grande, música a la izquierda y barra compacta	Große Karte, Musik links und kompakte Leiste
+Vehículo a la izquierda, mapa en el centro y música a la derecha	Fahrzeug links, Karte in der Mitte und Musik rechts
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	Karte oben; darunter Fahrzeug links und Musik rechts
+Música a la izquierda, mapa en el centro y vehículo a la derecha	Musik links, Karte in der Mitte und Fahrzeug rechts
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	Karte oben; darunter Musik links und Fahrzeug rechts
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	Ohne Fahrzeugkarte: breitere Karte, Tacho unten links und Musik rechts
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	Ohne Fahrzeugkarte: höhere Karte mit dem Tacho unten links und Musik über die ganze Breite
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Musik links, Tacho unten rechts, Verbindungsleiste eingeklappt und kompakte Leiste
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Fast ganze Karte: Tacho unten rechts, Verbindungsleiste eingeklappt, Musik über die ganze Breite und kompakte Leiste
+Cada tema se adapta solo a la orientación de la pantalla.	Jedes Design passt sich selbst an die Ausrichtung des Bildschirms an.

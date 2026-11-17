@@ -32,28 +32,33 @@ adb shell am start -n $ACT --es prueba saltar >/dev/null; sleep 25
 go idioma:es 6; go tema:oscuro 6; go inicio 4
 go idioma:es 6; go tema:oscuro 6; go inicio 4; go pista-demo 4; go vel:62 3
 shot p01-inicio
+# ajustes «sucios» como los de un usuario que ya movió cosas: el tema debe fijar todo lo que muestra su miniatura
+go pref:map_gauge_corner=tl 3; go pref:nav_btn_side=right 3; go pref:aa_panel_open=false 3
 go ajustes:11 5; shot p02-personalizacion
 adb shell input swipe 600 500 600 150 400; sleep 2; shot p03-personalizacion-abajo
-go ajustes:11 5
-# aplicar cada tema tocando su tarjeta (columnas a x≈460 y 830 del lienzo 1024; filas por desplazamiento)
-for t in 2 3 4 1; do
-  go ajustes:11 5
-  case $t in
-    1) adb shell input tap $((460*SW/1024)) $((250*SH/600)) ;;
-    2) adb shell input tap $((830*SW/1024)) $((250*SH/600)) ;;
-    3) adb shell input swipe 600 500 600 250 400; sleep 2; adb shell input tap $((460*SW/1024)) $((330*SH/600)) ;;
-    4) adb shell input swipe 600 500 600 250 400; sleep 2; adb shell input tap $((830*SW/1024)) $((330*SH/600)) ;;
-  esac
-  sleep 4; shot p1$t-tema-$t-ajustes
+go vista-temas:v 5; shot p04-vista-vertical
+go vista-temas:h 4
+for t in 1 2 3 4; do
+  go tema-gratis:$t 5; shot p1$t-tema-$t-ajustes
   go inicio 4; go pista-demo 3; go vel:62 3; shot p2$t-tema-$t-inicio
 done
 go tema:claro 6; go ajustes:11 5; shot p30-claro
+go vista-temas:v 4; shot p30b-claro-vertical
+go vista-temas:h 3
 go idioma:en 6; go ajustes:11 5; shot p31-ingles
 go idioma:ar 6; go ajustes:11 5; shot p32-arabe
 go idioma:zh 6; go ajustes:11 5; shot p33-chino
 go idioma:es 6; go tema:oscuro 5
+# vertical: misma prueba con la pantalla alta
 if [ "$API" -ge 18 ]; then size 1080x1920; else go sim:7 6; fi
+go pref:map_gauge_corner=tl 3; go pref:nav_btn_side=right 3
 go ajustes:11 6; shot p40-vertical
+go vista-temas:h 4; shot p41-vertical-vista-horizontal
+for t in 1 2 3 4; do
+  go tema-gratis:$t 5
+  go inicio 4; go pista-demo 3; go vel:62 3; shot p5$t-vertical-tema-$t-inicio
+done
+go ajustes:11 5; shot p59-vertical-ajustes-final
 if [ "$API" -ge 18 ]; then size 1024x600; else go sim:0 6; fi
 go inicio 5
 adb logcat -d | grep -E "FATAL EXCEPTION|AndroidRuntime: (java|Caused|\tat com.stradaos)" | tail -60 > $OUT/logcat.txt

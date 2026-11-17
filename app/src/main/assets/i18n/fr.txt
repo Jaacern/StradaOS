@@ -1095,10 +1095,15 @@ Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funci
 En uso	Utilisé
 Tema aplicado:	Thème appliqué :
 Clásico	Classique
-Vehículo, mapa y música: como viene StradaOS	Véhicule, carte et musique : StradaOS tel quel
 Música a la izquierda	Musique à gauche
-El reproductor del lado del conductor	Le lecteur côté conducteur
 Mapa amplio	Carte large
-Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Sans carte du véhicule : le compteur passe sur la carte
 Minimalista	Minimaliste
-Mapa grande, música a la izquierda y barra compacta	Grande carte, musique à gauche et barre compacte
+Vehículo a la izquierda, mapa en el centro y música a la derecha	Véhicule à gauche, carte au centre et musique à droite
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	Carte en haut ; en dessous, véhicule à gauche et musique à droite
+Música a la izquierda, mapa en el centro y vehículo a la derecha	Musique à gauche, carte au centre et véhicule à droite
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	Carte en haut ; en dessous, musique à gauche et véhicule à droite
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	Sans carte du véhicule : carte plus large, compteur en bas à gauche et musique à droite
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	Sans carte du véhicule : carte plus haute avec le compteur en bas à gauche et la musique sur toute la largeur
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Musique à gauche, compteur en bas à droite, panneau de connexion replié et barre compacte
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Carte presque entière : compteur en bas à droite, panneau de connexion replié, musique sur toute la largeur et barre compacte
+Cada tema se adapta solo a la orientación de la pantalla.	Chaque thème s'adapte tout seul à l'orientation de l'écran.

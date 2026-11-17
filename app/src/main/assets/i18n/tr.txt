@@ -1095,10 +1095,15 @@ Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funci
 En uso	Kullanımda
 Tema aplicado:	Tema uygulandı:
 Clásico	Klasik
-Vehículo, mapa y música: como viene StradaOS	Araç, harita ve müzik: StradaOS'un geldiği hali
 Música a la izquierda	Müzik solda
-El reproductor del lado del conductor	Çalar sürücü tarafında
 Mapa amplio	Geniş harita
-Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Araç kartı yok: hız göstergesi haritanın üzerinde
 Minimalista	Sade
-Mapa grande, música a la izquierda y barra compacta	Büyük harita, solda müzik ve kompakt çubuk
+Vehículo a la izquierda, mapa en el centro y música a la derecha	Araç solda, harita ortada ve müzik sağda
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	Harita üstte; altta araç solda ve müzik sağda
+Música a la izquierda, mapa en el centro y vehículo a la derecha	Müzik solda, harita ortada ve araç sağda
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	Harita üstte; altta müzik solda ve araç sağda
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	Araç kartı yok: daha geniş harita, hız göstergesi sol altta ve müzik sağda
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	Araç kartı yok: hız göstergesi sol altta olan daha uzun harita ve tam genişlikte müzik
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Müzik solda, hız göstergesi sağ altta, bağlantı paneli kapalı ve kompakt çubuk
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Neredeyse tam harita: hız göstergesi sağ altta, bağlantı paneli kapalı, tam genişlikte müzik ve kompakt çubuk
+Cada tema se adapta solo a la orientación de la pantalla.	Her tema ekran yönüne kendiliğinden uyum sağlar.

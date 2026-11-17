@@ -1095,10 +1095,15 @@ Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funci
 En uso	Em uso
 Tema aplicado:	Tema aplicado:
 Clásico	Clássico
-Vehículo, mapa y música: como viene StradaOS	Veículo, mapa e música: o StradaOS como vem
 Música a la izquierda	Música à esquerda
-El reproductor del lado del conductor	O player do lado do motorista
 Mapa amplio	Mapa amplo
-Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Sem cartão do veículo: o velocímetro vai sobre o mapa
 Minimalista	Minimalista
-Mapa grande, música a la izquierda y barra compacta	Mapa grande, música à esquerda e barra compacta
+Vehículo a la izquierda, mapa en el centro y música a la derecha	Veículo à esquerda, mapa no centro e música à direita
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	Mapa em cima; embaixo, veículo à esquerda e música à direita
+Música a la izquierda, mapa en el centro y vehículo a la derecha	Música à esquerda, mapa no centro e veículo à direita
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	Mapa em cima; embaixo, música à esquerda e veículo à direita
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	Sem cartão do veículo: mapa mais largo, velocímetro embaixo à esquerda e música à direita
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	Sem cartão do veículo: mapa mais alto com o velocímetro embaixo à esquerda e a música na largura toda
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Música à esquerda, velocímetro embaixo à direita, painel de conexão recolhido e barra compacta
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Mapa quase inteiro: velocímetro embaixo à direita, painel de conexão recolhido, música na largura toda e barra compacta
+Cada tema se adapta solo a la orientación de la pantalla.	Cada tema se adapta sozinho à orientação da tela.

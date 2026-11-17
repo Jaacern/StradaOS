@@ -693,6 +693,16 @@ public class Main extends Activity {
                     android.util.Log.w("StradaNav", "nav-ir desde " + wLat + "," + wLon + " a " + v);
                     startInternalNav(pl);
                 }
+                else if (v.startsWith("tema-gratis:")) {
+                    // tema-gratis:N aplica el tema N (1-4) como al tocar su tarjeta
+                    int n = Integer.parseInt(v.substring(12)) - 1;
+                    if (n >= 0 && n < FREE_THEMES.length) applyFreeTheme(FREE_THEMES[n]);
+                }
+                else if (v.startsWith("vista-temas:")) {
+                    // vista-temas:h|v elige la vista previa de Personalización
+                    stylePreview = "v".equals(v.substring(12)) ? 1 : 0;
+                    showSettings(C_STYLE);
+                }
                 else if ("reposo".equals(v)) h.postDelayed(new Runnable() { public void run() { showIdle(); } }, 1500);
                 else if (v.startsWith("pref:") && v.indexOf('=') > 5) {
                     // pref:clave=valor (true/false, número o texto); «pref:clave=» la borra
@@ -6010,23 +6020,46 @@ public class Main extends Activity {
     // el tema «en uso» es el que coincide con los ajustes actuales (si el usuario cambia algo, ninguno queda marcado).
 
     static final class FreeTheme {
-        final String name, desc; final boolean car, left, gauge, compact;
-        FreeTheme(String name, String desc, boolean car, boolean left, boolean gauge, boolean compact) {
-            this.name = name; this.desc = desc; this.car = car; this.left = left; this.gauge = gauge; this.compact = compact;
+        final String name, descH, descV, corner; final boolean car, left, gauge, compact, panel;
+        /** corner: esquina del velocímetro sobre el mapa (bl/br) cuando no hay tarjeta del vehículo; panel: conexión abierta. */
+        FreeTheme(String name, String descH, String descV, boolean car, boolean left, boolean gauge, String corner,
+                  boolean compact, boolean panel) {
+            this.name = name; this.descH = descH; this.descV = descV; this.car = car; this.left = left; this.gauge = gauge;
+            this.corner = corner; this.compact = compact; this.panel = panel;
         }
     }
 
+    // Cada tema fija todo lo que se ve en su miniatura (lado de la música, velocímetro y su esquina, lado del botón del
+    // navegador, panel de conexión y barra), para que la miniatura y la descripción coincidan con lo que se aplica.
     static final FreeTheme[] FREE_THEMES = {
-        new FreeTheme("Clásico", "Vehículo, mapa y música: como viene StradaOS", true, false, false, false),
-        new FreeTheme("Música a la izquierda", "El reproductor del lado del conductor", true, true, false, false),
-        new FreeTheme("Mapa amplio", "Sin tarjeta del vehículo: el velocímetro va sobre el mapa", false, false, true, false),
-        new FreeTheme("Minimalista", "Mapa grande, música a la izquierda y barra compacta", false, true, true, true),
+        new FreeTheme("Clásico",
+            "Vehículo a la izquierda, mapa en el centro y música a la derecha",
+            "Mapa arriba; debajo, vehículo a la izquierda y música a la derecha",
+            true, false, false, null, false, true),
+        new FreeTheme("Música a la izquierda",
+            "Música a la izquierda, mapa en el centro y vehículo a la derecha",
+            "Mapa arriba; debajo, música a la izquierda y vehículo a la derecha",
+            true, true, false, null, false, true),
+        new FreeTheme("Mapa amplio",
+            "Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha",
+            "Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho",
+            false, false, true, "bl", false, true),
+        new FreeTheme("Minimalista",
+            "Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta",
+            "Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta",
+            false, true, true, "br", true, false),
     };
 
+    /** Vista previa elegida en Personalización: -1 = la orientación actual, 0 = horizontal, 1 = vertical. */
+    private int stylePreview = -1;
+
+    // El panel de conexión se abre y se pliega a mano desde el mapa: no cuenta para marcar el tema «en uso».
     private boolean themeInUse(FreeTheme t) {
         return prefs.getBoolean("show_car", true) == t.car && prefs.getBoolean("show_player", true)
             && "left".equals(prefs.getString("player_side", "right")) == t.left
-            && (t.car || prefs.getBoolean("map_gauge", false) == t.gauge)
+            && "auto".equals(prefs.getString("nav_btn_side", "auto"))
+            && (t.car || (prefs.getBoolean("map_gauge", false) == t.gauge && prefs.getBoolean("car_speed", true)
+                && t.corner.equals(prefs.getString("map_gauge_corner", "auto"))))
             && (t.compact ? "compact" : "normal").equals(prefs.getString("dock_mode", "normal"));
     }
 
@@ -6034,8 +6067,10 @@ public class Main extends Activity {
         SharedPreferences.Editor e = prefs.edit()
             .putBoolean("show_car", t.car).putBoolean("show_player", true)
             .putString("player_side", t.left ? "left" : "right")
+            .putString("nav_btn_side", "auto")
+            .putBoolean("aa_panel_open", t.panel)
             .putString("dock_mode", t.compact ? "compact" : "normal");
-        if (!t.car) e.putBoolean("map_gauge", t.gauge).putBoolean("car_speed", true);
+        if (!t.car) e.putBoolean("map_gauge", t.gauge).putBoolean("car_speed", true).putString("map_gauge_corner", t.corner);
         e.apply();
         rebuild();
         showSettings(C_STYLE);
@@ -6049,12 +6084,51 @@ public class Main extends Activity {
         TextView h2 = tv(I18n.t("Temas gratis").toUpperCase(I18n.loc), 11, MUTED, true);
         h2.setPadding((int) (6 * s), (int) (10 * s), 0, (int) (8 * s));
         body.addView(h2);
-        float contentW = vertical ? 688 : 736, cellGap = 12;
-        float cellW = (contentW - cellGap) / 2, thumbW = cellW - 20;
+
+        // Subsección Horizontal | Vertical: el mismo tema sirve en las dos orientaciones; aquí se ve cómo queda en cada una
+        final boolean portrait = stylePreview < 0 ? vertical : stylePreview == 1;
+        LinearLayout tabs = new LinearLayout(this);
+        tabs.setGravity(Gravity.CENTER_VERTICAL);
+        LinearLayout g = new LinearLayout(this);
+        g.setBackground(round(BTN, 18));
+        int pp = (int) (3 * s);
+        g.setPadding(pp, pp, pp, pp);
+        String[] opts = {"Horizontal", "Vertical"};
+        for (int i = 0; i < 2; i++) {
+            final int idx = i;
+            boolean sel = (i == 1) == portrait;
+            TextView o = tv(opts[i], 13, sel ? Color.WHITE : SOFT, sel);
+            o.setGravity(Gravity.CENTER);
+            o.setText(o.getText() + " ");
+            o.setEllipsize(null);
+            o.setPadding((int) (18 * s), (int) (7 * s), (int) (15 * s), (int) (7 * s));
+            if (sel) o.setBackground(round(RED, 15));
+            o.setOnClickListener(new View.OnClickListener() { public void onClick(View v) {
+                stylePreview = idx;
+                showSettings(C_STYLE);
+            }});
+            g.addView(o);
+        }
+        tabs.addView(g);
+        TextView note = tv("Cada tema se adapta solo a la orientación de la pantalla.", 12, MUTED, false);
+        note.setPadding((int) (12 * s), 0, 0, 0);
+        tabs.addView(note, new LinearLayout.LayoutParams(0, -2, 1));
+        tabs.setPadding((int) (2 * s), 0, 0, (int) (10 * s));
+        body.addView(tabs);
+
+        // mismas reglas que la pantalla de inicio, para que la miniatura muestre lo que de verdad aparece
+        boolean navShown = prefs.getInt("nav_btn_size", 0) != 3;
+        String cm = prefs.getString("conn_buttons", "both");
+        boolean hasPanel = !"none".equals(cm) || prefs.getBoolean("weather_on", true);
+        boolean labels = prefs.getBoolean("dock_labels", true);
+        boolean forceCompact = portrait && vertical && shortVertical;
+        // horizontal: 2 por fila; vertical: las 4 en una fila (son altas)
+        int perRow = portrait ? 4 : 2;
+        float cellGap = portrait ? 10 : 12;
         LinearLayout rowL = null;
         for (int i = 0; i < FREE_THEMES.length; i++) {
             final FreeTheme t = FREE_THEMES[i];
-            if (i % 2 == 0) {
+            if (i % perRow == 0) {
                 rowL = new LinearLayout(this);
                 rowL.setOrientation(LinearLayout.HORIZONTAL);
                 LinearLayout.LayoutParams rlp = new LinearLayout.LayoutParams(-1, -2);
@@ -6065,27 +6139,39 @@ public class Main extends Activity {
             LinearLayout cell = new LinearLayout(this);
             cell.setOrientation(LinearLayout.VERTICAL);
             cell.setBackground(round(inUse ? RED_DARK : CARD, 16));
-            cell.setPadding((int) (10 * s), (int) (10 * s), (int) (10 * s), (int) (12 * s));
-            ThemeThumb th = new ThemeThumb(this, s, t.car, t.left, t.gauge, t.compact);
+            int cp = (int) ((portrait ? 8 : 10) * s);
+            cell.setPadding(cp, cp, cp, (int) (12 * s));
+            ThemeThumb th = new ThemeThumb(this, s, portrait, t.car, t.left, t.gauge, "bl".equals(t.corner),
+                t.compact || forceCompact, t.left, navShown, labels, t.panel && hasPanel);
             th.selected = inUse;
-            cell.addView(th, new LinearLayout.LayoutParams((int) (thumbW * s), (int) (thumbW * 0.586f * s)));
+            cell.addView(th, new LinearLayout.LayoutParams(-1, -2));
             LinearLayout nameRow = new LinearLayout(this);
             nameRow.setGravity(Gravity.CENTER_VERTICAL);
             nameRow.setPadding((int) (4 * s), (int) (10 * s), (int) (4 * s), 0);
-            TextView nm = tv(t.name, 15, TEXT, true);
+            TextView nm = tv(t.name, portrait ? 14 : 15, TEXT, true);
             nameRow.addView(nm, new LinearLayout.LayoutParams(0, -2, 1));
-            if (inUse) {
+            if (inUse && !portrait) {
                 TextView badge = tv("En uso", 11, 0xFFFFFFFF, true);
                 badge.setBackground(round(RED, 10));
                 badge.setPadding((int) (8 * s), (int) (2 * s), (int) (8 * s), (int) (2 * s));
                 nameRow.addView(badge);
             }
             cell.addView(nameRow);
-            TextView ds = tv(t.desc, 12, MUTED, false);
+            if (inUse && portrait) {
+                // celda angosta: la etiqueta va debajo del nombre para que no lo corte
+                TextView badge = tv("En uso", 11, 0xFFFFFFFF, true);
+                badge.setBackground(round(RED, 10));
+                badge.setPadding((int) (8 * s), (int) (2 * s), (int) (8 * s), (int) (2 * s));
+                LinearLayout.LayoutParams blp = new LinearLayout.LayoutParams(-2, -2);
+                blp.leftMargin = (int) (4 * s);
+                blp.topMargin = (int) (4 * s);
+                cell.addView(badge, blp);
+            }
+            TextView ds = tv(portrait ? t.descV : t.descH, 12, MUTED, false);
             ds.setPadding((int) (4 * s), (int) (3 * s), (int) (4 * s), 0);
             cell.addView(ds);
-            LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams((int) (cellW * s), -1);
-            if (i % 2 == 0) clp.rightMargin = (int) (cellGap * s);
+            LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(0, -1, 1f);
+            if (i % perRow != perRow - 1) clp.rightMargin = (int) (cellGap * s);
             rowL.addView(cell, clp);
             cell.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) { applyFreeTheme(t); }

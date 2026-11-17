@@ -1095,10 +1095,15 @@ Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funci
 En uso	In uso
 Tema aplicado:	Tema applicato:
 Clásico	Classico
-Vehículo, mapa y música: como viene StradaOS	Veicolo, mappa e musica: StradaOS così com'è
 Música a la izquierda	Musica a sinistra
-El reproductor del lado del conductor	Il lettore dal lato del conducente
 Mapa amplio	Mappa ampia
-Sin tarjeta del vehículo: el velocímetro va sobre el mapa	Senza scheda del veicolo: il tachimetro va sulla mappa
 Minimalista	Minimalista
-Mapa grande, música a la izquierda y barra compacta	Mappa grande, musica a sinistra e barra compatta
+Vehículo a la izquierda, mapa en el centro y música a la derecha	Veicolo a sinistra, mappa al centro e musica a destra
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	Mappa in alto; sotto, veicolo a sinistra e musica a destra
+Música a la izquierda, mapa en el centro y vehículo a la derecha	Musica a sinistra, mappa al centro e veicolo a destra
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	Mappa in alto; sotto, musica a sinistra e veicolo a destra
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	Senza scheda del veicolo: mappa più larga, tachimetro in basso a sinistra e musica a destra
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	Senza scheda del veicolo: mappa più alta con il tachimetro in basso a sinistra e la musica a tutta larghezza
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Musica a sinistra, tachimetro in basso a destra, pannello di connessione chiuso e barra compatta
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Mappa quasi intera: tachimetro in basso a destra, pannello di connessione chiuso, musica a tutta larghezza e barra compatta
+Cada tema se adapta solo a la orientación de la pantalla.	Ogni tema si adatta da solo all'orientamento dello schermo.

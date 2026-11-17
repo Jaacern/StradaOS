@@ -1095,10 +1095,15 @@ Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funci
 En uso	使用中
 Tema aplicado:	已应用主题：
 Clásico	经典
-Vehículo, mapa y música: como viene StradaOS	车辆、地图和音乐：StradaOS 默认样式
 Música a la izquierda	音乐在左侧
-El reproductor del lado del conductor	播放器在驾驶员一侧
 Mapa amplio	宽地图
-Sin tarjeta del vehículo: el velocímetro va sobre el mapa	不显示车辆卡片：车速表显示在地图上
 Minimalista	极简
-Mapa grande, música a la izquierda y barra compacta	大地图、音乐在左侧、紧凑栏
+Vehículo a la izquierda, mapa en el centro y música a la derecha	车辆在左、地图居中、音乐在右
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	地图在上；下方车辆在左、音乐在右
+Música a la izquierda, mapa en el centro y vehículo a la derecha	音乐在左、地图居中、车辆在右
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	地图在上；下方音乐在左、车辆在右
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	不显示车辆卡片：地图更宽，车速表在左下角，音乐在右
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	不显示车辆卡片：地图更高，车速表在左下角，音乐占满宽度
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	音乐在左，车速表在右下角，连接面板收起，紧凑栏
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	几乎全屏地图：车速表在右下角，连接面板收起，音乐占满宽度，紧凑栏
+Cada tema se adapta solo a la orientación de la pantalla.	每个主题都会自动适应屏幕方向。

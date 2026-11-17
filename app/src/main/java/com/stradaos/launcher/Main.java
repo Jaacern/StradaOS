@@ -701,6 +701,7 @@ public class Main extends Activity {
                 else if (v.startsWith("vista-temas:")) {
                     // vista-temas:h|v elige la vista previa de Personalización
                     stylePreview = "v".equals(v.substring(12)) ? 1 : 0;
+                    stylePreviewFor = vertical;
                     showSettings(C_STYLE);
                 }
                 else if ("reposo".equals(v)) h.postDelayed(new Runnable() { public void run() { showIdle(); } }, 1500);
@@ -6052,6 +6053,7 @@ public class Main extends Activity {
 
     /** Vista previa elegida en Personalización: -1 = la orientación actual, 0 = horizontal, 1 = vertical. */
     private int stylePreview = -1;
+    private boolean stylePreviewFor;   // orientación en la que se eligió: al girar la pantalla vuelve a la actual
 
     // El panel de conexión se abre y se pliega a mano desde el mapa: no cuenta para marcar el tema «en uso».
     private boolean themeInUse(FreeTheme t) {
@@ -6079,6 +6081,7 @@ public class Main extends Activity {
 
     private void catStyle(LinearLayout body) {
         TextView intro = tv("Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.", 13, MUTED, false);
+        multiLine(intro);
         intro.setPadding((int) (6 * s), 0, (int) (6 * s), (int) (6 * s));
         body.addView(intro);
         TextView h2 = tv(I18n.t("Temas gratis").toUpperCase(I18n.loc), 11, MUTED, true);
@@ -6086,6 +6089,7 @@ public class Main extends Activity {
         body.addView(h2);
 
         // Subsección Horizontal | Vertical: el mismo tema sirve en las dos orientaciones; aquí se ve cómo queda en cada una
+        if (stylePreview >= 0 && stylePreviewFor != vertical) stylePreview = -1;
         final boolean portrait = stylePreview < 0 ? vertical : stylePreview == 1;
         LinearLayout tabs = new LinearLayout(this);
         tabs.setGravity(Gravity.CENTER_VERTICAL);
@@ -6105,12 +6109,14 @@ public class Main extends Activity {
             if (sel) o.setBackground(round(RED, 15));
             o.setOnClickListener(new View.OnClickListener() { public void onClick(View v) {
                 stylePreview = idx;
+                stylePreviewFor = vertical;
                 showSettings(C_STYLE);
             }});
             g.addView(o);
         }
         tabs.addView(g);
         TextView note = tv("Cada tema se adapta solo a la orientación de la pantalla.", 12, MUTED, false);
+        multiLine(note);
         note.setPadding((int) (12 * s), 0, 0, 0);
         tabs.addView(note, new LinearLayout.LayoutParams(0, -2, 1));
         tabs.setPadding((int) (2 * s), 0, 0, (int) (10 * s));
@@ -6149,6 +6155,7 @@ public class Main extends Activity {
             nameRow.setGravity(Gravity.CENTER_VERTICAL);
             nameRow.setPadding((int) (4 * s), (int) (10 * s), (int) (4 * s), 0);
             TextView nm = tv(t.name, portrait ? 14 : 15, TEXT, true);
+            multiLine(nm);
             nameRow.addView(nm, new LinearLayout.LayoutParams(0, -2, 1));
             if (inUse && !portrait) {
                 TextView badge = tv("En uso", 11, 0xFFFFFFFF, true);
@@ -6167,7 +6174,10 @@ public class Main extends Activity {
                 blp.topMargin = (int) (4 * s);
                 cell.addView(badge, blp);
             }
+            // la descripción completa, sin cortar: dice exactamente lo que cambia al aplicar el tema
             TextView ds = tv(portrait ? t.descV : t.descH, 12, MUTED, false);
+            multiLine(ds);
+            ds.setLineSpacing(2 * s, 1f);
             ds.setPadding((int) (4 * s), (int) (3 * s), (int) (4 * s), 0);
             cell.addView(ds);
             LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(0, -1, 1f);
@@ -6179,6 +6189,12 @@ public class Main extends Activity {
         }
         LinearLayout pr = section(body, "Temas premium");
         rowBase(pr, "Próximamente", "Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.");
+    }
+
+    private static void multiLine(TextView v) {
+        v.setSingleLine(false);
+        v.setMaxLines(6);
+        v.setEllipsize(null);
     }
 
     private LinearLayout section(LinearLayout body, String name) {

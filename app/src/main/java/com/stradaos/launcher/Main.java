@@ -2587,7 +2587,7 @@ public class Main extends Activity {
         // Aurora: esquinas redondas de verdad sobre el fondo y el mapa un poco translúcido
         if (premium && premBg != null) liveMap.setBackdrop(premBg, premBgHolder, Prem.mapAlpha(LIGHT));
         // Cobalto: el mapa se difumina hasta donde empieza el reproductor (abajo, hacia las tarjetas, en vertical)
-        if (premium && Prem.cob() && !mapOnly && premBg != null) liveMap.setFade(vertical ? 2 : 1, (vertical ? 130 : 120) * s);
+        if (premium && Prem.cob() && !mapOnly && premBg != null) liveMap.setFade(vertical ? 2 : 1, (vertical ? 160 : 170) * s);
         liveMap.setVisibility(View.INVISIBLE);
         liveMap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) { liveMap.cycleZoom(); }

@@ -140,18 +140,15 @@ public class LiveMapView extends View {
     /** Franjas del fondo con opacidad creciente (sin capas ni ComposeShader: barato también en Android 4.1). */
     private void drawFade(Canvas c, float w, float h) {
         if (fadeEdge == 0 || fadeLen <= 0) return;
-        int n = 24;
-        float len = Math.min(fadeLen, fadeEdge == 1 ? w : h), step = len / n;
+        int n = 32;
+        float len = Math.min(fadeLen, fadeEdge == 1 ? w : h), step = len / n, e0 = (fadeEdge == 1 ? w : h) - len;
         for (int i = 0; i < n; i++) {
             float t = (i + 1f) / n;
             back.setAlpha(Math.round(255 * t * t * (3 - 2 * t)));   // curva suave
-            if (fadeEdge == 1) {
-                float x = w - len + i * step;
-                c.drawRect(x, 0, (i == n - 1 ? w : x + step + 1), h, back);
-            } else {
-                float y = h - len + i * step;
-                c.drawRect(0, y, w, (i == n - 1 ? h : y + step + 1), back);
-            }
+            // bordes en píxeles enteros y sin pisarse: si se pisan quedan rayitas más oscuras
+            float a0 = Math.round(e0 + i * step), a1 = i == n - 1 ? (fadeEdge == 1 ? w : h) : Math.round(e0 + (i + 1) * step);
+            if (fadeEdge == 1) c.drawRect(a0, 0, a1, h, back);
+            else c.drawRect(0, a0, w, a1, back);
         }
         back.setAlpha(255);
     }

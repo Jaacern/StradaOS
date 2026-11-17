@@ -2587,7 +2587,7 @@ public class Main extends Activity {
         // Aurora: esquinas redondas de verdad sobre el fondo y el mapa un poco translúcido
         if (premium && premBg != null) liveMap.setBackdrop(premBg, premBgHolder, Prem.mapAlpha(LIGHT));
         // Cobalto: el mapa se difumina hasta donde empieza el reproductor (abajo, hacia las tarjetas, en vertical)
-        if (premium && Prem.cob() && !mapOnly && premBg != null) liveMap.setFade(vertical ? 2 : 1, (vertical ? 230 : Math.max(260, mapW * 0.5f)) * s);
+        if (premium && Prem.cob() && !mapOnly && premBg != null) liveMap.setFade(vertical ? 2 : 1, (vertical ? 150 : Math.max(260, mapW * 0.5f)) * s);
         liveMap.setVisibility(View.INVISIBLE);
         liveMap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) { liveMap.cycleZoom(); }
@@ -3893,16 +3893,17 @@ public class Main extends Activity {
             mapY = premHeadY;
             mapW = W0 - 32;
         } else if (vertical) {
-            cobCardsH = shortVertical ? 300 : 360;
+            cobCardsH = shortVertical ? 360 : 450;   // más altas: llegan hasta el mapa
             cobCardsY = bottom - cobCardsH;
             mapY = premHeadY + (cobTempH > 0 ? cobTempH + 8 : 0);
             mapW = W0 - 32;
             bottom = cobCardsY;   // el difuminado termina donde empiezan las tarjetas
         } else {
-            cobColW = 248 + Math.min(60, Math.max(0, ex) / 6f);
-            float px = W0 - 16 - cobColW - 12 - cobColW;
+            cobColW = 256 + Math.min(60, Math.max(0, ex) / 6f);
+            float px = W0 - 16 - 2 * cobColW;   // reproductor y vehículo pegados (como la referencia)
             mapY = premHeadY + (cobTempH > 0 ? cobTempH + 8 : 0);
-            mapW = px - 16;   // el difuminado termina donde empieza el reproductor
+            // el difuminado termina donde empieza el reproductor (un poco por debajo de su borde inclinado)
+            mapW = px - 16 + cobSkew(cobColW, bottom - premHeadY) * 0.5f;
         }
         mapH = Math.max(120, bottom - mapY);
         cardH = mapH; rowY = mapY; insL = insR = 0;
@@ -3911,15 +3912,15 @@ public class Main extends Activity {
 
     private void buildCobalto() {
         premHeadViews.clear();
-        float W0 = premW(), gap = 12;
+        float W0 = premW();
         if (cobTempH > 0) buildCobTemp(24, premHeadY, (vertical ? W0 - 32 : mapW) - 8, cobTempH);
         if (vertical) {
-            float cw = (W0 - 32 - gap) / 2;
+            float cw = (W0 - 32) / 2;
             buildCobMusic(16, cobCardsY, cw, cobCardsH);
-            buildCobCar(16 + cw + gap, cobCardsY, cw, cobCardsH);
+            buildCobCar(16 + cw, cobCardsY, cw, cobCardsH);
         } else {
             float top = premHeadY, hh = dockTop - (noDock ? 16 : 12) - top;
-            float vx = W0 - 16 - cobColW, px = vx - gap - cobColW;
+            float vx = W0 - 16 - cobColW, px = vx - cobColW;
             buildCobMusic(px, top, cobColW, hh);
             buildCobCar(vx, top, cobColW, hh);
         }
@@ -3951,7 +3952,10 @@ public class Main extends Activity {
 
     /** Reproductor: carátula redonda con el avance alrededor, canción y artista centrados y los controles abajo. */
     /** Inclinación de las tarjetas de Cobalto (el borde de arriba corrido a la derecha), en unidades del lienzo. */
-    private float cobSkew(float w, float hh) { return Math.min(20, Math.min(w * 0.075f, hh * 0.05f)); }
+    private float cobSkew(float w, float hh) { return Math.min(w * 0.22f, hh * 0.15f); }
+
+    /** Centro horizontal de una tarjeta inclinada a la altura y (el borde izquierdo se corre hacia la derecha al bajar). */
+    private static float cobMid(float w, float hh, float sk, float y) { return (w + sk * Math.max(0, Math.min(1, y / hh))) / 2; }
 
     private void buildCobMusic(float x, float y, float w, float hh) {
         final FrameLayout card = new FrameLayout(this);
@@ -3960,29 +3964,34 @@ public class Main extends Activity {
         place(board, card, x, y, w, hh);
         premHeadViews.add(card);
         float m = 16;
-        placeWrap(card, tv("Música", 12, MUTED, true), m + sk, 14);
+        placeWrap(card, tv("Música", 12, MUTED, true), m + 6, 16);
         sourceTv = tv("", 11, RED, true);
         sourceTv.setGravity(Gravity.RIGHT);
         place(card, sourceTv, w * 0.38f, 14, w * 0.62f - m, 16);
         // elementos grandes: carátula, títulos y botones
-        float d = vertical ? Math.min(w * 0.58f, hh * 0.40f) : Math.min(w * 0.80f, hh * 0.46f);
-        float ps = vertical ? 54 : 60, bs = ps - 8;
+        float d = vertical ? Math.min(w * 0.56f, hh * 0.40f) : Math.min(w * 0.72f, hh * 0.44f);
+        float ps = vertical ? 56 : 60, bs = ps - 8;
         float tH = vertical ? 24 : 28, aH = vertical ? 20 : 22;
         float block = d + 14 + tH + 2 + aH + 4 + 16, avail = hh - 38 - 16, total = block + 16 + ps;
         float y0 = 38 + Math.max(0, (avail - total) / 2);
         playerArt = new PlayerArt(this, s, asset("ic/music_note.png"));
-        place(card, playerArt, (w - d) / 2, y0, d, d);
+        // todo centrado en la parte visible de la tarjeta a esa altura (el borde izquierdo está inclinado)
+        place(card, playerArt, cobMid(w, hh, sk, y0 + d / 2) - d / 2, y0, d, d);
         float ty = y0 + d + 14;
+        float tx = sk * (ty + 30) / hh + m, tw = w - m - tx;
         trackTv = tv("Nada sonando", vertical ? 18 : 20, TEXT, true);
         trackTv.setGravity(Gravity.CENTER_HORIZONTAL);
-        place(card, trackTv, m, ty, w - 2 * m, tH);
+        place(card, trackTv, tx, ty, tw, tH);
         artistTv = tv("Radio, Bluetooth o USB", vertical ? 14 : 15, MUTED, false);
         artistTv.setGravity(Gravity.CENTER_HORIZONTAL);
-        place(card, artistTv, m, ty + tH + 2, w - 2 * m, aH);
+        place(card, artistTv, tx, ty + tH + 2, tw, aH);
         timePosTv = tv("", 11, MUTED, false);
         timePosTv.setGravity(Gravity.CENTER_HORIZONTAL);
-        place(card, timePosTv, m, ty + tH + 2 + aH + 4, w - 2 * m, 16);
-        float ry = y0 + block + 16, cx = w / 2, sp = Math.min(20, (w - ps - 2 * bs) / 4);
+        place(card, timePosTv, tx, ty + tH + 2 + aH + 4, tw, 16);
+        float ry = y0 + block + 16, cx = cobMid(w, hh, sk, ry + ps / 2);
+        float aw = w - sk * (ry + ps) / hh - 16;   // ancho visible a la altura de los botones
+        if (ps + 2 * bs + 16 > aw) { bs = Math.max(36, (aw - ps - 16) / 2); }
+        float sp = Math.max(4, Math.min(20, (aw - ps - 2 * bs) / 4));
         final View prev = circleIcon("skip_previous", bs, bs * 0.56f, 0), next = circleIcon("skip_next", bs, bs * 0.56f, 0);
         prev.setBackground(round(Prem.soft(LIGHT), bs / 2));
         next.setBackground(round(Prem.soft(LIGHT), bs / 2));
@@ -4024,7 +4033,7 @@ public class Main extends Activity {
         premHeadViews.add(card);
         float m = 14;
         carTv = tv(prefs.getString("car_name", "Mi vehículo"), 12, MUTED, true);
-        place(card, carTv, m + 2 + sk, 14, w - 2 * m - 70 - sk, 16);
+        place(card, carTv, m + 8, 16, w - 2 * m - 80, 16);
         LinearLayout g = new LinearLayout(this);
         g.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
         gpsDot = new View(this);
@@ -4033,8 +4042,8 @@ public class Main extends Activity {
         gpsTv = tv("GPS", 10, MUTED, false);
         gpsTv.setPadding((int) (5 * s), 0, 0, 0);
         g.addView(gpsTv);
-        place(card, g, w - m - 100, 14, 100, 16);
-        float stripH = 38, stripY = hh - stripH - 12;
+        place(card, g, w - m - 100, 16, 100, 16);
+        float stripH = 38, stripY = hh - stripH - 14;
         float top = 36, gh = carSpeed ? Math.min(hh * 0.42f, w * 0.78f) : 0;
         // velocímetro
         final int speedo = carSpeed ? prefs.getInt("speedo", 0) : 0;
@@ -4053,9 +4062,11 @@ public class Main extends Activity {
             carGauge.setUnit(useMph());
             carGauge.setNumber(speedo == 2);
             carGauge.setCompact(gh < 170);
-            place(card, carGauge, 10 + sk * 0.5f, top, w - 20 - sk * 0.5f, gh);
+            float gx = sk * (top + gh / 2) / hh;   // centrado en la parte visible (borde inclinado)
+            place(card, carGauge, 10 + gx, top, w - 20 - gx, gh);
         } else if (carSpeed) {
-            place(card, sv, 10 + sk * 0.5f, top, w - 20 - sk * 0.5f, gh);
+            float gx = sk * (top + gh / 2) / hh;
+            place(card, sv, 10 + gx, top, w - 20 - gx, gh);
         }
         // el auto: el deportivo de StradaOS o, si se elige en Pantalla de inicio, la foto de Tu vehículo
         float cy = top + gh + (carSpeed ? 4 : 0), ch = (oilHome ? stripY - 8 : hh - 12) - cy;
@@ -4072,7 +4083,8 @@ public class Main extends Activity {
             // el auto del tema pegado a la derecha, cortado por el borde inclinado de la tarjeta, con su sombra
             place(card, new Cobalto.CarCut(this, Cobalto.car(this), sk * s, 24 * s, cy * s, (cy + ch) * s), 0, 0, w, hh);
         }
-        if (oilHome) premOilStrip(card, m - 4, stripY, w - 2 * m + 8 - sk, stripH);
+        float ox = sk * (stripY + stripH) / hh + m;   // la barrita del mantenimiento sigue el borde inclinado
+        if (oilHome) premOilStrip(card, ox, stripY, w - ox - m, stripH);
         else { oilValTv = null; oilBar = null; oilBarBg = null; oilLblTv = null; oilIc = null; }
         card.setOnClickListener(new View.OnClickListener() { public void onClick(View v) {
             if (oilHome) badgeMenu(); else showSettings(C_VEHICLE);

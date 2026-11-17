@@ -63,14 +63,17 @@ final class Cobalto {
         c.drawRect(0, 0, c.getWidth(), c.getHeight(), p);
     }
 
-    /** Paralelogramo redondeado (tarjeta inclinada): el borde de arriba corrido sk a la derecha respecto al de abajo. */
-    static Path para(float l, float t, float r, float b, float sk, float rad) {
-        float[] xs = {l + sk, r, r - sk, l}, ys = {t, t, b, b};
+    /**
+     * Forma de las tarjetas (como la referencia): el borde izquierdo inclinado (baja hacia la derecha, sk) con las
+     * esquinas de ese lado bien redondeadas; el lado derecho recto, casi sin redondear (se difumina y no lleva línea).
+     */
+    static Path shape(float l, float t, float r, float b, float sk, float rad) {
+        float[] xs = {l, r, r, l + sk}, ys = {t, t, b, b}, rr = {rad, rad * 0.3f, rad * 0.3f, rad};
         Path p = new Path();
         for (int i = 0; i < 4; i++) {
             float px = xs[(i + 3) % 4], py = ys[(i + 3) % 4], cx = xs[i], cy = ys[i], nx = xs[(i + 1) % 4], ny = ys[(i + 1) % 4];
             float d1 = (float) Math.hypot(cx - px, cy - py), d2 = (float) Math.hypot(nx - cx, ny - cy);
-            float k1 = Math.min(rad, d1 / 2) / d1, k2 = Math.min(rad, d2 / 2) / d2;
+            float k1 = Math.min(rr[i], d1 / 2) / d1, k2 = Math.min(rr[i], d2 / 2) / d2;
             float ax = cx + (px - cx) * k1, ay = cy + (py - cy) * k1, bx = cx + (nx - cx) * k2, by = cy + (ny - cy) * k2;
             if (i == 0) p.moveTo(ax, ay); else p.lineTo(ax, ay);
             p.quadTo(cx, cy, bx, by);
@@ -79,32 +82,75 @@ final class Cobalto {
         return p;
     }
 
-    /** Fondo de tarjeta inclinada: vidrio azul con degradado vertical y borde fino de luz. */
+    /** Solo el lado inclinado (con sus dos esquinas y un tramo de arriba y de abajo): ahí va la línea de la tarjeta. */
+    static Path edge(float l, float t, float r, float b, float sk, float rad) {
+        float w = r - l, len = (float) Math.hypot(sk, b - t), k = Math.min(rad, len / 2) / len;
+        Path p = new Path();
+        p.moveTo(l + w * 0.6f, t);
+        p.lineTo(l + rad, t);
+        p.quadTo(l, t, l + sk * k, t + (b - t) * k);
+        p.lineTo(l + sk - sk * k, b - (b - t) * k);
+        p.quadTo(l + sk, b, l + sk + rad, b);
+        p.lineTo(l + sk + w * 0.6f, b);
+        return p;
+    }
+
+    /** Fondo de la tarjeta: vidrio azul que se difumina hacia la derecha, línea solo en el lado inclinado y, en oscuro,
+     *  el brillo de luz en las dos esquinas redondeadas. */
     static final class SkewCard extends android.graphics.drawable.Drawable {
-        private final Paint fill = new Paint(Paint.ANTI_ALIAS_FLAG), edge = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Paint fill = new Paint(Paint.ANTI_ALIAS_FLAG), line = new Paint(Paint.ANTI_ALIAS_FLAG),
+            glow = new Paint(Paint.ANTI_ALIAS_FLAG), halo = new Paint(Paint.ANTI_ALIAS_FLAG);
         private final boolean light;
-        private final float rad, sk;
-        private Path path;
+        private final float rad, sk, stroke;
+        private Path path, side;
+        private float g1x, g1y, g2x, g2y, gr;
+        private Shader g1, g2, h1, h2;
 
         SkewCard(boolean light, float rad, float sk, float stroke) {
             this.light = light;
             this.rad = rad;
             this.sk = sk;
-            edge.setStyle(Paint.Style.STROKE);
-            edge.setStrokeWidth(Math.max(1f, stroke));
-            edge.setColor(glassEdge(light));
+            this.stroke = Math.max(1f, stroke);
+            for (Paint p : new Paint[]{line, glow, halo}) {
+                p.setStyle(Paint.Style.STROKE);
+                p.setStrokeCap(Paint.Cap.ROUND);
+            }
+            line.setStrokeWidth(this.stroke);
+            glow.setStrokeWidth(this.stroke * 2f);
+            halo.setStrokeWidth(this.stroke * 8f);
         }
 
         @Override protected void onBoundsChange(android.graphics.Rect b) {
-            float e = edge.getStrokeWidth() / 2;
-            path = para(b.left + e, b.top + e, b.right - e, b.bottom - e, sk, rad);
-            fill.setShader(new LinearGradient(0, b.top, 0, b.bottom, glassTop(light), glassBottom(light), Shader.TileMode.CLAMP));
+            float e = stroke * 4, l = b.left + e, t = b.top + e, r = b.right, bt = b.bottom - e, w = r - l;
+            path = shape(l, t, r, bt, sk, rad);
+            side = edge(l, t, r, bt, sk, rad);
+            int top = glassTop(light), bot = glassBottom(light);
+            fill.setShader(new LinearGradient(l, t, r, bt * 0.4f + t * 0.6f,
+                new int[]{top, bot, bot & 0x00FFFFFF | ((((bot >>> 24) * 30) / 100) << 24), bot & 0x00FFFFFF},
+                new float[]{0f, 0.55f, 0.85f, 1f}, Shader.TileMode.CLAMP));
+            int ec = glassEdge(light);
+            line.setShader(new LinearGradient(l + sk, 0, l + w * 0.62f, 0, ec, ec & 0x00FFFFFF, Shader.TileMode.CLAMP));
+            // brillo en las esquinas redondeadas (arriba a la izquierda y abajo, donde termina el lado inclinado)
+            g1x = l + rad * 0.3f; g1y = t + rad * 0.3f;
+            g2x = l + sk + rad * 0.3f; g2y = bt - rad * 0.3f;
+            gr = rad * 2.6f;
+            int hot = light ? 0xCCFFFFFF : 0xF2D6ECFF, mid = light ? 0x40FFFFFF : 0x807FB6FF, soft = light ? 0x30FFFFFF : 0x557FB6FF;
+            g1 = new android.graphics.RadialGradient(g1x, g1y, gr, new int[]{hot, mid, 0}, new float[]{0f, 0.45f, 1f}, Shader.TileMode.CLAMP);
+            g2 = new android.graphics.RadialGradient(g2x, g2y, gr, new int[]{hot, mid, 0}, new float[]{0f, 0.45f, 1f}, Shader.TileMode.CLAMP);
+            h1 = new android.graphics.RadialGradient(g1x, g1y, gr * 0.8f, new int[]{soft, 0}, null, Shader.TileMode.CLAMP);
+            h2 = new android.graphics.RadialGradient(g2x, g2y, gr * 0.8f, new int[]{soft, 0}, null, Shader.TileMode.CLAMP);
         }
 
         @Override public void draw(Canvas c) {
             if (path == null) return;
             c.drawPath(path, fill);
-            c.drawPath(path, edge);
+            c.drawPath(side, line);
+            if (!light) {   // en oscuro: la luz que se ve en las puntas redondeadas
+                halo.setShader(h1); c.drawPath(side, halo);
+                halo.setShader(h2); c.drawPath(side, halo);
+                glow.setShader(g1); c.drawPath(side, glow);
+                glow.setShader(g2); c.drawPath(side, glow);
+            }
         }
 
         @Override public void setAlpha(int a) { }
@@ -149,11 +195,12 @@ final class Cobalto {
             if (w <= 0 || h <= 0 || car == null) return;
             try { out = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888); } catch (Throwable e) { return; }
             Canvas c = new Canvas(out);
-            c.clipPath(para(1, 1, w - 1, h - 1, sk, rad));
+            float e = 4 * (sk > 0 ? 1 : 0);
+            c.clipPath(shape(e, e, w, h - e, sk, rad));
             float aspect = car.getWidth() / (float) car.getHeight();
-            float ah = Math.max(10, areaBottom - areaTop), cw = w * 1.08f, ch = cw / aspect;
+            float ah = Math.max(10, areaBottom - areaTop), cw = w * 1.12f, ch = cw / aspect;
             if (ch > ah) { ch = ah; cw = ch * aspect; }
-            float left = w - cw * 0.92f, top = areaBottom - ch;   // se sale un 8 % por la derecha
+            float left = w - cw * 0.74f, top = areaBottom - ch;   // como la referencia: el auto se sale por la derecha
             Paint p = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.FILTER_BITMAP_FLAG);
             // sombra: una mancha ancha y suave y otra más oscura justo bajo las ruedas
             float sy = top + ch * 0.92f;
@@ -206,15 +253,16 @@ final class Cobalto {
         }
 
         private void card(Canvas c, float l, float t, float rt, float b, float rad) {
-            Path path = para(l, t, rt, b, Math.min((rt - l) * 0.07f, (b - t) * 0.06f), rad * 1.3f);
+            float sk = Math.min((rt - l) * 0.22f, (b - t) * 0.15f);
+            Path path = shape(l, t, rt, b, sk, rad * 1.3f);
             p.setStyle(Paint.Style.FILL);
-            p.setShader(new LinearGradient(0, t, 0, b, glassTop(light), glassBottom(light), Shader.TileMode.CLAMP));
+            p.setShader(new LinearGradient(l, t, rt, t, glassTop(light), glassBottom(light) & 0x30FFFFFF, Shader.TileMode.CLAMP));
             c.drawPath(path, p);
-            p.setShader(null);
             p.setStyle(Paint.Style.STROKE);
             p.setStrokeWidth(Math.max(1f, s * 0.8f));
-            p.setColor(glassEdge(light));
-            c.drawPath(path, p);
+            p.setShader(new LinearGradient(l + sk, 0, l + (rt - l) * 0.6f, 0, glassEdge(light), 0, Shader.TileMode.CLAMP));
+            c.drawPath(edge(l, t, rt, b, sk, rad * 1.3f), p);
+            p.setShader(null);
         }
 
         @Override protected void onDraw(Canvas c) {
@@ -246,18 +294,18 @@ final class Cobalto {
             float pillH = portrait ? w * 0.09f : h * 0.11f, pillY = h - pad - pillH, bottom = pillY - gap;
             float tempH = u * 0.07f;
             if (!portrait) {
-                float vw = cw * 0.25f, pw = cw * 0.25f;
-                float vx = pad + cw - vw, px = vx - gap - pw;
+                float vw = cw * 0.26f, pw = cw * 0.26f;
+                float vx = pad + cw - vw, px = vx - pw;
                 temp(c, pad, top, px - pad, tempH, text, muted);
                 map(c, pad, top + tempH + gap, px - gap * 0.3f, bottom, crad, u, true);
                 player(c, px, top, pw, bottom - top, crad, text, muted);
                 vehicle(c, vx, top, vw, bottom - top, crad, text, muted);
             } else {
-                float cardsH = h * 0.26f, cy = bottom - cardsH, cwh = (cw - gap) / 2;
+                float cardsH = h * 0.32f, cy = bottom - cardsH, cwh = cw / 2;
                 temp(c, pad, top, cw, tempH, text, muted);
                 map(c, pad, top + tempH + gap, pad + cw, cy - gap * 0.3f, crad, u, false);
                 player(c, pad, cy, cwh, cardsH, crad, text, muted);
-                vehicle(c, pad + cwh + gap, cy, cwh, cardsH, crad, text, muted);
+                vehicle(c, pad + cwh, cy, cwh, cardsH, crad, text, muted);
             }
             float pw2 = cw * (portrait ? 0.78f : 0.52f), px2 = (w - pw2) / 2;
             rr(c, px2, pillY, px2 + pw2, pillY + pillH, pillH / 2, pill(light));

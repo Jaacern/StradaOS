@@ -28,8 +28,8 @@ final class Cobalto {
 
     static int base(boolean light) { return light ? 0xFFE6ECF6 : 0xFF060B18; }
     // tarjetas: vidrio azul con el borde de arriba un poco más claro (degradado vertical)
-    static int glassTop(boolean light) { return light ? 0xD9FFFFFF : 0x4A2A4680; }
-    static int glassBottom(boolean light) { return light ? 0x99E4ECFA : 0x2E0D1A3A; }
+    static int glassTop(boolean light) { return light ? 0xD9FFFFFF : 0x6E2D4C88; }
+    static int glassBottom(boolean light) { return light ? 0x99E4ECFA : 0x4A0F1E44; }
     static int glassEdge(boolean light) { return light ? 0xE6FFFFFF : 0x4D6E9BFF; }
     static int pill(boolean light) { return light ? 0x4D8FA3C7 : 0xE60A1328; }
     static int pillEdge(boolean light) { return light ? 0xB3FFFFFF : 0x4D6E9BFF; }

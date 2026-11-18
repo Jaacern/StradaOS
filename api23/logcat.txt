@@ -1,0 +1,1004 @@
+--------- beginning of main
+11-18 14:32:41.190  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:41.454  3812  3812 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:32:41.455  3812  3812 D AndroidRuntime: CheckJNI is OFF
+11-18 14:32:41.462  3812  3812 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:32:41.472  3812  3812 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:32:41.472  3812  3812 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:32:41.473  3812  3812 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:32:41.478  3812  3812 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+--------- beginning of system
+11-18 14:32:41.480  1560  1571 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:32:41.480  3812  3812 D AndroidRuntime: Shutting down VM
+11-18 14:32:42.505  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:42.998  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:44.505  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:46.511  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:47.784  3822  3822 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:32:47.785  3822  3822 D AndroidRuntime: CheckJNI is OFF
+11-18 14:32:47.792  3822  3822 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:32:47.803  3822  3822 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:32:47.803  3822  3822 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:32:47.804  3822  3822 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:32:47.813  3822  3822 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:32:47.814  1560  2044 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:32:47.814  3822  3822 D AndroidRuntime: Shutting down VM
+11-18 14:32:48.828  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:49.369  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:49.370  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:49.382  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:49.392  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:50.645  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:50.647  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:50.655  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:50.729  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:50.745  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:50.751  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:50.847  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:52.236  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.259  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.270  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.276  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.287  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.312  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.321  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.327  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.338  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.360  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.371  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.394  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.405  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.411  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.421  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.442  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.455  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.461  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.472  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.492  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.506  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.516  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:32:52.821  3095  3123 E Surface : getSlotFromBufferLocked: unknown buffer: 0xadca04e0
+11-18 14:32:52.861  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:54.875  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:56.876  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:32:58.889  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:00.045  1248  1601 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-18 14:33:00.046  1248  1265 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 2457600
+11-18 14:33:00.049  3833  3833 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 3833
+11-18 14:33:00.195  3838  3838 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:00.196  3838  3838 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:00.206  3838  3838 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:00.216  3838  3838 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:00.216  3838  3838 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:00.217  3838  3838 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:00.227  3838  3838 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:00.229  2096  2096 D MediaScannerReceiver: action: android.intent.action.MEDIA_SCANNER_SCAN_FILE path: /data/local/tmp/s.png
+11-18 14:33:00.229  3838  3838 D AndroidRuntime: Shutting down VM
+11-18 14:33:00.532  3847  3847 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:00.533  3847  3847 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:00.547  3847  3847 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:00.558  3847  3847 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:00.558  3847  3847 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:00.559  3847  3847 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:00.565  3847  3847 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-18 14:33:00.565  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=512.0, y[0]=450.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595482, downTime=595482, deviceId=0, source=0x1002 }
+11-18 14:33:00.566  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=450.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595482, downTime=595482, deviceId=0, source=0x1002 }
+11-18 14:33:00.584  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=433.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595502, downTime=595502, deviceId=0, source=0x1002 }
+11-18 14:33:00.601  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=419.475, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595519, downTime=595519, deviceId=0, source=0x1002 }
+11-18 14:33:00.619  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.621  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=402.975, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595539, downTime=595539, deviceId=0, source=0x1002 }
+11-18 14:33:00.635  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.638  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=389.775, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595555, downTime=595555, deviceId=0, source=0x1002 }
+11-18 14:33:00.648  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.652  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.655  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=374.925, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595573, downTime=595573, deviceId=0, source=0x1002 }
+11-18 14:33:00.665  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.669  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.673  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=360.9, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595590, downTime=595590, deviceId=0, source=0x1002 }
+11-18 14:33:00.682  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.685  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=351.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595602, downTime=595602, deviceId=0, source=0x1002 }
+11-18 14:33:00.702  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.705  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=334.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595622, downTime=595622, deviceId=0, source=0x1002 }
+11-18 14:33:00.716  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.720  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.724  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=318.825, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595641, downTime=595641, deviceId=0, source=0x1002 }
+11-18 14:33:00.734  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.737  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.741  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=304.8, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595658, downTime=595658, deviceId=0, source=0x1002 }
+11-18 14:33:00.750  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.755  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.757  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=291.6, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595674, downTime=595674, deviceId=0, source=0x1002 }
+11-18 14:33:00.768  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.770  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=280.875, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595687, downTime=595687, deviceId=0, source=0x1002 }
+11-18 14:33:00.787  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.790  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=264.375, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595707, downTime=595707, deviceId=0, source=0x1002 }
+11-18 14:33:00.800  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.804  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.807  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=250.34999, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595724, downTime=595724, deviceId=0, source=0x1002 }
+11-18 14:33:00.817  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.821  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.824  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=236.32501, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595741, downTime=595741, deviceId=0, source=0x1002 }
+11-18 14:33:00.834  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.839  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.840  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=223.125, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595757, downTime=595757, deviceId=0, source=0x1002 }
+11-18 14:33:00.852  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.858  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=208.275, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595775, downTime=595775, deviceId=0, source=0x1002 }
+11-18 14:33:00.872  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.875  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=193.42502, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595793, downTime=595793, deviceId=0, source=0x1002 }
+11-18 14:33:00.885  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.889  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.892  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=180.225, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595809, downTime=595809, deviceId=0, source=0x1002 }
+11-18 14:33:00.902  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.906  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.906  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:00.906  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=167.85, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595824, downTime=595824, deviceId=0, source=0x1002 }
+11-18 14:33:00.919  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.925  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.929  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=149.69998, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595846, downTime=595846, deviceId=0, source=0x1002 }
+11-18 14:33:00.937  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.941  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=139.79999, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595858, downTime=595858, deviceId=0, source=0x1002 }
+11-18 14:33:00.957  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.959  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=512.0, y[0]=124.94998, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595876, downTime=595876, deviceId=0, source=0x1002 }
+11-18 14:33:00.970  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.974  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.980  3847  3847 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=512.0, y[0]=120.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=595897, downTime=595897, deviceId=0, source=0x1002 }
+11-18 14:33:00.989  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.994  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:00.997  3847  3847 D AndroidRuntime: Shutting down VM
+11-18 14:33:01.008  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.017  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.043  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.061  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.073  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.077  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.091  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.095  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.108  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.128  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.140  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.145  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.159  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.163  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.176  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.180  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.192  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.213  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.226  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.232  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.249  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.282  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.295  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.299  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.312  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.333  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.345  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.350  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.363  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.384  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.399  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.402  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.415  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.419  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.432  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.435  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.450  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.453  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.467  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.470  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.485  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.493  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.499  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.504  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.517  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.521  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.534  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.551  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.921  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.945  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.955  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.963  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.972  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:01.995  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.005  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.030  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.039  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.046  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.056  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.080  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.089  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.097  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.106  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.127  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.139  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.148  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.157  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.177  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:02.912  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:03.242  1248  1601 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-18 14:33:03.243  1248  1263 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 2457600
+11-18 14:33:03.244  3856  3856 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 3856
+11-18 14:33:03.389  3861  3861 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:03.390  3861  3861 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:03.397  3861  3861 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:03.412  3861  3861 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:03.412  3861  3861 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:03.412  3861  3861 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:03.416  3861  3861 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:03.421  2096  2096 D MediaScannerReceiver: action: android.intent.action.MEDIA_SCANNER_SCAN_FILE path: /data/local/tmp/s.png
+11-18 14:33:03.422  3861  3861 D AndroidRuntime: Shutting down VM
+11-18 14:33:03.721  3870  3870 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:03.721  3870  3870 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:03.727  3870  3870 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:03.734  3870  3870 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:03.734  3870  3870 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:03.735  3870  3870 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:03.741  3870  3870 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-18 14:33:03.742  3870  3870 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=598659, downTime=598659, deviceId=-1, source=0x101 }
+11-18 14:33:03.742  3870  3870 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=598659, downTime=598659, deviceId=-1, source=0x101 }
+11-18 14:33:03.743  3095  3123 E Surface : getSlotFromBufferLocked: unknown buffer: 0xadca08a0
+11-18 14:33:03.744  3870  3870 D AndroidRuntime: Shutting down VM
+11-18 14:33:03.744  3095  3095 W InputEventReceiver: Attempted to finish an input event but the input event receiver has already been disposed.
+11-18 14:33:04.916  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:06.054  3880  3880 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:06.056  3880  3880 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:06.064  3880  3880 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:06.072  3880  3880 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:06.072  3880  3880 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:06.073  3880  3880 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:06.077  3880  3880 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-18 14:33:06.078  3880  3880 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=600995, downTime=600995, deviceId=-1, source=0x101 }
+11-18 14:33:06.078  3880  3880 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=600995, downTime=600995, deviceId=-1, source=0x101 }
+11-18 14:33:06.079  3880  3880 D AndroidRuntime: Shutting down VM
+11-18 14:33:06.085  1248  1279 D hwcomposer: hw_composer sent 3511 syncs in 60s
+11-18 14:33:06.930  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:08.386  3891  3891 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:08.387  3891  3891 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:08.396  3891  3891 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:08.404  3891  3891 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:08.404  3891  3891 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:08.405  3891  3891 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:08.409  3891  3891 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:08.411  1560  2036 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:33:08.413  3891  3891 D AndroidRuntime: Shutting down VM
+11-18 14:33:09.429  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:09.922  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:11.430  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:12.717  3900  3900 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:12.717  3900  3900 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:12.729  3900  3900 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:12.736  3900  3900 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:12.736  3900  3900 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:12.737  3900  3900 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:12.747  3900  3900 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:12.748  1560  1701 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:33:12.748  3900  3900 D AndroidRuntime: Shutting down VM
+11-18 14:33:13.753  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:14.280  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:15.753  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:17.760  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:19.058  3910  3910 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:19.059  3910  3910 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:19.066  3910  3910 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:19.077  3910  3910 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:19.077  3910  3910 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:19.080  3910  3910 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:19.083  3910  3910 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:19.085  1560  2198 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:33:19.085  3910  3910 D AndroidRuntime: Shutting down VM
+11-18 14:33:20.088  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:20.635  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:20.636  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:20.646  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:20.648  1969  1969 W RichInputMethodSubtype: Can't find emoji subtype
+11-18 14:33:20.649  1969  1969 W RichInputMethodSubtype: No input method subtype found; returning dummy subtype: Multi-lingual subtype: android.view.inputmethod.InputMethodSubtype@d78b2ed0, zz
+11-18 14:33:20.665  1969  1969 W ViewPager: Requested offscreen page limit 0 too small; defaulting to 1
+11-18 14:33:20.666  1560  1647 W AudioTrack: AUDIO_OUTPUT_FLAG_FAST denied by client; transfer 4, track 48000 Hz, output 44100 Hz
+11-18 14:33:20.669  1969  1969 I LatinIME: Starting input. Cursor position = 0,0
+11-18 14:33:20.692  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:20.760  1248  2200 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-18 14:33:20.760  1969  3927 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+11-18 14:33:20.763  1969  1969 D         : HostConnection::get() New Host Connection established 0xac963540, tid 1969
+11-18 14:33:20.783  1969  3927 D         : HostConnection::get() New Host Connection established 0xac96bac0, tid 3927
+11-18 14:33:20.792  1969  3927 I OpenGLRenderer: Initialized EGL, version 1.4
+11-18 14:33:20.793  1969  3927 D EGL_emulation: eglCreateContext: 0xaa45d440: maj 3 min 0 rcv 3
+11-18 14:33:20.793  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:33:20.793  1969  3927 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
+11-18 14:33:20.794  1969  3927 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
+11-18 14:33:20.796  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:33:21.245  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:21.260  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:21.647  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:21.663  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.088  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:22.150  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.166  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.217  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.255  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.268  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.302  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.318  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.356  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.368  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.407  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.419  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.456  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.470  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.503  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.655  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:22.672  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:23.159  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:23.192  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:23.645  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:23.662  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:23.839  1273  1628 W audio_hw_generic: Not supplying enough data to HAL, expected position 275735 , only wrote 138810
+11-18 14:33:24.089  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:24.165  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:24.173  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:24.652  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:24.669  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:25.173  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:25.190  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:25.320  1248  2513 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-18 14:33:25.321  1248  2200 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 2457600
+11-18 14:33:25.322  3930  3930 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 3930
+11-18 14:33:25.446  3935  3935 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:25.447  3935  3935 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:25.455  3935  3935 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:25.463  3935  3935 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:25.463  3935  3935 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:25.465  3935  3935 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:25.468  3935  3935 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:25.470  2096  2096 D MediaScannerReceiver: action: android.intent.action.MEDIA_SCANNER_SCAN_FILE path: /data/local/tmp/s.png
+11-18 14:33:25.471  3935  3935 D AndroidRuntime: Shutting down VM
+11-18 14:33:25.677  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:25.682  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:25.802  3944  3944 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:25.803  3944  3944 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:25.810  3944  3944 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:25.824  3944  3944 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:25.824  3944  3944 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:25.825  3944  3944 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:25.829  3944  3944 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-18 14:33:25.829  3944  3944 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=620747, downTime=620747, deviceId=-1, source=0x101 }
+11-18 14:33:25.830  3944  3944 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=620747, downTime=620747, deviceId=-1, source=0x101 }
+11-18 14:33:25.831  3944  3944 D AndroidRuntime: Shutting down VM
+11-18 14:33:25.848  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:33:25.850  1969  3927 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40bd700
+11-18 14:33:26.089  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:26.181  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:26.189  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:26.684  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:26.718  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:27.171  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:27.191  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:27.692  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:27.709  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:28.090  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:28.142  3953  3953 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:28.143  3953  3953 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:28.154  3953  3953 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:28.161  3953  3953 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:28.161  3953  3953 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:28.163  3953  3953 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:28.170  3953  3953 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:28.173  1560  1571 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:33:28.173  3953  3953 D AndroidRuntime: Shutting down VM
+11-18 14:33:28.209  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:28.213  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:28.700  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:28.717  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:29.186  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:29.210  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:29.220  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:29.719  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:29.738  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:29.741  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:30.245  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:30.497  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:30.732  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:30.748  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:31.187  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:31.252  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:31.286  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:31.740  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:31.759  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:32.260  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:32.293  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:32.747  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:32.764  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:33.200  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:33.267  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:33.284  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:33.771  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:33.778  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:34.275  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:34.282  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:34.470  3963  3963 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:34.470  3963  3963 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:34.479  3963  3963 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:34.490  3963  3963 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:34.490  3963  3963 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:34.491  3963  3963 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:34.495  3963  3963 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:34.496  1560  1747 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:33:34.498  3963  3963 D AndroidRuntime: Shutting down VM
+11-18 14:33:34.761  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:34.778  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:35.265  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:35.282  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:35.534  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:35.786  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:35.794  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:36.077  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:36.079  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:36.080  1969  1969 I LatinIME: Starting input. Cursor position = 0,0
+11-18 14:33:36.088  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:36.098  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:36.106  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:36.125  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:36.133  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:33:36.596  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:36.611  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.098  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.114  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.534  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:37.601  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.609  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.685  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.691  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.704  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.714  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.723  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.729  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.740  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.746  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.767  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.773  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.788  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.793  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.805  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.811  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.826  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.832  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.846  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.851  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.866  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.874  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.890  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.907  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.925  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.934  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.942  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.948  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.960  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:37.970  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:38.112  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:38.118  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:38.597  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:38.614  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:39.101  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:39.118  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:39.537  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:39.621  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:39.626  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:40.126  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:40.136  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:40.631  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:40.646  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:40.743  1248  1265 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-18 14:33:40.743  1248  1263 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 2457600
+11-18 14:33:40.745  3973  3973 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 3973
+11-18 14:33:40.926  3978  3978 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:40.926  3978  3978 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:40.932  3978  3978 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:40.943  3978  3978 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:40.943  3978  3978 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:40.946  3978  3978 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:40.951  3978  3978 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:40.954  2096  2096 D MediaScannerReceiver: action: android.intent.action.MEDIA_SCANNER_SCAN_FILE path: /data/local/tmp/s.png
+11-18 14:33:40.954  3978  3978 D AndroidRuntime: Shutting down VM
+11-18 14:33:41.125  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:41.143  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:41.294  3987  3987 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:41.295  3987  3987 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:41.307  3987  3987 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:41.319  3987  3987 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:41.319  3987  3987 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:41.320  3987  3987 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:41.335  3987  3987 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-18 14:33:41.335  3987  3987 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=636252, downTime=636252, deviceId=-1, source=0x101 }
+11-18 14:33:41.338  3987  3987 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=636252, downTime=636252, deviceId=-1, source=0x101 }
+11-18 14:33:41.341  3987  3987 D AndroidRuntime: Shutting down VM
+11-18 14:33:41.352  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:33:41.358  1969  3927 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40bdac0
+11-18 14:33:41.554  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:41.635  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:41.652  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:42.138  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:42.146  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:42.642  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:42.650  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:43.148  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:43.156  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:43.568  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:43.646  3996  3996 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:43.646  3996  3996 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:43.652  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:43.659  3996  3996 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:43.668  3996  3996 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:43.668  3996  3996 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:43.668  3996  3996 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:43.670  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:43.675  3996  3996 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:43.679  1560  2036 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:33:43.680  3996  3996 D AndroidRuntime: Shutting down VM
+11-18 14:33:44.139  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:44.147  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:44.660  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:44.667  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:44.693  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:45.163  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:45.172  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:45.215  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:45.651  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:45.668  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:46.155  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:46.507  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:46.659  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:46.675  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:46.693  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:47.163  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:47.196  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:47.666  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:47.700  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:48.170  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:48.187  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:48.674  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:48.682  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:48.693  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:49.162  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:49.179  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:49.682  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:49.689  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:49.991  4006  4006 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:49.992  4006  4006 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:50.000  4006  4006 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:50.015  4006  4006 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:50.015  4006  4006 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:50.015  4006  4006 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:50.022  4006  4006 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:50.023  1560  2198 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:33:50.024  4006  4006 D AndroidRuntime: Shutting down VM
+11-18 14:33:50.185  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:50.194  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:50.672  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:50.689  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:51.040  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:51.193  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:51.201  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:51.586  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:51.588  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:51.589  1969  1969 I LatinIME: Starting input. Cursor position = 0,0
+11-18 14:33:51.596  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:51.601  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:51.614  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:51.647  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:51.663  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:33:52.118  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:52.134  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:52.605  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:52.621  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.040  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:53.125  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.142  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.175  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.194  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.209  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.214  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.226  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.245  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.260  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.280  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.294  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.301  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.314  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.329  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.345  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.355  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.363  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.384  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.397  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.409  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.424  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.448  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.463  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.467  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.635  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:53.640  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:54.139  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:54.149  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:54.625  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:54.641  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:55.044  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:55.128  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:55.145  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:55.632  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:55.648  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:56.135  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:56.152  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:56.269  1248  2200 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-18 14:33:56.272  1248  2513 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 2457600
+11-18 14:33:56.275  4014  4014 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 4014
+11-18 14:33:56.437  4020  4020 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:56.438  4020  4020 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:56.449  4020  4020 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:56.469  4020  4020 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:56.469  4020  4020 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:56.470  4020  4020 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:56.476  4020  4020 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:56.480  2096  2096 D MediaScannerReceiver: action: android.intent.action.MEDIA_SCANNER_SCAN_FILE path: /data/local/tmp/s.png
+11-18 14:33:56.480  4020  4020 D AndroidRuntime: Shutting down VM
+11-18 14:33:56.643  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:56.649  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:56.831  4029  4029 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:56.831  4029  4029 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:56.841  4029  4029 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:56.855  4029  4029 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:56.855  4029  4029 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:56.856  4029  4029 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:56.865  4029  4029 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-18 14:33:56.865  4029  4029 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=651782, downTime=651782, deviceId=-1, source=0x101 }
+11-18 14:33:56.867  4029  4029 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=651782, downTime=651782, deviceId=-1, source=0x101 }
+11-18 14:33:56.870  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:33:56.870  4029  4029 D AndroidRuntime: Shutting down VM
+11-18 14:33:56.870  1969  3927 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40bdd40
+11-18 14:33:57.057  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:57.159  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:57.163  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:57.644  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:57.678  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:58.165  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:58.182  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:58.652  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:58.669  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:59.057  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:33:59.173  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:59.188  4038  4038 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:33:59.189  4038  4038 D AndroidRuntime: CheckJNI is OFF
+11-18 14:33:59.190  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:59.201  4038  4038 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:33:59.215  4038  4038 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:33:59.215  4038  4038 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:33:59.216  4038  4038 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:33:59.220  4038  4038 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:33:59.221  1560  2198 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:33:59.222  4038  4038 D AndroidRuntime: Shutting down VM
+11-18 14:33:59.660  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:33:59.677  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:00.164  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:00.180  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:00.226  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:00.684  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:00.693  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:00.777  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:01.173  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:01.240  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:01.677  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:01.695  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:02.180  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:02.214  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:02.226  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:02.684  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:02.701  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:03.171  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:03.174  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:03.692  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:03.709  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:04.179  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:04.195  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:04.226  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:04.699  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:04.706  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:05.203  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:05.212  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:05.555  4048  4048 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:34:05.556  4048  4048 D AndroidRuntime: CheckJNI is OFF
+11-18 14:34:05.564  4048  4048 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:34:05.579  4048  4048 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:34:05.579  4048  4048 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:34:05.581  4048  4048 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:34:05.590  4048  4048 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:34:05.591  1560  1572 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:34:05.592  4048  4048 D AndroidRuntime: Shutting down VM
+11-18 14:34:05.711  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:05.728  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:06.096  1248  1279 D hwcomposer: hw_composer sent 3310 syncs in 60s
+11-18 14:34:06.197  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:06.214  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:06.601  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:06.718  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:06.727  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:07.163  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:07.164  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:07.167  1969  1969 I LatinIME: Starting input. Cursor position = 0,0
+11-18 14:34:07.174  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:07.179  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:07.206  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:07.223  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:07.229  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:34:07.695  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:07.700  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.201  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.206  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.605  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:08.706  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.720  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.759  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.766  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.779  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.785  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.799  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.811  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.832  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.858  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.874  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.877  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.895  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.909  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.922  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.944  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.960  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.978  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:08.991  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:09.012  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:09.030  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:09.046  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:09.198  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:09.215  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:09.719  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:09.723  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:10.226  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:10.232  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:10.618  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:10.734  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:10.751  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:11.221  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:11.238  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:11.743  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:11.748  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:11.858  1248  2200 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-18 14:34:11.861  1248  1263 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 2457600
+11-18 14:34:11.864  4057  4057 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 4057
+11-18 14:34:12.040  4062  4062 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:34:12.041  4062  4062 D AndroidRuntime: CheckJNI is OFF
+11-18 14:34:12.052  4062  4062 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:34:12.070  4062  4062 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:34:12.070  4062  4062 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:34:12.070  4062  4062 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:34:12.082  4062  4062 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:34:12.083  2096  2096 D MediaScannerReceiver: action: android.intent.action.MEDIA_SCANNER_SCAN_FILE path: /data/local/tmp/s.png
+11-18 14:34:12.085  4062  4062 D AndroidRuntime: Shutting down VM
+11-18 14:34:12.237  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:12.254  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:12.410  4071  4071 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:34:12.411  4071  4071 D AndroidRuntime: CheckJNI is OFF
+11-18 14:34:12.421  4071  4071 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:34:12.432  4071  4071 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:34:12.432  4071  4071 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:34:12.433  4071  4071 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:34:12.438  4071  4071 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-18 14:34:12.439  4071  4071 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=667356, downTime=667356, deviceId=-1, source=0x101 }
+11-18 14:34:12.439  4071  4071 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=667356, downTime=667356, deviceId=-1, source=0x101 }
+11-18 14:34:12.441  4071  4071 D AndroidRuntime: Shutting down VM
+11-18 14:34:12.457  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:34:12.458  1969  3927 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40bde80
+11-18 14:34:12.624  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:12.742  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:12.759  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:13.245  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:13.262  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:13.749  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:13.754  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:14.262  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:14.265  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:14.639  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:14.757  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:14.770  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:14.771  4080  4080 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:34:14.772  4080  4080 D AndroidRuntime: CheckJNI is OFF
+11-18 14:34:14.786  4080  4080 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:34:14.799  4080  4080 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:34:14.799  4080  4080 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:34:14.800  4080  4080 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:34:14.806  4080  4080 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:34:14.806  1560  1678 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:34:14.812  4080  4080 D AndroidRuntime: Shutting down VM
+11-18 14:34:15.260  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:15.272  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:15.765  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:15.780  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:15.819  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:16.250  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:16.268  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:16.353  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:16.755  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:16.771  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:17.260  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:17.511  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:17.763  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:17.780  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:17.830  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:18.250  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:18.267  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:18.754  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:18.771  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:19.258  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:19.275  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:19.778  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:19.795  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:19.830  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:20.265  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:20.282  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:20.786  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:20.819  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:21.105  4089  4089 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:34:21.106  4089  4089 D AndroidRuntime: CheckJNI is OFF
+11-18 14:34:21.114  4089  4089 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:34:21.122  4089  4089 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:34:21.122  4089  4089 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:34:21.123  4089  4089 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:34:21.127  4089  4089 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:34:21.129  1560  1747 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:34:21.131  4089  4089 D AndroidRuntime: Shutting down VM
+11-18 14:34:21.289  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:21.323  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:21.777  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:21.793  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:22.133  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:22.281  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:22.315  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:22.652  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:22.654  1969  1969 I LatinIME: Starting input. Cursor position = 0,0
+11-18 14:34:22.664  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:22.683  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:22.701  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:22.706  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:34:23.173  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:23.180  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:23.659  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:23.676  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.149  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:24.182  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.199  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.250  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.288  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.304  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.343  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.359  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.389  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.406  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.450  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.469  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.495  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.510  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.524  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.679  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:24.696  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:25.186  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:25.192  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:25.696  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:25.702  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:26.155  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:26.205  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:26.211  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:26.695  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:26.712  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:27.218  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:27.235  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:27.360  1248  2513 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+11-18 14:34:27.372  1248  1265 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 2457600
+11-18 14:34:27.374  4098  4098 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 4098
+11-18 14:34:27.551  4103  4103 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:34:27.552  4103  4103 D AndroidRuntime: CheckJNI is OFF
+11-18 14:34:27.562  4103  4103 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:34:27.577  4103  4103 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:34:27.577  4103  4103 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:34:27.579  4103  4103 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:34:27.585  4103  4103 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:34:27.586  2096  2096 D MediaScannerReceiver: action: android.intent.action.MEDIA_SCANNER_SCAN_FILE path: /data/local/tmp/s.png
+11-18 14:34:27.587  4103  4103 D AndroidRuntime: Shutting down VM
+11-18 14:34:27.589  4103  4111 E art     : Thread attaching while runtime is shutting down: Binder_3
+11-18 14:34:27.589  4103  4111 I AndroidRuntime: NOTE: attach of thread 'Binder_3' failed
+11-18 14:34:27.727  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:27.736  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:27.940  4113  4113 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:34:27.941  4113  4113 D AndroidRuntime: CheckJNI is OFF
+11-18 14:34:27.956  4113  4113 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:34:27.965  4113  4113 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:34:27.965  4113  4113 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:34:27.966  4113  4113 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:34:27.978  4113  4113 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+11-18 14:34:27.978  4113  4113 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=682895, downTime=682895, deviceId=-1, source=0x101 }
+11-18 14:34:27.980  4113  4113 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=682895, downTime=682895, deviceId=-1, source=0x101 }
+11-18 14:34:27.982  4113  4113 D AndroidRuntime: Shutting down VM
+11-18 14:34:27.984  1969  3927 D EGL_emulation: eglMakeCurrent: 0xaa45d440: ver 3 0 (tinfo 0xadcbf960)
+11-18 14:34:27.985  1969  3927 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40bdfc0
+11-18 14:34:28.155  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:28.219  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:28.235  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:28.739  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:28.773  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:29.243  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:29.260  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:29.747  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:29.753  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:30.167  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:30.235  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:30.255  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:30.318  4123  4123 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:34:30.319  4123  4123 D AndroidRuntime: CheckJNI is OFF
+11-18 14:34:30.327  4123  4123 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:34:30.337  4123  4123 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:34:30.337  4123  4123 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:34:30.338  4123  4123 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:34:30.345  4123  4123 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:34:30.347  1560  2044 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:34:30.349  4123  4123 D AndroidRuntime: Shutting down VM
+11-18 14:34:30.746  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:30.762  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:31.249  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:31.254  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:31.361  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:31.753  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:31.759  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:31.881  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:32.241  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:32.391  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:32.743  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:32.760  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:33.248  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:33.361  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:33.365  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:33.769  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:33.802  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:34.272  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:34.306  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:34.760  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:34.777  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:35.264  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:35.281  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:35.365  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:35.768  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:35.784  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:36.288  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:36.293  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:36.670  4135  4135 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+11-18 14:34:36.671  4135  4135 D AndroidRuntime: CheckJNI is OFF
+11-18 14:34:36.683  4135  4135 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+11-18 14:34:36.699  4135  4135 E memtrack: Couldn't load memtrack module (No such file or directory)
+11-18 14:34:36.699  4135  4135 E android.os.Debug: failed to load memtrack module: -2
+11-18 14:34:36.700  4135  4135 I Radio-JNI: register_android_hardware_Radio DONE
+11-18 14:34:36.705  4135  4135 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+11-18 14:34:36.706  1560  1678 I ActivityManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 0 on display 0
+11-18 14:34:36.707  4135  4135 D AndroidRuntime: Shutting down VM
+11-18 14:34:36.791  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:36.809  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:37.279  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:37.295  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:37.727  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:37.796  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:37.801  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:38.231  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:38.282  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:38.518  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:38.786  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:38.820  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:39.291  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:39.526  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:39.728  3095  3095 E BluetoothAdapter: Bluetooth binder is null
+11-18 14:34:39.795  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:39.828  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:40.282  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:40.298  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:40.785  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)
+11-18 14:34:40.802  3095  3123 D EGL_emulation: eglMakeCurrent: 0xadc14780: ver 3 0 (tinfo 0xadc126d0)

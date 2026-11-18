@@ -1,0 +1,1168 @@
+--------- beginning of main
+11-18 14:32:12.308  2643  2660 D EGL_emulation: app_time_stats: avg=10.32ms min=5.26ms max=29.11ms count=55
+--------- beginning of system
+11-18 14:32:12.324   505  2281 W ActivityTaskManager: callingPackage for (uid=2000, pid=3201) has no WPC
+11-18 14:32:12.326   797   824 D KeyguardService: setOccluded(false)
+11-18 14:32:12.326   797   824 D KeyguardViewMediator: setOccluded(false)
+11-18 14:32:12.326   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:32:12.326   505  2281 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:32:12.327   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:32:12.341   924  3189 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:32:12.346   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:32:12.346   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:32:12.362   924  3204 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:32:12.363   797   875 D EGL_emulation: app_time_stats: avg=507.41ms min=6.44ms max=6807.97ms count=14
+11-18 14:32:12.390   505   525 D OomAdjuster: Not killing cached processes
+11-18 14:32:12.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:12.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:12.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:12.977   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:12.977   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:13.368  2643  2660 D EGL_emulation: app_time_stats: avg=32.96ms min=5.19ms max=340.60ms count=31
+11-18 14:32:13.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:13.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:13.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:13.977   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:13.977   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:14.385  2643  2660 D EGL_emulation: app_time_stats: avg=251.45ms min=8.60ms max=532.67ms count=4
+11-18 14:32:14.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:14.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:14.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:14.977   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:14.977   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:15.388  2643  2660 D EGL_emulation: app_time_stats: avg=501.70ms min=11.20ms max=992.21ms count=2
+11-18 14:32:15.878   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:32:15.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:15.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:15.977   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:15.977   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:15.977   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:32:16.241   797   797 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+11-18 14:32:16.407  2643  2660 D EGL_emulation: app_time_stats: avg=92.57ms min=14.44ms max=604.43ms count=11
+11-18 14:32:16.978   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:16.978   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:16.978   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:16.978   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:16.978   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:17.411  2643  2660 D EGL_emulation: app_time_stats: avg=33.44ms min=12.48ms max=53.64ms count=30
+11-18 14:32:17.978   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:17.978   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:17.978   924  3204 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:17.978   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:17.978   924  3204 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:18.364   505  2281 W ActivityTaskManager: callingPackage for (uid=2000, pid=3208) has no WPC
+11-18 14:32:18.375   797  1814 D KeyguardService: setOccluded(false)
+11-18 14:32:18.375   797  1814 D KeyguardViewMediator: setOccluded(false)
+11-18 14:32:18.376   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:32:18.376   505  2281 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:32:18.377   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:32:18.388   924  3204 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:32:18.390   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:32:18.390   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:32:18.404   797   875 D EGL_emulation: app_time_stats: avg=430.74ms min=9.61ms max=5732.10ms count=14
+11-18 14:32:18.414   924  3211 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:32:18.426  2643  2660 D EGL_emulation: app_time_stats: avg=24.81ms min=8.65ms max=39.71ms count=40
+11-18 14:32:18.430   505   525 D OomAdjuster: Not killing cached processes
+11-18 14:32:18.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:18.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:18.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:18.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:18.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:19.440  2643  2660 D EGL_emulation: app_time_stats: avg=37.40ms min=12.33ms max=388.53ms count=27
+11-18 14:32:19.893  2643  2643 D CompatibilityChangeReporter: Compat change id reported: 147798919; UID 10141; state: DISABLED
+11-18 14:32:19.900   325  3213 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10141 0}
+11-18 14:32:19.901   325  3214 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-18 14:32:19.901   325  3214 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x722e3efec370
+11-18 14:32:19.901   325  3214 I resolv  : doQuery: rcode=0, ancount=0, return value=111
+11-18 14:32:19.903   505  2281 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10141; state: DISABLED
+11-18 14:32:19.903   505  2281 D CompatibilityChangeReporter: Compat change id reported: 273564678; UID 10141; state: DISABLED
+11-18 14:32:19.904   325  3215 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-18 14:32:19.904   325  3215 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x722dfeff29d0
+11-18 14:32:19.904   325  3215 I resolv  : doQuery: rcode=0, ancount=1, return value=56
+11-18 14:32:19.906  2643  3212 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+11-18 14:32:19.920   505  1493 D CoreBackPreview: Window{bbbdc8a u0 Toast}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@9e88f18, mPriority=0, mIsAnimationCallback=false}
+11-18 14:32:20.018   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:20.018   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:20.018   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:20.018   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:20.018   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:20.450  2643  2660 D EGL_emulation: app_time_stats: avg=1009.66ms min=1009.66ms max=1009.66ms count=1
+11-18 14:32:20.978   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:20.978   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:20.978   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:20.978   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:20.978   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:21.337   505  1493 D CoreBackPreview: Window{53e86cf u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@f46c0eb, mPriority=0, mIsAnimationCallback=false}
+11-18 14:32:21.447   505  1493 I ImeTracker: com.stradaos.launcher.debug:82a6954c: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:32:21.448   505  1493 I ImeTracker: com.stradaos.launcher.debug:82a6954c: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:32:21.978   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:21.978   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:21.978   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:21.978   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:21.978   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:32:21.993  2643  2660 D EGL_emulation: app_time_stats: avg=511.29ms min=11.74ms max=983.56ms count=3
+11-18 14:32:22.256   797   797 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+11-18 14:32:22.957  2643  2660 D EGL_emulation: app_time_stats: avg=523.58ms min=7.49ms max=1493.45ms count=3
+11-18 14:32:22.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:22.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:22.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:22.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:22.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:23.003  2643  2660 D EGL_emulation: app_time_stats: avg=48.08ms min=20.75ms max=64.05ms count=21
+11-18 14:32:23.401  2643  2643 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@1e0b472
+11-18 14:32:23.402   505  1493 D CoreBackPreview: Window{bbbdc8a u0 Toast}: Setting back callback null
+11-18 14:32:23.418   505  1493 W InputManager-JNI: Input channel object 'bbbdc8a Toast (client)' was disposed without first being removed with the input manager!
+11-18 14:32:23.420   505  1493 W NotificationService: Toast already killed. pkg=com.stradaos.launcher.debug token=android.os.BinderProxy@96b7851
+11-18 14:32:23.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:23.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:23.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:23.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:23.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:24.016  2643  2660 D EGL_emulation: app_time_stats: avg=23.54ms min=7.25ms max=44.87ms count=38
+11-18 14:32:24.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:24.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:24.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:24.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:24.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:25.017  2643  2660 D EGL_emulation: app_time_stats: avg=22.58ms min=7.29ms max=33.08ms count=40
+11-18 14:32:25.268   797   797 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+11-18 14:32:25.879   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:32:25.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:25.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:25.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:25.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:25.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:26.019  2643  2660 D EGL_emulation: app_time_stats: avg=20.26ms min=4.71ms max=34.29ms count=41
+11-18 14:32:26.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:26.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:26.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:26.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:26.979   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:27.055  2643  2660 D EGL_emulation: app_time_stats: avg=47.08ms min=23.78ms max=59.69ms count=22
+11-18 14:32:27.979   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:27.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:27.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:27.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:27.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:28.074  2643  2660 D EGL_emulation: app_time_stats: avg=44.27ms min=16.53ms max=54.74ms count=23
+11-18 14:32:28.272   797   797 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+11-18 14:32:28.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:28.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:28.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:28.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:28.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:29.074  2643  2660 D EGL_emulation: app_time_stats: avg=43.44ms min=9.02ms max=53.60ms count=23
+11-18 14:32:29.987   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:29.987   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:29.987   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:29.987   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:29.987   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:30.123  2643  2660 D EGL_emulation: app_time_stats: avg=20.85ms min=4.35ms max=51.25ms count=41
+11-18 14:32:30.479  3218  3218 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 14:32:30.479  3218  3218 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 14:32:30.496   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-18 14:32:30.496  3218  3220 I Gralloc4: mapper 4.x is not supported
+--------- beginning of kernel
+11-18 14:32:30.665     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+11-18 14:32:30.585   505  1542 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-18 14:32:30.585   505  1542 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-18 14:32:30.586   505   532 D OomAdjuster: Not killing cached processes
+11-18 14:32:30.590   505   522 I ActivityManager: Broadcast completed: result=0
+11-18 14:32:30.592  1439  1922 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:32:30.590  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:183): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:30.765     0     0 W audit   : audit_lost=62 audit_rate_limit=5 audit_backlog_limit=64
+11-18 14:32:30.777     0     0 E audit   : rate limit exceeded
+11-18 14:32:30.590  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:184): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:30.606  1439  1922 W ModernMediaScanner: Failed to visit /data/local/tmp/s.png: java.nio.file.AccessDeniedException: /data/local/tmp/s.png
+11-18 14:32:30.607  1439  1922 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 15ms, 0 inserts 0 updates 0 deletes
+11-18 14:32:30.608  1439  1922 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:32:30.590  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:185): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:30.590  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:186): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:30.590  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:187): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:30.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:30.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:30.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:30.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:30.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:31.277   797   797 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+11-18 14:32:31.484  2643  2660 D EGL_emulation: app_time_stats: avg=64.78ms min=28.50ms max=411.89ms count=21
+11-18 14:32:31.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:31.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:31.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:31.981   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:31.981   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:32.505  2643  2660 D EGL_emulation: app_time_stats: avg=85.08ms min=27.94ms max=497.67ms count=12
+11-18 14:32:32.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:32.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:32.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:32.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:32.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:33.191  3231  3231 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 14:32:33.191  3231  3231 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 14:32:33.371     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+11-18 14:32:33.202   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-18 14:32:33.202  3231  3233 I Gralloc4: mapper 4.x is not supported
+11-18 14:32:33.289   505  1542 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-18 14:32:33.289   505  1542 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-18 14:32:33.293   505   522 I ActivityManager: Broadcast completed: result=0
+11-18 14:32:33.293  1439  1922 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:32:33.294  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:191): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:33.303  1439  1922 W ModernMediaScanner: Failed to visit /data/local/tmp/s.png: java.nio.file.AccessDeniedException: /data/local/tmp/s.png
+11-18 14:32:33.303  1439  1922 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 9ms, 0 inserts 0 updates 0 deletes
+11-18 14:32:33.304  1439  1922 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:32:33.294  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:192): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:33.294  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:193): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:33.294  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:194): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:33.294  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:195): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:33.467     0     0 W audit   : audit_lost=65 audit_rate_limit=5 audit_backlog_limit=64
+11-18 14:32:33.472     0     0 E audit   : rate limit exceeded
+11-18 14:32:33.368   505   523 D AutofillManagerService: onBackKeyPressed()
+11-18 14:32:33.369  2643  2643 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@16fe670
+11-18 14:32:33.371   505  2281 D CoreBackPreview: Window{53e86cf u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback null
+11-18 14:32:33.373   505  2281 W InputManager-JNI: Input channel object '53e86cf com.stradaos.launcher.debug/com.stradaos.launcher.Main (client)' was disposed without first being removed with the input manager!
+11-18 14:32:33.380  2643  2643 W InputEventReceiver: Attempted to finish an input event but the input event receiver has already been disposed.
+11-18 14:32:33.392   505   525 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+11-18 14:32:33.411   505  1542 I ImeTracker: com.stradaos.launcher.debug:dd883dc9: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:32:33.412   505  1542 I ImeTracker: com.stradaos.launcher.debug:dd883dc9: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:32:33.513  2643  2660 D EGL_emulation: app_time_stats: avg=45.78ms min=23.80ms max=58.02ms count=22
+11-18 14:32:33.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:33.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:33.980   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:33.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:33.980   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:34.525  2643  2660 D EGL_emulation: app_time_stats: avg=77.80ms min=8.64ms max=487.80ms count=13
+11-18 14:32:34.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:34.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:34.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:34.981   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:34.981   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:35.411   505   523 D AutofillManagerService: onBackKeyPressed()
+11-18 14:32:35.531  2643  2660 D EGL_emulation: app_time_stats: avg=31.31ms min=12.18ms max=51.80ms count=32
+11-18 14:32:35.879   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:32:35.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:35.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:35.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:35.981   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:35.981   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:36.542  2643  2660 D EGL_emulation: app_time_stats: avg=24.41ms min=14.55ms max=32.29ms count=41
+11-18 14:32:36.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:36.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:36.981   924  3211 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:36.981   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:36.981   924  3211 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:37.457   505  1542 W ActivityTaskManager: callingPackage for (uid=2000, pid=3252) has no WPC
+11-18 14:32:37.460   797   824 D KeyguardService: setOccluded(false)
+11-18 14:32:37.460   797   824 D KeyguardViewMediator: setOccluded(false)
+11-18 14:32:37.460   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:32:37.460   505  1542 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:32:37.461   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:32:37.470   924  3211 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:32:37.470   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:32:37.470   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:32:37.491   797   875 D EGL_emulation: app_time_stats: avg=1363.14ms min=13.14ms max=18786.81ms count=14
+11-18 14:32:37.506   924  3255 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:32:37.525   505   525 D OomAdjuster: Not killing cached processes
+11-18 14:32:37.559  2643  2660 D EGL_emulation: app_time_stats: avg=24.17ms min=8.24ms max=49.15ms count=41
+11-18 14:32:37.981   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:37.981   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:37.981   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:37.981   924  3255 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:37.981   924  3255 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:38.981   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:38.981   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:38.981   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:38.981   924  3255 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:38.981   924  3255 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:39.055  2643  2660 D EGL_emulation: app_time_stats: avg=67.87ms min=14.96ms max=514.16ms count=22
+11-18 14:32:39.981   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:39.981   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:39.981   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:39.981   924  3255 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:39.981   924  3255 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:40.526  2643  2660 D EGL_emulation: app_time_stats: avg=486.99ms min=8.82ms max=990.91ms count=3
+11-18 14:32:40.982   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:40.982   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:40.982   924  3255 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:40.982   924  3255 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:40.982   924  3255 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:41.490   505  1542 W ActivityTaskManager: callingPackage for (uid=2000, pid=3259) has no WPC
+11-18 14:32:41.493   505  1542 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:32:41.493   797  1814 D KeyguardService: setOccluded(false)
+11-18 14:32:41.493   797  1814 D KeyguardViewMediator: setOccluded(false)
+11-18 14:32:41.493   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:32:41.493   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:32:41.494   924  3255 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:32:41.497   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:32:41.497   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:32:41.504   797   875 D EGL_emulation: app_time_stats: avg=281.27ms min=0.96ms max=3701.49ms count=14
+11-18 14:32:41.510   924  3262 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:32:41.527  2643  2660 D EGL_emulation: app_time_stats: avg=500.33ms min=12.53ms max=988.13ms count=2
+11-18 14:32:41.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:41.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:41.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:41.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:41.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:42.540  2643  2660 D EGL_emulation: app_time_stats: avg=337.71ms min=14.56ms max=983.11ms count=3
+11-18 14:32:42.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:42.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:42.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:42.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:42.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:43.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:43.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:43.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:43.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:43.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:44.543  2643  2660 D EGL_emulation: app_time_stats: avg=496.82ms min=10.54ms max=1007.68ms count=4
+11-18 14:32:44.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:44.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:44.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:44.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:44.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:45.551  2643  2660 D EGL_emulation: app_time_stats: avg=504.26ms min=13.59ms max=994.93ms count=2
+11-18 14:32:45.883   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:32:45.899   797   875 D EGL_emulation: app_time_stats: avg=313.95ms min=15.28ms max=4094.51ms count=14
+11-18 14:32:45.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:45.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:45.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:45.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:45.982   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:32:46.560  2643  2660 D EGL_emulation: app_time_stats: avg=72.00ms min=12.16ms max=459.14ms count=14
+11-18 14:32:46.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:46.982   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:46.983   924  3262 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:46.983   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:46.983   924  3262 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:47.530   505  2635 W ActivityTaskManager: callingPackage for (uid=2000, pid=3266) has no WPC
+11-18 14:32:47.535   797   826 D KeyguardService: setOccluded(false)
+11-18 14:32:47.535   797   826 D KeyguardViewMediator: setOccluded(false)
+11-18 14:32:47.536   505  2635 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:32:47.539   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:32:47.539   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:32:47.542   924  3262 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:32:47.542   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:32:47.542   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:32:47.558   797   875 D EGL_emulation: app_time_stats: avg=1658.01ms min=1658.01ms max=1658.01ms count=1
+11-18 14:32:47.572   924  3269 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:32:47.581  2643  2660 D EGL_emulation: app_time_stats: avg=30.40ms min=9.67ms max=50.91ms count=33
+11-18 14:32:47.605   505   525 D OomAdjuster: Not killing cached processes
+11-18 14:32:47.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:47.987   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:47.987   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:47.987   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:47.987   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:48.584  2643  2660 D EGL_emulation: app_time_stats: avg=46.73ms min=6.22ms max=529.79ms count=21
+11-18 14:32:48.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:48.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:48.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:48.986   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:48.986   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:49.074  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:32:49.074  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:32:49.076   505  1149 D CoreBackPreview: Window{f6a25e4 u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@95bc50, mPriority=0, mIsAnimationCallback=false}
+11-18 14:32:49.168   505  1149 I ImeTracker: com.stradaos.launcher.debug:69532fca: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:32:49.168   505  1149 I ImeTracker: com.stradaos.launcher.debug:69532fca: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:32:49.608  2643  2660 D EGL_emulation: app_time_stats: avg=511.63ms min=22.00ms max=1001.26ms count=2
+11-18 14:32:49.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:49.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:49.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:49.986   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:49.986   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:50.611  2643  2660 D EGL_emulation: app_time_stats: avg=501.37ms min=27.01ms max=975.74ms count=2
+11-18 14:32:50.686  2643  2660 D EGL_emulation: app_time_stats: avg=527.16ms min=34.91ms max=1492.55ms count=3
+11-18 14:32:50.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:50.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:50.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:50.986   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:50.986   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:51.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:51.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:51.987   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:51.987   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:51.987   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:32:52.009  2643  2660 D EGL_emulation: app_time_stats: avg=698.99ms min=400.08ms max=997.90ms count=2
+11-18 14:32:52.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:52.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:52.986   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:52.986   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:52.986   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:53.056  2643  2660 D EGL_emulation: app_time_stats: avg=44.84ms min=4.88ms max=53.22ms count=23
+11-18 14:32:53.628  3273  3273 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 14:32:53.628  3273  3273 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 14:32:53.808     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+11-18 14:32:53.640   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-18 14:32:53.641  3273  3275 I Gralloc4: mapper 4.x is not supported
+11-18 14:32:53.711   505  1149 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-18 14:32:53.712   505  1149 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-18 14:32:53.712   505   532 D OomAdjuster: Not killing cached processes
+11-18 14:32:53.715   505   522 I ActivityManager: Broadcast completed: result=0
+11-18 14:32:53.716  1439  1922 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:32:53.714  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:199): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:53.714  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:200): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:53.889     0     0 W audit   : audit_lost=68 audit_rate_limit=5 audit_backlog_limit=64
+11-18 14:32:53.894     0     0 E audit   : rate limit exceeded
+11-18 14:32:53.725  1439  1922 W ModernMediaScanner: Failed to visit /data/local/tmp/s.png: java.nio.file.AccessDeniedException: /data/local/tmp/s.png
+11-18 14:32:53.726  1439  1922 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 9ms, 0 inserts 0 updates 0 deletes
+11-18 14:32:53.726  1439  1922 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:32:53.714  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:201): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:53.714  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:202): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:53.714  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:203): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:32:53.768   505   523 D AutofillManagerService: onBackKeyPressed()
+11-18 14:32:53.769  2643  2643 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@45ba25c
+11-18 14:32:53.769  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:32:53.769  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:32:53.770   505  1149 D CoreBackPreview: Window{f6a25e4 u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback null
+11-18 14:32:53.772   505  1149 W InputManager-JNI: Input channel object 'f6a25e4 com.stradaos.launcher.debug/com.stradaos.launcher.Main (client)' was disposed without first being removed with the input manager!
+11-18 14:32:53.777  2643  2643 W InputEventReceiver: Attempted to finish an input event but the input event receiver has already been disposed.
+11-18 14:32:53.782   505   525 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+11-18 14:32:53.802   505   518 I ImeTracker: com.stradaos.launcher.debug:f84dbded: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:32:53.802   505   518 I ImeTracker: com.stradaos.launcher.debug:f84dbded: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:32:53.987   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:53.987   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:53.987   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:53.987   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:53.987   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:32:54.105  2643  2660 D EGL_emulation: app_time_stats: avg=80.69ms min=45.83ms max=387.61ms count=13
+11-18 14:32:54.987   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:54.987   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:54.987   924  3269 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:54.987   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:54.987   924  3269 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:55.155  2643  2660 D EGL_emulation: app_time_stats: avg=45.62ms min=11.19ms max=53.00ms count=23
+11-18 14:32:55.798   505  2355 W ActivityTaskManager: callingPackage for (uid=2000, pid=3288) has no WPC
+11-18 14:32:55.802   924  3269 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:32:55.802   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:32:55.803   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:32:55.803   797  1814 D KeyguardService: setOccluded(false)
+11-18 14:32:55.803   797  1814 D KeyguardViewMediator: setOccluded(false)
+11-18 14:32:55.803   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:32:55.804   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:32:55.804   505  2355 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:32:55.843   797   875 D EGL_emulation: app_time_stats: avg=591.81ms min=7.69ms max=7987.35ms count=14
+11-18 14:32:55.845   924  3291 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:32:55.883   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:32:55.989   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:55.989   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:55.989   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:55.989   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:55.989   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:56.834  2643  2660 D EGL_emulation: app_time_stats: avg=152.60ms min=12.45ms max=991.12ms count=11
+11-18 14:32:56.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:56.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:56.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:56.988   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:56.988   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:57.852  2643  2660 D EGL_emulation: app_time_stats: avg=250.56ms min=9.73ms max=604.14ms count=4
+11-18 14:32:57.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:57.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:57.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:57.988   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:57.988   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:58.177     0     0 W healthd : battery l=100 v=5000 t=25.0 h=2 st=2 c=900000 fc=3000000 cc=10 chg=a
+11-18 14:32:58.855  2643  2660 D EGL_emulation: app_time_stats: avg=501.43ms min=8.84ms max=994.02ms count=2
+11-18 14:32:58.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:58.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:58.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:58.988   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:58.988   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:32:59.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:59.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:32:59.988   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:32:59.988   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:32:59.988   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:33:00.013  2643  2660 D EGL_emulation: app_time_stats: avg=578.47ms min=161.32ms max=995.62ms count=2
+11-18 14:33:00.039   797   875 D EGL_emulation: app_time_stats: avg=299.65ms min=14.98ms max=3916.90ms count=14
+11-18 14:33:00.989   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:00.989   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:00.989   924  3291 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:00.989   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:00.989   924  3291 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:01.031  2643  2660 D EGL_emulation: app_time_stats: avg=42.39ms min=13.18ms max=51.35ms count=24
+11-18 14:33:01.849   505  2355 W ActivityTaskManager: callingPackage for (uid=2000, pid=3295) has no WPC
+11-18 14:33:01.850   505  2355 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:33:01.851   797  1814 D KeyguardService: setOccluded(false)
+11-18 14:33:01.851   797  1814 D KeyguardViewMediator: setOccluded(false)
+11-18 14:33:01.851   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:33:01.851   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:33:01.854   924  3291 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:33:01.854   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:33:01.854   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:33:01.876   797   875 D EGL_emulation: app_time_stats: avg=1836.30ms min=1836.30ms max=1836.30ms count=1
+11-18 14:33:01.879   924  3298 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:33:01.902   505   525 D OomAdjuster: Not killing cached processes
+11-18 14:33:01.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:01.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:01.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:01.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:01.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:02.043  2643  2660 D EGL_emulation: app_time_stats: avg=24.91ms min=7.84ms max=46.12ms count=40
+11-18 14:33:02.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:02.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:02.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:02.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:02.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:03.385  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:03.385  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:03.388   505  2355 D CoreBackPreview: Window{55a4755 u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@cc503d1, mPriority=0, mIsAnimationCallback=false}
+11-18 14:33:03.451   505  1542 I ImeTracker: com.stradaos.launcher.debug:c28f85a8: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:33:03.451   505  1542 I ImeTracker: com.stradaos.launcher.debug:c28f85a8: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:33:03.925  2643  2660 D EGL_emulation: app_time_stats: avg=470.46ms min=17.56ms max=1002.06ms count=4
+11-18 14:33:03.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:03.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:03.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:03.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:03.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:04.926  2643  2660 D EGL_emulation: app_time_stats: avg=500.03ms min=25.39ms max=974.67ms count=2
+11-18 14:33:04.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:04.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:04.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:04.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:04.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:05.002  2643  2660 D EGL_emulation: app_time_stats: avg=530.88ms min=15.23ms max=1524.72ms count=3
+11-18 14:33:05.883   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:33:05.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:05.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:05.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:05.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:05.989   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:33:06.009  2643  2660 D EGL_emulation: app_time_stats: avg=539.36ms min=84.30ms max=994.43ms count=2
+11-18 14:33:06.989   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:06.990   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:06.990   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:06.990   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:06.990   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:07.032  2643  2660 D EGL_emulation: app_time_stats: avg=44.45ms min=18.60ms max=51.24ms count=23
+11-18 14:33:07.991   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:07.991   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:07.991   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:07.991   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:07.991   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:07.992  3301  3301 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 14:33:07.993  3301  3301 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 14:33:08.012   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-18 14:33:08.012  3301  3303 I Gralloc4: mapper 4.x is not supported
+11-18 14:33:08.181     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+11-18 14:33:08.042  2643  2660 D EGL_emulation: app_time_stats: avg=22.40ms min=7.33ms max=37.23ms count=41
+11-18 14:33:08.187   505  2355 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-18 14:33:08.187   505  2355 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-18 14:33:08.188   505   532 D OomAdjuster: Not killing cached processes
+11-18 14:33:08.192   505   522 I ActivityManager: Broadcast completed: result=0
+11-18 14:33:08.193  1439  1922 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:33:08.190  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:207): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:08.198  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:208): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:08.206  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:209): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:08.387     0     0 W audit   : audit_lost=71 audit_rate_limit=5 audit_backlog_limit=64
+11-18 14:33:08.388     0     0 E audit   : rate limit exceeded
+11-18 14:33:08.232  1439  1922 W ModernMediaScanner: Failed to visit /data/local/tmp/s.png: java.nio.file.AccessDeniedException: /data/local/tmp/s.png
+11-18 14:33:08.233  1439  1922 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 20ms, 0 inserts 0 updates 0 deletes
+11-18 14:33:08.206  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:210): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:08.241  1439  1922 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:33:08.206  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:211): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:08.311   505   523 D AutofillManagerService: onBackKeyPressed()
+11-18 14:33:08.312  2643  2643 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@2ddff0
+11-18 14:33:08.312   505  2355 D CoreBackPreview: Window{55a4755 u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback null
+11-18 14:33:08.312  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:08.312  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:08.314   505  2355 W InputManager-JNI: Input channel object '55a4755 com.stradaos.launcher.debug/com.stradaos.launcher.Main (client)' was disposed without first being removed with the input manager!
+11-18 14:33:08.330  2643  2643 W InputEventReceiver: Attempted to finish an input event but the input event receiver has already been disposed.
+11-18 14:33:08.341   505   525 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+11-18 14:33:08.361   505  1149 I ImeTracker: com.stradaos.launcher.debug:3fa6a7e5: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:33:08.361   505  1149 I ImeTracker: com.stradaos.launcher.debug:3fa6a7e5: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:33:08.991   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=62
+11-18 14:33:08.992   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:08.992   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=3
+11-18 14:33:08.992   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:08.992   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:09.048  2643  2660 D EGL_emulation: app_time_stats: avg=21.12ms min=7.68ms max=47.25ms count=43
+11-18 14:33:09.992   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:09.992   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:09.992   924  3298 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:09.992   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:09.992   924  3298 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:10.076  2643  2660 D EGL_emulation: app_time_stats: avg=6.99ms min=5.13ms max=23.16ms count=61
+11-18 14:33:10.364   505  1149 W ActivityTaskManager: callingPackage for (uid=2000, pid=3316) has no WPC
+11-18 14:33:10.367   797   826 D KeyguardService: setOccluded(false)
+11-18 14:33:10.368   797   826 D KeyguardViewMediator: setOccluded(false)
+11-18 14:33:10.368   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:33:10.368   505  1149 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:33:10.369   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:33:10.389   924  3298 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:33:10.390   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:33:10.390   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:33:10.404   797   875 D EGL_emulation: app_time_stats: avg=608.97ms min=12.12ms max=8231.14ms count=14
+11-18 14:33:10.412   924  3319 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:33:10.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:10.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:10.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:10.992   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:10.992   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:11.417  2643  2660 D EGL_emulation: app_time_stats: avg=31.79ms min=6.54ms max=357.60ms count=41
+11-18 14:33:11.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:11.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:11.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:11.992   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:11.992   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:12.435  2643  2660 D EGL_emulation: app_time_stats: avg=250.67ms min=8.91ms max=573.65ms count=4
+11-18 14:33:12.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:12.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:12.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:12.992   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:12.992   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:13.444  2643  2660 D EGL_emulation: app_time_stats: avg=1009.02ms min=1009.02ms max=1009.02ms count=1
+11-18 14:33:13.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:13.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:13.992   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:13.992   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:13.992   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:33:14.250   797   874 D ControlsListingControllerImpl: Subscribing callback, service count: 0
+11-18 14:33:14.250   797   874 D ControlsListingControllerImpl: Unsubscribing callback
+11-18 14:33:14.455  2643  2660 D EGL_emulation: app_time_stats: avg=84.24ms min=11.85ms max=553.60ms count=12
+11-18 14:33:14.993   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:14.993   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:14.993   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:14.993   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:14.993   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:15.459  2643  2660 D EGL_emulation: app_time_stats: avg=32.22ms min=10.39ms max=52.48ms count=31
+11-18 14:33:15.885   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:33:15.899   797   875 D EGL_emulation: app_time_stats: avg=392.41ms min=6.99ms max=5194.69ms count=14
+11-18 14:33:15.993   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:15.993   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:15.993   924  3319 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:15.993   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:15.993   924  3319 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:16.121   505   722 E WifiStaIfaceAidlImpl: installApfPacketFilter failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-18 14:33:16.351   797   797 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+11-18 14:33:16.409   505   575 W ActivityTaskManager: callingPackage for (uid=2000, pid=3324) has no WPC
+11-18 14:33:16.411   797  1814 D KeyguardService: setOccluded(false)
+11-18 14:33:16.411   797  1814 D KeyguardViewMediator: setOccluded(false)
+11-18 14:33:16.411   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:33:16.412   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:33:16.412   505   575 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:33:16.425   924  3319 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:33:16.425   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:33:16.425   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:33:16.449   924  3327 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:33:16.469  2643  2660 D EGL_emulation: app_time_stats: avg=24.40ms min=12.32ms max=39.07ms count=41
+11-18 14:33:16.472   505   525 I ActivityManager: Killing 1588:com.android.printspooler/u0a78 (adj 985): empty #17
+11-18 14:33:16.473   505   525 I ActivityManager: Killing 2022:com.android.dynsystem/1000 (adj 985): empty #18
+11-18 14:33:16.473   505   525 I ActivityManager: Killing 2006:com.android.contacts/u0a96 (adj 995): empty #19
+11-18 14:33:16.473   505   525 I ActivityManager: Killing 1976:com.android.localtransport/1000 (adj 995): empty #20
+11-18 14:33:16.474   505   525 I ActivityManager: Killing 1961:com.android.camera2/u0a104 (adj 999): empty #21
+11-18 14:33:16.474   505   525 I ActivityManager: Killing 1492:com.android.sdksetup/u0a110 (adj 999): empty #22
+11-18 14:33:16.474   505   525 I ActivityManager: Killing 1593:com.android.devicelockcontroller/u0a128 (adj 999): empty #23
+11-18 14:33:16.474   505   525 I ActivityManager: Killing 1925:com.android.calendar/u0a99 (adj 999): empty #24
+11-18 14:33:16.474   505   525 I ActivityManager: Killing 1679:com.android.managedprovisioning/u0a68 (adj 999): empty #25
+11-18 14:33:16.475   505   525 I ActivityManager: Killing 1261:com.android.cellbroadcastreceiver/u0a64 (adj 999): empty #26
+11-18 14:33:16.475   505   525 I ActivityManager: Killing 1897:com.android.traceur/u0a92 (adj 999): empty #27
+11-18 14:33:16.475   505   525 I ActivityManager: Killing 1851:com.android.quicksearchbox/u0a107 (adj 999): empty #28
+11-18 14:33:16.475   505   525 I ActivityManager: Killing 1686:com.android.keychain/1000 (adj 999): empty #29
+11-18 14:33:16.475   505   525 I ActivityManager: Killing 1496:com.android.music/u0a102 (adj 999): empty #30
+11-18 14:33:16.505   505   523 D DisplayManagerService: Drop pending events for gone uid 10102
+11-18 14:33:16.505   505   518 I MediaSessionStack: removeSession | record: com.android.music/MediaPlaybackService (userId=0)
+11-18 14:33:16.506   978   978 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 0
+11-18 14:33:16.506   978   978 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 0
+11-18 14:33:16.506   978   978 D AvrcpTargetJni: sendPlayerSettingsNative
+11-18 14:33:16.506   978   978 I bt_stack: [INFO:avrcp_service.cc(551)] virtual void bluetooth::avrcp::AvrcpService::SendPlayerSettingsChanged(std::vector<PlayerAttribute>, std::vector<uint8_t>)
+11-18 14:33:16.506   978   978 I bt_stack: [INFO:avrcp_service.cc(565)] attribute=PlayerAttribute::REPEAT : value=PlayerRepeatValue::OFF
+11-18 14:33:16.506   978   978 I bt_stack: attribute=PlayerAttribute::SHUFFLE : value=PlayerShuffleValue::OFF
+11-18 14:33:16.506   978   978 I bt_stack: 
+11-18 14:33:16.507   326   326 I Zygote  : Process 1588 exited due to signal 9 (Killed)
+11-18 14:33:16.507   326   326 I Zygote  : Process 2006 exited due to signal 9 (Killed)
+11-18 14:33:16.507   326   326 I Zygote  : Process 2022 exited due to signal 9 (Killed)
+11-18 14:33:16.508   505   534 I libprocessgroup: Successfully killed process cgroup uid 10078 pid 1588 in 26ms
+11-18 14:33:16.508   505   534 I libprocessgroup: Successfully killed process cgroup uid 1000 pid 2022 in 0ms
+11-18 14:33:16.508   505   534 I libprocessgroup: Successfully killed process cgroup uid 10096 pid 2006 in 0ms
+11-18 14:33:16.508   505   534 I libprocessgroup: Successfully killed process cgroup uid 1000 pid 1976 in 0ms
+11-18 14:33:16.508   505   523 D DisplayManagerService: Drop pending events for gone uid 10078
+11-18 14:33:16.509   505   523 D DisplayManagerService: Drop pending events for gone uid 10096
+11-18 14:33:16.510   326   326 I Zygote  : Process 1496 exited due to signal 9 (Killed)
+11-18 14:33:16.521   326   326 I Zygote  : Process 1976 exited due to signal 9 (Killed)
+11-18 14:33:16.525   505  1542 I StatusBarManagerService: binder died for pkg=com.android.sdksetup
+11-18 14:33:16.528   505   534 I libprocessgroup: Successfully killed process cgroup uid 10104 pid 1961 in 0ms
+11-18 14:33:16.528   326   326 I Zygote  : Process 1261 exited due to signal 9 (Killed)
+11-18 14:33:16.528   505   523 D DisplayManagerService: Drop pending events for gone uid 10110
+11-18 14:33:16.531   326   326 I Zygote  : Process 1492 exited due to signal 9 (Killed)
+11-18 14:33:16.531   326   326 I Zygote  : Process 1593 exited due to signal 9 (Killed)
+11-18 14:33:16.531   326   326 I Zygote  : Process 1851 exited due to signal 9 (Killed)
+11-18 14:33:16.697     0     0 I binder  : undelivered transaction 107939, process died.
+11-18 14:33:16.699     0     0 I binder  : undelivered transaction 108888, process died.
+11-18 14:33:16.701     0     0 I binder  : undelivered transaction 109128, process died.
+11-18 14:33:16.702     0     0 I binder  : undelivered transaction 107585, process died.
+11-18 14:33:16.703     0     0 I binder  : undelivered transaction 107859, process died.
+11-18 14:33:16.532   326   326 I Zygote  : Process 1679 exited due to signal 9 (Killed)
+11-18 14:33:16.532   326   326 I Zygote  : Process 1686 exited due to signal 9 (Killed)
+11-18 14:33:16.532   326   326 I Zygote  : Process 1897 exited due to signal 9 (Killed)
+11-18 14:33:16.532   326   326 I Zygote  : Process 1925 exited due to signal 9 (Killed)
+11-18 14:33:16.532   326   326 I Zygote  : Process 1961 exited due to signal 9 (Killed)
+11-18 14:33:16.533   505   523 D DisplayManagerService: Drop pending events for gone uid 10107
+11-18 14:33:16.534   505   534 I libprocessgroup: Successfully killed process cgroup uid 10110 pid 1492 in 0ms
+11-18 14:33:16.534   505   534 I libprocessgroup: Successfully killed process cgroup uid 10128 pid 1593 in 0ms
+11-18 14:33:16.534   505   534 I libprocessgroup: Successfully killed process cgroup uid 10099 pid 1925 in 0ms
+11-18 14:33:16.534   505   534 I libprocessgroup: Successfully killed process cgroup uid 10068 pid 1679 in 0ms
+11-18 14:33:16.534   505   534 I libprocessgroup: Successfully killed process cgroup uid 10064 pid 1261 in 0ms
+11-18 14:33:16.534   505   534 I libprocessgroup: Successfully killed process cgroup uid 10092 pid 1897 in 0ms
+11-18 14:33:16.534   505   534 I libprocessgroup: Successfully killed process cgroup uid 10107 pid 1851 in 0ms
+11-18 14:33:16.535   505   534 I libprocessgroup: Successfully killed process cgroup uid 1000 pid 1686 in 0ms
+11-18 14:33:16.535   505   534 I libprocessgroup: Successfully killed process cgroup uid 10102 pid 1496 in 0ms
+11-18 14:33:16.537   505   523 D DisplayManagerService: Drop pending events for gone uid 10128
+11-18 14:33:16.539   505   523 D DisplayManagerService: Drop pending events for gone uid 10092
+11-18 14:33:16.539   505   523 D DisplayManagerService: Drop pending events for gone uid 10104
+11-18 14:33:16.539   505   523 D DisplayManagerService: Drop pending events for gone uid 10099
+11-18 14:33:16.539   505   523 D DisplayManagerService: Drop pending events for gone uid 10068
+11-18 14:33:16.539   505   523 D DisplayManagerService: Drop pending events for gone uid 10064
+11-18 14:33:16.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:16.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:16.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:16.993   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:16.993   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:17.492  2643  2660 D EGL_emulation: app_time_stats: avg=71.96ms min=8.16ms max=445.60ms count=14
+11-18 14:33:17.953  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:17.953  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:17.955   505   518 D CoreBackPreview: Window{44d9cf7 u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@351193, mPriority=0, mIsAnimationCallback=false}
+11-18 14:33:17.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:17.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:17.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:17.993   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:17.993   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:18.020   505   518 I ImeTracker: com.stradaos.launcher.debug:9b72d67d: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:33:18.020   505   518 I ImeTracker: com.stradaos.launcher.debug:9b72d67d: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:33:18.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:18.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:18.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:18.993   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:18.993   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:19.356   797   797 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+11-18 14:33:19.467  2643  2660 D EGL_emulation: app_time_stats: avg=987.64ms min=975.46ms max=999.83ms count=2
+11-18 14:33:19.569  2643  2660 D EGL_emulation: app_time_stats: avg=530.61ms min=15.16ms max=1525.64ms count=3
+11-18 14:33:19.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:19.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:19.993   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:19.993   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:19.993   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:33:20.485  2643  2660 D EGL_emulation: app_time_stats: avg=84.76ms min=24.66ms max=518.17ms count=12
+11-18 14:33:20.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:20.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:20.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:20.994   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:20.994   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:21.508  2643  2660 D EGL_emulation: app_time_stats: avg=32.45ms min=15.90ms max=50.69ms count=31
+11-18 14:33:21.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:21.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:21.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:21.994   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:21.994   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:22.533  2643  2660 D EGL_emulation: app_time_stats: avg=31.07ms min=9.26ms max=52.65ms count=32
+11-18 14:33:22.539  3329  3329 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 14:33:22.539  3329  3329 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 14:33:22.556   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-18 14:33:22.556  3329  3331 I Gralloc4: mapper 4.x is not supported
+11-18 14:33:22.723     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+11-18 14:33:22.661   505   518 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-18 14:33:22.662   505   518 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-18 14:33:22.671   505   522 I ActivityManager: Broadcast completed: result=0
+11-18 14:33:22.673  1439  1922 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:33:22.670  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:215): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:22.691  1439  1922 W ModernMediaScanner: Failed to visit /data/local/tmp/s.png: java.nio.file.AccessDeniedException: /data/local/tmp/s.png
+11-18 14:33:22.692  1439  1922 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 18ms, 0 inserts 0 updates 0 deletes
+11-18 14:33:22.692  1439  1922 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:33:22.857     0     0 W audit   : audit_lost=74 audit_rate_limit=5 audit_backlog_limit=64
+11-18 14:33:22.861     0     0 E audit   : rate limit exceeded
+11-18 14:33:22.670  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:216): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:22.670  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:217): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:22.670  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:218): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:22.670  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:219): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:22.770   505   523 D AutofillManagerService: onBackKeyPressed()
+11-18 14:33:22.772  2643  2643 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a0a18aa
+11-18 14:33:22.772   505   518 D CoreBackPreview: Window{44d9cf7 u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback null
+11-18 14:33:22.772  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:22.773  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:22.787   505   518 W InputManager-JNI: Input channel object '44d9cf7 com.stradaos.launcher.debug/com.stradaos.launcher.Main (client)' was disposed without first being removed with the input manager!
+11-18 14:33:22.792  2643  2643 W InputEventReceiver: Attempted to finish an input event but the input event receiver has already been disposed.
+11-18 14:33:22.804   505   525 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+11-18 14:33:22.822   505   518 I ImeTracker: com.stradaos.launcher.debug:e9a1f803: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:33:22.822   505   518 I ImeTracker: com.stradaos.launcher.debug:e9a1f803: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:33:22.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:22.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:22.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:22.994   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:22.994   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:23.541  2643  2660 D EGL_emulation: app_time_stats: avg=21.39ms min=6.43ms max=37.69ms count=43
+11-18 14:33:23.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:23.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:23.994   924  3327 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:23.994   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:23.994   924  3327 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:24.817   505   786 W ActivityTaskManager: callingPackage for (uid=2000, pid=3344) has no WPC
+11-18 14:33:24.820   797   824 D KeyguardService: setOccluded(false)
+11-18 14:33:24.820   797   824 D KeyguardViewMediator: setOccluded(false)
+11-18 14:33:24.820   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:33:24.821   505   786 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:33:24.822   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:33:24.823   924  3327 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:33:24.823   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:33:24.823   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:33:24.840   797   875 D EGL_emulation: app_time_stats: avg=632.51ms min=1.07ms max=8101.29ms count=14
+11-18 14:33:24.842   924  3347 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:33:24.851  2643  2660 D EGL_emulation: app_time_stats: avg=54.38ms min=18.04ms max=458.03ms count=24
+11-18 14:33:24.994   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:24.994   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:24.994   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:24.994   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:24.994   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:25.851  2643  2660 D EGL_emulation: app_time_stats: avg=493.74ms min=10.13ms max=977.35ms count=2
+11-18 14:33:25.890   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:33:25.994   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:25.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:25.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:25.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:25.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:26.868  2643  2660 D EGL_emulation: app_time_stats: avg=251.87ms min=10.16ms max=578.18ms count=4
+11-18 14:33:26.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:26.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:26.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:26.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:26.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:27.873  2643  2660 D EGL_emulation: app_time_stats: avg=502.34ms min=13.92ms max=990.76ms count=2
+11-18 14:33:27.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:27.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:27.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:27.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:27.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:28.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:28.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:28.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:28.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:28.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:33:29.029  2643  2660 D EGL_emulation: app_time_stats: avg=578.17ms min=161.12ms max=995.22ms count=2
+11-18 14:33:29.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:29.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:29.995   924  3347 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:29.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:29.995   924  3347 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:30.045  2643  2660 D EGL_emulation: app_time_stats: avg=42.29ms min=11.26ms max=54.50ms count=24
+11-18 14:33:30.859   505  2199 W ActivityTaskManager: callingPackage for (uid=2000, pid=3351) has no WPC
+11-18 14:33:30.860   505  2199 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:33:30.861   797  2198 D KeyguardService: setOccluded(false)
+11-18 14:33:30.861   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:33:30.861   797  2198 D KeyguardViewMediator: setOccluded(false)
+11-18 14:33:30.861   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:33:30.873   924  3347 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:33:30.874   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:33:30.874   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:33:30.893   797   875 D EGL_emulation: app_time_stats: avg=432.28ms min=14.13ms max=5754.86ms count=14
+11-18 14:33:30.900   924  3354 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:33:30.995   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:30.995   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:30.995   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:30.995   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:30.995   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:31.917  2643  2660 D EGL_emulation: app_time_stats: avg=46.45ms min=9.03ms max=888.74ms count=40
+11-18 14:33:31.995   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:31.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:31.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:31.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:31.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:32.401  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:32.402  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:32.403   505  2199 D CoreBackPreview: Window{eb43619 u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@9c91ad5, mPriority=0, mIsAnimationCallback=false}
+11-18 14:33:32.467   505  2199 I ImeTracker: com.stradaos.launcher.debug:badb4bf0: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:33:32.470   505  2199 I ImeTracker: com.stradaos.launcher.debug:badb4bf0: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:33:32.941  2643  2660 D EGL_emulation: app_time_stats: avg=512.06ms min=22.27ms max=1001.85ms count=2
+11-18 14:33:32.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:32.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:32.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:32.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:32.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:33.944  2643  2660 D EGL_emulation: app_time_stats: avg=501.33ms min=26.31ms max=976.35ms count=2
+11-18 14:33:33.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:33.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:33.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:33.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:33.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:34.001  2643  2660 D EGL_emulation: app_time_stats: avg=524.95ms min=13.11ms max=1509.50ms count=3
+11-18 14:33:34.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:34.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:34.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:34.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:34.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:33:35.026  2643  2660 D EGL_emulation: app_time_stats: avg=540.58ms min=84.67ms max=996.50ms count=2
+11-18 14:33:35.885   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:33:35.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:35.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:35.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:35.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:35.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:36.026  2643  2660 D EGL_emulation: app_time_stats: avg=333.25ms min=28.15ms max=890.77ms count=3
+11-18 14:33:36.959  3357  3357 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 14:33:36.960  3357  3357 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 14:33:36.969   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-18 14:33:36.969  3357  3359 I Gralloc4: mapper 4.x is not supported
+11-18 14:33:37.138     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+11-18 14:33:36.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:36.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:36.996   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:36.996   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:36.997   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:37.054  2643  2660 D EGL_emulation: app_time_stats: avg=46.73ms min=22.38ms max=53.28ms count=22
+11-18 14:33:37.061   505  2199 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-18 14:33:37.062   505  2199 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-18 14:33:37.065   505   522 I ActivityManager: Broadcast completed: result=0
+11-18 14:33:37.071  1439  1922 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:33:37.078  1439  1922 W ModernMediaScanner: Failed to visit /data/local/tmp/s.png: java.nio.file.AccessDeniedException: /data/local/tmp/s.png
+11-18 14:33:37.079  1439  1922 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 6ms, 0 inserts 0 updates 0 deletes
+11-18 14:33:37.079  1439  1922 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:33:37.070  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:223): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:37.246     0     0 W audit   : audit_lost=77 audit_rate_limit=5 audit_backlog_limit=64
+11-18 14:33:37.250     0     0 E audit   : rate limit exceeded
+11-18 14:33:37.070  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:224): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:37.070  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:225): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:37.070  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:226): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:37.070  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:227): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:37.142   505   523 D AutofillManagerService: onBackKeyPressed()
+11-18 14:33:37.143  2643  2643 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@84c647b
+11-18 14:33:37.143  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:37.144  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:37.144   505  2281 D CoreBackPreview: Window{eb43619 u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback null
+11-18 14:33:37.146   505  2281 W InputManager-JNI: Input channel object 'eb43619 com.stradaos.launcher.debug/com.stradaos.launcher.Main (client)' was disposed without first being removed with the input manager!
+11-18 14:33:37.152  2643  2643 W InputEventReceiver: Attempted to finish an input event but the input event receiver has already been disposed.
+11-18 14:33:37.153   505   525 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+11-18 14:33:37.192   505  2199 I ImeTracker: com.stradaos.launcher.debug:d0c83117: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:33:37.192   505  2199 I ImeTracker: com.stradaos.launcher.debug:d0c83117: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:33:37.997   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:37.997   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:37.997   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:37.997   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:37.997   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:38.072  2643  2660 D EGL_emulation: app_time_stats: avg=42.37ms min=15.69ms max=57.55ms count=24
+11-18 14:33:38.997   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=62
+11-18 14:33:38.997   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:38.997   924  3354 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=3
+11-18 14:33:38.997   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:38.997   924  3354 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:39.093  2643  2660 D EGL_emulation: app_time_stats: avg=23.93ms min=9.70ms max=30.64ms count=42
+11-18 14:33:39.190   505  2199 W ActivityTaskManager: callingPackage for (uid=2000, pid=3372) has no WPC
+11-18 14:33:39.192   505  2199 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:33:39.192   797  1814 D KeyguardService: setOccluded(false)
+11-18 14:33:39.192   797  1814 D KeyguardViewMediator: setOccluded(false)
+11-18 14:33:39.192   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:33:39.193   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:33:39.207   924  3354 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:33:39.207   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:33:39.208   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:33:39.228   797   875 D EGL_emulation: app_time_stats: avg=595.22ms min=14.23ms max=8039.58ms count=14
+11-18 14:33:39.246   924  3375 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:33:39.997   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:39.997   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:39.997   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:39.997   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:39.997   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:40.251  2643  2660 D EGL_emulation: app_time_stats: avg=48.23ms min=17.15ms max=196.15ms count=24
+11-18 14:33:40.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:40.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:40.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:40.998   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:40.998   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:41.268  2643  2660 D EGL_emulation: app_time_stats: avg=253.48ms min=16.80ms max=605.39ms count=4
+11-18 14:33:41.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:41.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:41.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:41.998   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:41.998   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:42.274  2643  2660 D EGL_emulation: app_time_stats: avg=502.52ms min=14.26ms max=990.79ms count=2
+11-18 14:33:42.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:42.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:42.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:42.998   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:42.998   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:33:43.292  2643  2660 D EGL_emulation: app_time_stats: avg=127.27ms min=11.37ms max=754.82ms count=8
+11-18 14:33:43.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:43.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:43.998   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:43.998   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:43.998   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:44.294  2643  2660 D EGL_emulation: app_time_stats: avg=37.07ms min=13.09ms max=50.88ms count=27
+11-18 14:33:44.999   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:44.999   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:44.999   924  3375 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:44.999   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:44.999   924  3375 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:45.222   505  2199 W ActivityTaskManager: callingPackage for (uid=2000, pid=3379) has no WPC
+11-18 14:33:45.224   797   826 D KeyguardService: setOccluded(false)
+11-18 14:33:45.224   797   826 D KeyguardViewMediator: setOccluded(false)
+11-18 14:33:45.224   505  2199 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:33:45.225   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:33:45.227   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:33:45.239   924  3375 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:33:45.240   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:33:45.240   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:33:45.256   797   875 D EGL_emulation: app_time_stats: avg=430.26ms min=8.79ms max=5734.28ms count=14
+11-18 14:33:45.262   924  3382 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:33:45.302  2643  2660 D EGL_emulation: app_time_stats: avg=24.07ms min=8.37ms max=34.75ms count=41
+11-18 14:33:45.892   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:33:46.003   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:46.003   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:46.003   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:46.003   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:46.003   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:46.772  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:46.773  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:46.774   505  2199 D CoreBackPreview: Window{30e8fab u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@ba47b87, mPriority=0, mIsAnimationCallback=false}
+11-18 14:33:46.859   505  2199 I ImeTracker: com.stradaos.launcher.debug:133cb21: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:33:46.859   505  2199 I ImeTracker: com.stradaos.launcher.debug:133cb21: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:33:47.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:47.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:47.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:47.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:47.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:47.291  2643  2660 D EGL_emulation: app_time_stats: avg=58.05ms min=12.49ms max=1000.98ms count=34
+11-18 14:33:47.999   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:48.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:48.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:48.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:48.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:48.293  2643  2660 D EGL_emulation: app_time_stats: avg=501.07ms min=26.26ms max=975.88ms count=2
+11-18 14:33:48.387  2643  2660 D EGL_emulation: app_time_stats: avg=529.06ms min=13.67ms max=1510.54ms count=3
+11-18 14:33:49.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:49.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:49.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:49.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:49.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:33:49.321  2643  2660 D EGL_emulation: app_time_stats: avg=128.51ms min=19.29ms max=732.71ms count=8
+11-18 14:33:50.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:50.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:50.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:50.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:50.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:50.332  2643  2660 D EGL_emulation: app_time_stats: avg=45.90ms min=15.13ms max=53.51ms count=22
+11-18 14:33:51.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:51.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:51.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:51.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:51.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:51.332  2643  2660 D EGL_emulation: app_time_stats: avg=83.31ms min=28.25ms max=503.45ms count=12
+11-18 14:33:51.335  3384  3384 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 14:33:51.335  3384  3384 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 14:33:51.344   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-18 14:33:51.344  3384  3386 I Gralloc4: mapper 4.x is not supported
+11-18 14:33:51.514     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+11-18 14:33:51.433   505  2199 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-18 14:33:51.434   505  2199 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-18 14:33:51.445   505   522 I ActivityManager: Broadcast completed: result=0
+11-18 14:33:51.450  1439  1922 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:33:51.450  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:231): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:51.454  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:232): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:51.630     0     0 W audit   : audit_lost=80 audit_rate_limit=5 audit_backlog_limit=64
+11-18 14:33:51.454  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:233): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:51.633     0     0 E audit   : rate limit exceeded
+11-18 14:33:51.465  1439  1922 W ModernMediaScanner: Failed to visit /data/local/tmp/s.png: java.nio.file.AccessDeniedException: /data/local/tmp/s.png
+11-18 14:33:51.466  1439  1922 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 8ms, 0 inserts 0 updates 0 deletes
+11-18 14:33:51.466  1439  1922 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+11-18 14:33:51.454  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:234): avc:  denied  { getattr } for  comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:51.454  1439  1439 W com.android.providers.media.module: type=1400 audit(0.0:235): avc:  denied  { search } for  comm=4173796E635461736B202331 name="tmp" dev="dm-38" ino=65538 scontext=u:r:mediaprovider_app:s0:c125,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+11-18 14:33:51.514  2643  2643 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@748339d
+11-18 14:33:51.515   505   523 D AutofillManagerService: onBackKeyPressed()
+11-18 14:33:51.515  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:51.515  2643  2643 D AutofillManager: view not autofillable - not passing ime action check
+11-18 14:33:51.516   505   716 D CoreBackPreview: Window{30e8fab u0 com.stradaos.launcher.debug/com.stradaos.launcher.Main}: Setting back callback null
+11-18 14:33:51.517   505   716 W InputManager-JNI: Input channel object '30e8fab com.stradaos.launcher.debug/com.stradaos.launcher.Main (client)' was disposed without first being removed with the input manager!
+11-18 14:33:51.520  2643  2643 W InputEventReceiver: Attempted to finish an input event but the input event receiver has already been disposed.
+11-18 14:33:51.543   505   525 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+11-18 14:33:51.556   505   716 I ImeTracker: com.stradaos.launcher.debug:32c7040f: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-18 14:33:51.556   505   716 I ImeTracker: com.stradaos.launcher.debug:32c7040f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 14:33:52.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:52.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:52.000   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:52.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:52.000   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:52.342  2643  2660 D EGL_emulation: app_time_stats: avg=35.84ms min=10.65ms max=56.72ms count=28
+11-18 14:33:53.004   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:53.004   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:53.004   924  3382 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:53.004   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:53.004   924  3382 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:53.343  2643  2660 D EGL_emulation: app_time_stats: avg=25.02ms min=17.03ms max=30.63ms count=40
+11-18 14:33:53.458   505   716 D WifiNl80211Manager: Scan result ready event
+11-18 14:33:53.458   505   716 D WifiNative: Scan result ready event
+11-18 14:33:53.565   505   716 W ActivityTaskManager: callingPackage for (uid=2000, pid=3399) has no WPC
+11-18 14:33:53.576   797   826 D KeyguardService: setOccluded(false)
+11-18 14:33:53.577   797   826 D KeyguardViewMediator: setOccluded(false)
+11-18 14:33:53.577   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:33:53.577   505   716 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:33:53.578   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:33:53.588   924  3382 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:33:53.590   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:33:53.590   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:33:53.605   797   875 D EGL_emulation: app_time_stats: avg=596.29ms min=6.98ms max=8049.97ms count=14
+11-18 14:33:53.627   924  3402 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:33:54.002   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:54.002   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:54.002   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:54.002   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:54.003   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:54.617  2643  2660 D EGL_emulation: app_time_stats: avg=40.74ms min=12.42ms max=541.39ms count=31
+11-18 14:33:55.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:55.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:55.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:55.003   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:55.003   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:55.635  2643  2660 D EGL_emulation: app_time_stats: avg=253.05ms min=9.65ms max=534.40ms count=4
+11-18 14:33:55.888   797   797 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-18 14:33:56.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:56.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:56.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:56.003   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:56.003   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:56.643  2643  2660 D EGL_emulation: app_time_stats: avg=1008.47ms min=1008.47ms max=1008.47ms count=1
+11-18 14:33:57.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:57.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:57.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:57.003   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:57.003   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:33:57.651  2643  2660 D EGL_emulation: app_time_stats: avg=503.96ms min=13.25ms max=994.68ms count=2
+11-18 14:33:58.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:58.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:58.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:58.003   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:58.003   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-18 14:33:58.177     0     0 W healthd : battery l=100 v=5000 t=25.0 h=2 st=2 c=900000 fc=3000000 cc=10 chg=a
+11-18 14:33:58.656  2643  2660 D EGL_emulation: app_time_stats: avg=62.77ms min=15.44ms max=374.71ms count=16
+11-18 14:33:59.003   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:59.004   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:33:59.004   924  3402 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:33:59.004   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:33:59.004   924  3402 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+11-18 14:33:59.618   505  2635 W ActivityTaskManager: callingPackage for (uid=2000, pid=3407) has no WPC
+11-18 14:33:59.621   505  2635 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} with LAUNCH_SINGLE_TASK from uid 2000 (BAL_ALLOW_PERMISSION) result code=3
+11-18 14:33:59.621   797  1814 D KeyguardService: setOccluded(false)
+11-18 14:33:59.621   797  1814 D KeyguardViewMediator: setOccluded(false)
+11-18 14:33:59.621   797   797 D KeyguardViewMediator: handleSetOccluded(false)
+11-18 14:33:59.623   797   843 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{com.stradaos.launcher.debug/com.stradaos.launcher.Main}
+11-18 14:33:59.639   924  3402 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-18 14:33:59.640   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@29dc61a
+11-18 14:33:59.640   505   522 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@1a5754b
+11-18 14:33:59.656   797   875 D EGL_emulation: app_time_stats: avg=431.96ms min=8.82ms max=5742.75ms count=14
+11-18 14:33:59.659   924  3410 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-18 14:33:59.671  2643  2660 D EGL_emulation: app_time_stats: avg=29.72ms min=15.43ms max=51.53ms count=34
+11-18 14:34:00.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:34:00.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:34:00.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:34:00.004   924  3410 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:34:00.004   924  3410 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:34:00.690  2643  2660 D EGL_emulation: app_time_stats: avg=53.29ms min=14.17ms max=591.14ms count=19
+11-18 14:34:01.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:34:01.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:34:01.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:34:01.004   924  3410 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:34:01.004   924  3410 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:34:02.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:34:02.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:34:02.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:34:02.004   924  3410 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:34:02.004   924  3410 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:34:02.676  2643  2660 D EGL_emulation: app_time_stats: avg=494.25ms min=9.84ms max=991.57ms count=4
+11-18 14:34:03.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:34:03.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-18 14:34:03.004   924  3410 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-18 14:34:03.004   924  3410 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-18 14:34:03.004   924  3410 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-18 14:34:03.816     0     0 I logd    : logdr: UID=2000 GID=2000 PID=3412 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns

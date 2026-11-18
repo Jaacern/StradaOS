@@ -1,0 +1,11 @@
+central-fed-district.map
+crimean-fed-district.map
+far-eastern-fed-district-1.map
+far-eastern-fed-district-2.map
+kaliningrad.map
+north-caucasus-fed-district.map
+northwestern-fed-district.map
+siberian-fed-district.map
+south-fed-district.map
+ural-fed-district.map
+volga-fed-district.map

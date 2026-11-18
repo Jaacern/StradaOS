@@ -1,0 +1,759 @@
+--------- beginning of /dev/log/main
+D/AndroidRuntime( 3107): 
+D/AndroidRuntime( 3107): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3107): CheckJNI is ON
+D/dalvikvm( 3107): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3107): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3107): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3107): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3107): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3107): Shutting down VM
+I/AndroidRuntime( 3107): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3107): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 1ms
+--------- beginning of /dev/log/system
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3107
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/dalvikvm( 2398): GC_CONCURRENT freed 2848K, 12% free 24489K/27527K, paused 0ms+1ms, total 5ms
+D/AndroidRuntime( 3120): 
+D/AndroidRuntime( 3120): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3120): CheckJNI is ON
+D/dalvikvm( 3120): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3120): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3120): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3120): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3120): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3120): Shutting down VM
+I/AndroidRuntime( 3120): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3120): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 0ms
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3120
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 49152
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3138): 
+D/AndroidRuntime( 3138): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3138): CheckJNI is ON
+D/dalvikvm( 3138): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3138): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3138): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3138): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3138): Calling main entry com.android.commands.input.Input
+D/AndroidRuntime( 3138): Shutting down VM
+D/dalvikvm( 3138): GC_CONCURRENT freed 94K, 79% free 436K/2048K, paused 1ms+0ms, total 1ms
+I/AndroidRuntime( 3138): NOTE: attach of thread 'Binder_1' failed
+D/AndroidRuntime( 3152): 
+D/AndroidRuntime( 3152): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3152): CheckJNI is ON
+D/dalvikvm( 3152): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3152): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3152): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3152): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3152): Calling main entry com.android.commands.input.Input
+I/Input   ( 3152): InjectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=630646, downTime=630646, deviceId=-1, source=0x101 }
+I/Input   ( 3152): InjectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=630646, downTime=630646, deviceId=-1, source=0x101 }
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3152): Shutting down VM
+I/AndroidRuntime( 3152): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3152): GC_CONCURRENT freed 98K, 79% free 440K/2048K, paused 0ms+0ms, total 0ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3164): 
+D/AndroidRuntime( 3164): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3164): CheckJNI is ON
+D/dalvikvm( 3164): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3164): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3164): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3164): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3164): Calling main entry com.android.commands.input.Input
+I/Input   ( 3164): InjectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=632898, downTime=632898, deviceId=-1, source=0x101 }
+I/Input   ( 3164): InjectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=632898, downTime=632898, deviceId=-1, source=0x101 }
+D/AndroidRuntime( 3164): Shutting down VM
+I/AndroidRuntime( 3164): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3164): GC_CONCURRENT freed 98K, 79% free 440K/2048K, paused 0ms+0ms, total 1ms
+D/AndroidRuntime( 3176): 
+D/AndroidRuntime( 3176): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3176): CheckJNI is ON
+D/dalvikvm( 3176): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3176): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3176): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3176): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3176): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3176): Shutting down VM
+I/AndroidRuntime( 3176): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3176): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 0ms
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3176
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/dalvikvm( 2398): GC_CONCURRENT freed 1314K, 9% free 25094K/27527K, paused 0ms+1ms, total 5ms
+D/dalvikvm( 2398): GC_FOR_ALLOC freed 1156K, 12% free 24305K/27527K, paused 3ms, total 3ms
+D/AndroidRuntime( 3189): 
+D/AndroidRuntime( 3189): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3189): CheckJNI is ON
+D/dalvikvm( 3189): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3189): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3189): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3189): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3189): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3189): Shutting down VM
+I/AndroidRuntime( 3189): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3189): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 0ms
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3189
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/dalvikvm( 2398): GC_FOR_ALLOC freed 1286K, 11% free 24774K/27527K, paused 3ms, total 3ms
+D/AndroidRuntime( 3202): 
+D/AndroidRuntime( 3202): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3202): CheckJNI is ON
+D/dalvikvm( 3202): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3202): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3202): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3202): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3202): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3202): Shutting down VM
+I/AndroidRuntime( 3202): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3202): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 0ms
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3202
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 1483): GC_CONCURRENT freed 188K, 6% free 6387K/6727K, paused 10ms+10ms, total 23ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 1483): GC_CONCURRENT freed 141K, 5% free 6688K/6983K, paused 11ms+1ms, total 13ms
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/        ( 1483): HostConnection::get() New Host Connection established 0xb79f6cb0, tid 1483
+D/dalvikvm( 1483): GC_FOR_ALLOC freed 102K, 4% free 6733K/6983K, paused 2ms, total 3ms
+I/dalvikvm-heap( 1483): Grow heap (frag case) to 7.741MB for 1130508-byte allocation
+D/dalvikvm( 1483): GC_CONCURRENT freed 13K, 4% free 7823K/8135K, paused 13ms+0ms, total 18ms
+D/dalvikvm( 1483): WAIT_FOR_CONCURRENT_GC blocked 4ms
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3220): 
+D/AndroidRuntime( 3220): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3220): CheckJNI is ON
+D/dalvikvm( 3220): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3220): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3220): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3220): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3220): Calling main entry com.android.commands.input.Input
+I/Input   ( 3220): InjectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=654056, downTime=654056, deviceId=-1, source=0x101 }
+I/Input   ( 3220): InjectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=654056, downTime=654056, deviceId=-1, source=0x101 }
+D/AndroidRuntime( 3220): Shutting down VM
+I/AndroidRuntime( 3220): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3220): GC_CONCURRENT freed 98K, 79% free 440K/2048K, paused 1ms+0ms, total 1ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3232): 
+D/AndroidRuntime( 3232): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3232): CheckJNI is ON
+D/dalvikvm( 3232): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3232): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3232): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3232): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3232): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3232): Shutting down VM
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3232
+I/AndroidRuntime( 3232): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3232): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 1ms
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 2398): GC_CONCURRENT freed 1908K, 10% free 24878K/27527K, paused 1ms+2ms, total 8ms
+D/dalvikvm( 1367): GC_CONCURRENT freed 430K, 49% free 8312K/16071K, paused 0ms+11ms, total 14ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3245): 
+D/AndroidRuntime( 3245): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3245): CheckJNI is ON
+D/dalvikvm( 3245): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3245): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3245): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3245): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3245): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3245): Shutting down VM
+D/dalvikvm( 3245): GC_CONCURRENT freed 96K, 77% free 476K/2048K, paused 0ms+0ms, total 0ms
+I/AndroidRuntime( 3245): NOTE: attach of thread 'Binder_1' failed
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3245
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3259): 
+D/AndroidRuntime( 3259): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3259): CheckJNI is ON
+D/dalvikvm( 3259): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3259): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3259): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3259): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3259): Calling main entry com.android.commands.input.Input
+I/Input   ( 3259): InjectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=670988, downTime=670988, deviceId=-1, source=0x101 }
+I/Input   ( 3259): InjectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=670988, downTime=670988, deviceId=-1, source=0x101 }
+D/AndroidRuntime( 3259): Shutting down VM
+I/AndroidRuntime( 3259): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3259): GC_CONCURRENT freed 98K, 79% free 440K/2048K, paused 0ms+0ms, total 0ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3271): 
+D/AndroidRuntime( 3271): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3271): CheckJNI is ON
+D/dalvikvm( 3271): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3271): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3271): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3271): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3271): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3271): Shutting down VM
+D/dalvikvm( 3271): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 1ms
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3271
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 2398): GC_CONCURRENT freed 1965K, 10% free 24950K/27527K, paused 0ms+1ms, total 10ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3284): 
+D/AndroidRuntime( 3284): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3284): CheckJNI is ON
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 3284): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3284): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3284): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3284): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3284): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3284): Shutting down VM
+D/dalvikvm( 3284): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 1ms
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3284
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3300): 
+D/AndroidRuntime( 3300): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3300): CheckJNI is ON
+D/dalvikvm( 3300): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3300): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3300): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3300): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3300): Calling main entry com.android.commands.input.Input
+I/Input   ( 3300): InjectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=687881, downTime=687881, deviceId=-1, source=0x101 }
+I/Input   ( 3300): InjectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=687881, downTime=687881, deviceId=-1, source=0x101 }
+D/AndroidRuntime( 3300): Shutting down VM
+I/AndroidRuntime( 3300): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3300): GC_CONCURRENT freed 98K, 79% free 440K/2048K, paused 0ms+0ms, total 0ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3312): 
+D/AndroidRuntime( 3312): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3312): CheckJNI is ON
+D/dalvikvm( 3312): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3312): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3312): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3312): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3312): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3312): Shutting down VM
+D/dalvikvm( 3312): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 1ms
+I/AndroidRuntime( 3312): NOTE: attach of thread 'Binder_3' failed
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3312
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 2398): GC_CONCURRENT freed 1815K, 9% free 25130K/27527K, paused 10ms+10ms, total 26ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+E/ThrottleService( 1367): problem during onPollAlarm: java.lang.IllegalStateException: problem parsing stats: java.io.FileNotFoundException: /proc/net/xt_qtaguid/iface_stat_all: open failed: ENOENT (No such file or directory)
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3325): 
+D/AndroidRuntime( 3325): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3325): CheckJNI is ON
+D/dalvikvm( 3325): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3325): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3325): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3325): Added shared lib libnativehelper.so 0x0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3325): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3325): Shutting down VM
+I/AndroidRuntime( 3325): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3325): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 1ms
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3325
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 1367): GC_CONCURRENT freed 493K, 49% free 8322K/16071K, paused 0ms+1ms, total 10ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3341): 
+D/AndroidRuntime( 3341): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3341): CheckJNI is ON
+D/dalvikvm( 3341): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3341): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3341): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3341): Added shared lib libnativehelper.so 0x0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3341): Calling main entry com.android.commands.input.Input
+I/Input   ( 3341): InjectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=704874, downTime=704874, deviceId=-1, source=0x101 }
+I/Input   ( 3341): InjectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=704874, downTime=704874, deviceId=-1, source=0x101 }
+D/AndroidRuntime( 3341): Shutting down VM
+I/AndroidRuntime( 3341): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3341): GC_CONCURRENT freed 98K, 79% free 440K/2048K, paused 1ms+0ms, total 1ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3353): 
+D/AndroidRuntime( 3353): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3353): CheckJNI is ON
+D/dalvikvm( 3353): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3353): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3353): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3353): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3353): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3353): Shutting down VM
+D/dalvikvm( 3353): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 0ms
+I/AndroidRuntime( 3353): NOTE: attach of thread 'Binder_3' failed
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3353
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 2398): GC_CONCURRENT freed 1903K, 9% free 25186K/27527K, paused 0ms+0ms, total 7ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3366): 
+D/AndroidRuntime( 3366): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3366): CheckJNI is ON
+D/dalvikvm( 3366): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3366): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3366): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3366): Added shared lib libnativehelper.so 0x0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3366): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3366): Shutting down VM
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3366
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 3366): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 0ms+0ms, total 0ms
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/gralloc_ranchu( 1137): gralloc_alloc: Creating ashmem region of size 2236416
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3382): 
+D/AndroidRuntime( 3382): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3382): CheckJNI is ON
+D/dalvikvm( 3382): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3382): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3382): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3382): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3382): Calling main entry com.android.commands.input.Input
+I/Input   ( 3382): InjectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=721832, downTime=721832, deviceId=-1, source=0x101 }
+I/Input   ( 3382): InjectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=721832, downTime=721832, deviceId=-1, source=0x101 }
+D/AndroidRuntime( 3382): Shutting down VM
+I/AndroidRuntime( 3382): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3382): GC_CONCURRENT freed 98K, 79% free 440K/2048K, paused 0ms+0ms, total 0ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3394): 
+D/AndroidRuntime( 3394): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3394): CheckJNI is ON
+D/dalvikvm( 3394): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3394): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3394): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3394): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3394): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3394): Shutting down VM
+I/AndroidRuntime( 3394): NOTE: attach of thread 'Binder_3' failed
+D/dalvikvm( 3394): GC_CONCURRENT freed 97K, 77% free 476K/2048K, paused 1ms+0ms, total 1ms
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3394
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 2398): GC_FOR_ALLOC freed 1920K, 11% free 24712K/27527K, paused 4ms, total 4ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/AndroidRuntime( 3407): 
+D/AndroidRuntime( 3407): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 3407): CheckJNI is ON
+D/dalvikvm( 3407): Trying to load lib libjavacore.so 0x0
+D/dalvikvm( 3407): Added shared lib libjavacore.so 0x0
+D/dalvikvm( 3407): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm( 3407): Added shared lib libnativehelper.so 0x0
+D/AndroidRuntime( 3407): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3407): Shutting down VM
+D/dalvikvm( 3407): GC_CONCURRENT freed 96K, 77% free 476K/2048K, paused 0ms+0ms, total 2ms
+I/AndroidRuntime( 3407): NOTE: attach of thread 'Binder_1' failed
+I/ActivityManager( 1367): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 3407
+I/LocationManagerService( 1367): remove gps (pid 2398), disabled
+I/LocationManagerService( 1367): request gps (pid 2398) 1000 1000
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/dalvikvm( 2398): GC_FOR_ALLOC freed 1196K, 11% free 24625K/27527K, paused 5ms, total 5ms
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0
+D/EGL_emulation( 2398): eglMakeCurrent: 0xb7a53b18: ver 2 0

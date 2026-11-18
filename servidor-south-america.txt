@@ -1,0 +1,13 @@
+argentina.map
+bolivia.map
+brazil.map
+brazil/
+chile.map
+colombia.map
+ecuador.map
+guyana.map
+paraguay.map
+peru.map
+suriname.map
+uruguay.map
+venezuela.map

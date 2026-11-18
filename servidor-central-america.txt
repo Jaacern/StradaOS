@@ -1,0 +1,11 @@
+bahamas.map
+belize.map
+costa-rica.map
+cuba.map
+el-salvador.map
+guatemala.map
+haiti-and-domrep.map
+honduras.map
+jamaica.map
+nicaragua.map
+panama.map

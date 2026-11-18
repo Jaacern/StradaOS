@@ -178,23 +178,17 @@ final class Cobalto {
     }
 
     /**
-     * La foto recortada (fondo transparente) de Tu vehículo pegada a la derecha de la tarjeta, cortada por su borde y
-     * con su sombra en el piso. La vista cubre solo la franja del auto; la forma de la tarjeta se calcula con su alto
-     * completo (cardH) y la posición de la franja (offY). Se compone una vez en un Bitmap (lienzo por software: ahí
-     * sí se puede recortar con un Path, también en Android 4.1).
+     * La foto recortada (fondo transparente) de Tu vehículo, completa y centrada en su recuadro, como en el inicio de
+     * siempre, con una sombra suave en el piso. Se quita el margen transparente de la foto para que el auto llene el
+     * recuadro sin cortarse. Se compone una vez en un Bitmap.
      */
-    static final class CarCut extends View {
+    static final class CarFit extends View {
         private final Bitmap car;
-        private final float sk, rad, cardH, offY;
         private Bitmap out;
 
-        CarCut(Context c, Bitmap car, float sk, float rad, float cardH, float offY) {
+        CarFit(Context c, Bitmap car) {
             super(c);
             this.car = car;
-            this.sk = sk;
-            this.rad = rad;
-            this.cardH = cardH;
-            this.offY = offY;
         }
 
         @Override protected void onSizeChanged(int w, int h, int ow, int oh) {
@@ -202,28 +196,19 @@ final class Cobalto {
             if (w <= 0 || h <= 0 || car == null) return;
             try { out = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888); } catch (Throwable e) { return; }
             Canvas c = new Canvas(out);
-            float e = rad / 6;
-            c.clipPath(shape(e, e - offY, w, cardH - e - offY, sk, rad));
             android.graphics.Rect src = trim(car);
-            float aspect = src.width() / (float) Math.max(1, src.height());
-            float ch = h * 0.94f, cw = ch * aspect;
-            if (cw > w * 1.02f) { cw = w * 1.02f; ch = cw / aspect; }
-            float left = w - cw * 0.90f, top = h - ch;   // se sale un 10 % por la derecha
+            float k = Math.min(w * 0.96f / Math.max(1, src.width()), h * 0.90f / Math.max(1, src.height()));
+            float cw = src.width() * k, ch = src.height() * k;
+            float left = (w - cw) / 2, top = (h - ch) / 2 - h * 0.02f;
             Paint p = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.FILTER_BITMAP_FLAG);
-            // sombra: una mancha ancha y suave y otra más oscura justo debajo
-            float sy = top + ch * 0.95f;
-            shadow(c, p, left + cw * 0.5f, sy, cw * 0.55f, ch * 0.12f, 0x8C000000);
-            shadow(c, p, left + cw * 0.5f, sy, cw * 0.42f, ch * 0.05f, 0xB3000000);
-            c.drawBitmap(car, src, new RectF(left, top, left + cw, top + ch), p);
-        }
-
-        private static void shadow(Canvas c, Paint p, float cx, float cy, float rx, float ry, int color) {
-            p.setShader(new RadialGradient(cx, cy, rx, new int[]{color, color & 0x40FFFFFF, 0}, new float[]{0f, 0.55f, 1f}, Shader.TileMode.CLAMP));
+            float sy = top + ch * 0.97f;
+            p.setShader(new RadialGradient(w / 2f, sy, cw * 0.5f, new int[]{0x80000000, 0x26000000, 0}, new float[]{0f, 0.55f, 1f}, Shader.TileMode.CLAMP));
             c.save();
-            c.scale(1f, ry / rx, cx, cy);
-            c.drawCircle(cx, cy, rx, p);
+            c.scale(1f, 0.10f, w / 2f, sy);
+            c.drawCircle(w / 2f, sy, cw * 0.5f, p);
             c.restore();
             p.setShader(null);
+            c.drawBitmap(car, src, new RectF(left, top, left + cw, top + ch), p);
         }
 
         @Override protected void onDraw(Canvas c) {

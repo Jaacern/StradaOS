@@ -4101,8 +4101,8 @@ public class Main extends Activity {
             float gx = sk * (top + gh / 2) / hh;
             place(card, sv, 10 + gx, top, w - 20 - gx, gh);
         }
-        // la foto de Tu vehículo (como el inicio de siempre). Recortada (fondo transparente): pegada a la derecha,
-        // cortada por el borde de la tarjeta y con sombra. Con fondo: recuadro redondeado. Sin foto: tocar para ponerla.
+        // la foto de Tu vehículo (como el inicio de siempre). Recortada (fondo transparente): completa y centrada, con
+        // sombra suave. Con fondo: recuadro redondeado. Sin foto: tocar para ponerla.
         float cy = top + gh + (carSpeed ? 4 : 0), ch = (oilHome ? stripY - 8 : hh - 12) - cy;
         float px0 = sk * (cy + ch) / hh + m, pw = w - m - px0;
         final boolean oilTap = oilHome;
@@ -4117,14 +4117,15 @@ public class Main extends Activity {
             boolean cut = false;
             try { cut = CarPhoto.hasTransparency(photo); } catch (Throwable ignored) { }
             View pv;
+            // en el mismo recuadro que «Toca para poner la foto»: completa, centrada y sin cortarse
             if (cut) {
-                pv = new Cobalto.CarCut(this, photo, sk * s, 24 * s, hh * s, cy * s);
-                place(card, pv, 0, cy, w, ch);
+                pv = new Cobalto.CarFit(this, photo);
+                place(card, pv, px0, cy + 4, pw, ch - 8);
             } else {
                 ImageView car = new ImageView(this);
-                car.setImageBitmap(CarPhoto.cardCrop(photo, (int) (pw * s), (int) (ch * s), 16 * s));
+                car.setImageBitmap(CarPhoto.cardCrop(photo, (int) (pw * s), (int) ((ch - 8) * s), 16 * s));
                 car.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                place(card, car, px0, cy, pw, ch);
+                place(card, car, px0, cy + 4, pw, ch - 8);
                 pv = car;
             }
             pv.setOnClickListener(cardTap);

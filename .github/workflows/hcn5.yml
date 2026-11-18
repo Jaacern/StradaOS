@@ -20,6 +20,10 @@ jobs:
           mkdir -p diag dev
           unzip -q -o diag.zip -d diag || true
           unzip -q -o dev.zip -d dev || true
+          # los zip de adentro (Trace, Launcher, DEX)
+          for i in 1 2 3; do
+            find dev -name '*.zip' ! -name '*.done' | while read q; do d="${q%.zip}"; mkdir -p "$d"; unzip -q -o "$q" -d "$d" || true; mv "$q" "$q.done"; done
+          done
           echo "===== ARCHIVOS"; find diag dev -type f -printf '%s\t%p\n' | sort -k2
       - name: Diagnósticos de texto
         run: |
@@ -29,25 +33,32 @@ jobs:
           done
           cd ../dev
           find . -type f \( -iname '*.txt' -o -iname '*.log' -o -iname '*.md' -o -iname '*.aidl' \) | while read f; do
-            echo "=================== $f"; head -c 20000 "$f"; echo
+            echo "=================== $f"; head -c 6000 "$f"; echo
           done
       - name: Herramientas
         run: |
           curl -sSL -o jadx.zip "$(curl -s https://api.github.com/repos/skylot/jadx/releases/latest | grep -o 'https://[^"]*jadx-[0-9.]*\.zip' | head -1)"
           unzip -q jadx.zip -d jadx && chmod +x jadx/bin/jadx
           curl -sSL -o vdex.zip https://github.com/anestisb/vdexExtractor/archive/refs/heads/master.zip && unzip -q vdex.zip
-          (cd vdexExtractor-master && ./make.sh gcc >/dev/null 2>&1 && ls bin) || echo "vdexExtractor no compiló"
+          sudo apt-get install -y -q zlib1g-dev >/dev/null 2>&1 || true
+          (cd vdexExtractor-master && ./make.sh gcc 2>&1 | tail -15; ls -la bin) || echo "vdexExtractor no compiló"
       - name: Sacar DEX de los vdex/odex/apk/jar
         run: |
           mkdir -p dex
           find z/dev -type f \( -iname '*.vdex' \) | while read f; do
-            ./vdexExtractor-master/bin/vdexExtractor -i "$f" -o dex/ 2>&1 | tail -3 || true
+            echo "== $f"; ./vdexExtractor-master/bin/vdexExtractor -i "$f" -o dex/ 2>&1 | tail -5 || true
+          done
+          # jar/apk con classes.dex adentro
+          find z/dev -type f \( -iname '*.jar' -o -iname '*.apk' \) | while read f; do
+            n=$(basename "$f"); if unzip -l "$f" 2>/dev/null | grep -q 'classes.*\.dex'; then echo "$n trae dex"; else echo "$n sin dex (odex/vdex)"; fi
           done
           find z/dev -type f \( -iname '*.dex' -o -iname '*.apk' -o -iname '*.jar' \) -exec cp {} dex/ \; 2>/dev/null || true
           ls -la dex
       - name: Buscar el servicio sourceinfo
         run: |
           mkdir -p out
+          echo "===== ¿Qué archivos nombran sourceservice?"
+          grep -rlas 'sourceservice' z/dev | head -30
           for f in dex/*; do
             if strings -a "$f" | grep -q 'sourceservice'; then
               echo "=== $f menciona sourceservice"

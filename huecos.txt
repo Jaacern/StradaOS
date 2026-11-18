@@ -1,0 +1,4 @@
+es-cobalto-oscuro-vacio 561,1390,474,229
+es-cobalto-claro-vacio 561,1390,474,229
+en-cobalto-oscuro-vacio 561,1390,474,229
+en-cobalto-claro-vacio 561,1390,474,229

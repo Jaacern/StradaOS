@@ -1,0 +1,1 @@
+11-18 02:47:30.210  2496  2496 W StradaNav: nav-ir desde 6.2442,-75.56799833333334 a nav-ir:6.2702,-75.5660,Parque Explora

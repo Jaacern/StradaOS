@@ -1,0 +1,29 @@
+I/PackageManager.DexOptimizer( 1625): Running dexopt (dexoptNeeded=1) on: /data/app/com.stradaos.launcher.debug-PIIphwRhhlBfC52nY5_7Iw==/base.apk pkg=com.stradaos.launcher.debug isa=x86 dexoptFlags=boot_complete,debuggable,public target-filter=quicken oatDir=/data/app/com.stradaos.launcher.debug-PIIphwRhhlBfC52nY5_7Iw==/oat sharedLibraries=PCL[]
+W/dex2oat ( 2752): /system/bin/dex2oat --zip-fd=8 --zip-location=base.apk --input-vdex-fd=-1 --output-vdex-fd=10 --oat-fd=9 --oat-location=/data/app/com.stradaos.launcher.debug-PIIphwRhhlBfC52nY5_7Iw==/oat/x86/base.odex --instruction-set=x86 --instruction-set-variant=x86 --instruction-set-features=default --runtime-arg -Xms64m --runtime-arg -Xmx512m --compiler-filter=quicken --swap-fd=11 --debuggable --classpath-dir=/data/app/com.stradaos.launcher.debug-PIIphwRhhlBfC52nY5_7Iw== --class-loader-context=PCL[]
+I/dex2oat ( 2752): /system/bin/dex2oat --input-vdex-fd=-1 --output-vdex-fd=10 --compiler-filter=quicken --debuggable --classpath-dir=/data/app/com.stradaos.launcher.debug-PIIphwRhhlBfC52nY5_7Iw== --class-loader-context=PCL[]
+V/BackupManagerService( 1625): restoreAtInstall pkg=com.stradaos.launcher.debug token=1 restoreSet=0
+W/BroadcastQueue( 1625): Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.stradaos.launcher.debug flg=0x4000010 (has extras) } to com.svox.pico/.VoiceDataInstallerReceiver
+D/ImsResolver( 1844): maybeAddedImsService, packageName: com.stradaos.launcher.debug
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): Start proc 2788:com.stradaos.launcher.debug/u0a59 for activity com.stradaos.launcher.debug/com.stradaos.launcher.Main
+I/ActivityManager( 1625): Displayed com.stradaos.launcher.debug/com.stradaos.launcher.Main: +1s122ms
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+D/SurfaceFlinger( 1408): duplicate layer name: changing com.stradaos.launcher.debug/com.stradaos.launcher.Main to com.stradaos.launcher.debug/com.stradaos.launcher.Main#1
+I/chatty  ( 2788): uid=10059(com.stradaos.launcher.debug) RenderThread identical 16 lines
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000
+I/ActivityManager( 1625): START u0 {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras)} from uid 2000

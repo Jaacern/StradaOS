@@ -1,0 +1,133 @@
+D/AndroidRuntime( 1963): 
+D/AndroidRuntime( 1963): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 1963): CheckJNI is ON
+D/AndroidRuntime( 1963): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 1963): Shutting down VM
+I/AndroidRuntime( 1963): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2000): 
+D/AndroidRuntime( 2000): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2000): CheckJNI is ON
+D/AndroidRuntime( 2000): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2000): Shutting down VM
+I/AndroidRuntime( 2000): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2015): 
+D/AndroidRuntime( 2015): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2015): CheckJNI is ON
+D/AndroidRuntime( 2015): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2015): Shutting down VM
+I/AndroidRuntime( 2015): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2031): 
+D/AndroidRuntime( 2031): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2031): CheckJNI is ON
+D/AndroidRuntime( 2031): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2031): Shutting down VM
+I/AndroidRuntime( 2031): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2046): 
+D/AndroidRuntime( 2046): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2046): CheckJNI is ON
+D/AndroidRuntime( 2046): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2046): Shutting down VM
+I/AndroidRuntime( 2046): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2062): 
+D/AndroidRuntime( 2062): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2062): CheckJNI is ON
+D/AndroidRuntime( 2062): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2062): Shutting down VM
+I/AndroidRuntime( 2062): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2077): 
+D/AndroidRuntime( 2077): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2077): CheckJNI is ON
+D/AndroidRuntime( 2077): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2077): Shutting down VM
+I/AndroidRuntime( 2077): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2097): 
+D/AndroidRuntime( 2097): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2097): CheckJNI is ON
+D/AndroidRuntime( 2097): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2097): Shutting down VM
+I/AndroidRuntime( 2097): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2124): 
+D/AndroidRuntime( 2124): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2124): CheckJNI is ON
+D/AndroidRuntime( 2124): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2124): Shutting down VM
+I/AndroidRuntime( 2124): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2143): 
+D/AndroidRuntime( 2143): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2143): CheckJNI is ON
+D/AndroidRuntime( 2143): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2143): Shutting down VM
+D/AndroidRuntime( 2162): 
+D/AndroidRuntime( 2162): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2162): CheckJNI is ON
+D/AndroidRuntime( 2162): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2162): Shutting down VM
+I/AndroidRuntime( 2162): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2179): 
+D/AndroidRuntime( 2179): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2179): CheckJNI is ON
+D/AndroidRuntime( 2179): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2179): Shutting down VM
+I/AndroidRuntime( 2179): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2196): 
+D/AndroidRuntime( 2196): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2196): CheckJNI is ON
+D/AndroidRuntime( 2196): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2196): Shutting down VM
+I/AndroidRuntime( 2196): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2212): 
+D/AndroidRuntime( 2212): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2212): CheckJNI is ON
+D/AndroidRuntime( 2212): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2212): Shutting down VM
+I/AndroidRuntime( 2212): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2228): 
+D/AndroidRuntime( 2228): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2228): CheckJNI is ON
+D/AndroidRuntime( 2228): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2228): Shutting down VM
+I/AndroidRuntime( 2228): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2244): 
+D/AndroidRuntime( 2244): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2244): CheckJNI is ON
+D/AndroidRuntime( 2244): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2244): Shutting down VM
+D/AndroidRuntime( 2260): 
+D/AndroidRuntime( 2260): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2260): CheckJNI is ON
+D/AndroidRuntime( 2260): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2260): Shutting down VM
+D/AndroidRuntime( 2276): 
+D/AndroidRuntime( 2276): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2276): CheckJNI is ON
+D/AndroidRuntime( 2276): Calling main entry com.android.commands.input.Input
+D/AndroidRuntime( 2276): Shutting down VM
+D/AndroidRuntime( 2288): 
+D/AndroidRuntime( 2288): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2288): CheckJNI is ON
+D/AndroidRuntime( 2288): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2288): Shutting down VM
+I/AndroidRuntime( 2288): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2305): 
+D/AndroidRuntime( 2305): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2305): CheckJNI is ON
+D/AndroidRuntime( 2305): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2305): Shutting down VM
+I/AndroidRuntime( 2305): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2322): 
+D/AndroidRuntime( 2322): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2322): CheckJNI is ON
+D/AndroidRuntime( 2322): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2322): Shutting down VM
+D/AndroidRuntime( 2335): 
+D/AndroidRuntime( 2335): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2335): CheckJNI is ON
+D/AndroidRuntime( 2335): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2335): Shutting down VM
+I/AndroidRuntime( 2335): NOTE: attach of thread 'Binder_3' failed
+D/AndroidRuntime( 2351): 
+D/AndroidRuntime( 2351): >>>>>> AndroidRuntime START com.android.internal.os.RuntimeInit <<<<<<
+D/AndroidRuntime( 2351): CheckJNI is ON
+D/AndroidRuntime( 2351): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 2351): Shutting down VM
+I/AndroidRuntime( 2351): NOTE: attach of thread 'Binder_3' failed

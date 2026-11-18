@@ -1,0 +1,45 @@
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 1963
+I/ActivityThread( 1973): Pub com.stradaos.launcher.debug.apk: com.stradaos.launcher.ApkProvider
+I/ActivityManager( 1366): Start proc com.stradaos.launcher.debug for activity com.stradaos.launcher.debug/com.stradaos.launcher.Main: pid=1973 uid=10044 gids={3003, 1028, 1015, 3002, 3001}
+I/dalvikvm( 1973): Could not find method com.stradaos.launcher.Main.checkSelfPermission, referenced from method com.stradaos.launcher.Main.backupRestore
+W/dalvikvm( 1973): VFY: unable to resolve virtual method 2485: Lcom/stradaos/launcher/Main;.checkSelfPermission (Ljava/lang/String;)I
+I/dalvikvm( 1973): Could not find method com.stradaos.launcher.Main.checkSelfPermission, referenced from method com.stradaos.launcher.Main.backupSave
+W/dalvikvm( 1973): VFY: unable to resolve virtual method 2485: Lcom/stradaos/launcher/Main;.checkSelfPermission (Ljava/lang/String;)I
+W/dalvikvm( 1973): Unable to resolve superclass of Lcom/stradaos/launcher/MediaListener; (136)
+W/dalvikvm( 1973): Link of class 'Lcom/stradaos/launcher/MediaListener;' failed
+W/dalvikvm( 1973): VFY: unable to resolve static field 1603 (connected) in Lcom/stradaos/launcher/MediaListener;
+I/dalvikvm( 1973): Could not find method com.stradaos.launcher.Main.checkSelfPermission, referenced from method com.stradaos.launcher.Main.chooseMapToDownload
+W/dalvikvm( 1973): VFY: unable to resolve virtual method 2485: Lcom/stradaos/launcher/Main;.checkSelfPermission (Ljava/lang/String;)I
+I/dalvikvm( 1973): Could not find method com.stradaos.launcher.Main.checkSelfPermission, referenced from method com.stradaos.launcher.Main.gpsState
+W/dalvikvm( 1973): VFY: unable to resolve virtual method 2485: Lcom/stradaos/launcher/Main;.checkSelfPermission (Ljava/lang/String;)I
+I/dalvikvm( 1973): Could not find method com.stradaos.launcher.Main.checkSelfPermission, referenced from method com.stradaos.launcher.Main.pickMapFile
+W/dalvikvm( 1973): VFY: unable to resolve virtual method 2485: Lcom/stradaos/launcher/Main;.checkSelfPermission (Ljava/lang/String;)I
+W/dalvikvm( 1973): Unable to resolve superclass of Lcom/stradaos/launcher/MediaListener; (136)
+W/dalvikvm( 1973): Link of class 'Lcom/stradaos/launcher/MediaListener;' failed
+W/dalvikvm( 1973): VFY: unable to resolve static field 1603 (connected) in Lcom/stradaos/launcher/MediaListener;
+I/dalvikvm( 1973): Could not find method android.os.StatFs.getAvailableBytes, referenced from method com.stradaos.launcher.MapDownload.free
+I/dalvikvm( 1973): DexOpt: access denied from Lcom/stradaos/launcher/NotifArt; to field Landroid/app/Notification;.extras
+I/dalvikvm( 1973): Could not find method android.speech.tts.TextToSpeech.speak, referenced from method com.stradaos.launcher.Nav.doSpeak
+I/dalvikvm( 1973): Could not find method android.content.Context.getExternalFilesDirs, referenced from method com.stradaos.launcher.Backup.appDirs
+I/ActivityManager( 1366): Displayed com.stradaos.launcher.debug/com.stradaos.launcher.Main: +451ms
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2000
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2015
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2031
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2046
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2062
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2077
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2097
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2124
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2143
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2162
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2179
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2196
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2212
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2228
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2244
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2260
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2288
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2305
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2322
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2335
+I/ActivityManager( 1366): START {flg=0x10000000 cmp=com.stradaos.launcher.debug/com.stradaos.launcher.Main (has extras) u=0} from pid 2351

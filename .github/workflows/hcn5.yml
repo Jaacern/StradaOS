@@ -79,3 +79,10 @@ jobs:
             echo "=================== $j"
             grep -n -B3 -A25 'SourceInfo\|MusicInfo\|getMusicInfo\|OnEventListener' "$j" | head -260
           done
+      - name: Base del launcher (Bluetooth, ID3, fuente)
+        run: |
+          for n in BaseMediaCard SourceUtils BaseCard; do
+            find out -name "$n.java" | head -2 | while read j; do echo "=================== $j"; cat "$j"; done
+          done
+          echo "===== registerBtEvent / onMetadataChanged / acciones"
+          grep -rn 'registerBtEvent\|registerMusicEvent\|IntentFilter\|addAction\|"com\.\(autochips\|hcn\|zjinnova\)[^"]*"\|MediaController\|MediaSessionManager\|getService("sourceinfo")\|"sourceinfo"' out/MtkLauncher3_classes.dex --include=*.java | grep -v '/theme/' | head -80

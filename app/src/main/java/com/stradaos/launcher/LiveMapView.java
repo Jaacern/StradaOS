@@ -448,7 +448,14 @@ public class LiveMapView extends View {
             if (bd) drawFade(c, w, h);
             String attr = anyFile ? I18n.t("© colaboradores de OpenStreetMap") + " · mapsforge"
                     : provider == 5 ? "© Esri, HERE, Garmin, © OpenStreetMap" : provider == 4 ? "© OpenStreetMap, SRTM · © OpenTopoMap" : I18n.t("© colaboradores de OpenStreetMap");
-            c.drawText(attr, w - text.measureText(attr) - 10 * s, (Nav.active != null ? 96 : 14) * s, text);
+            float ax = w - text.measureText(attr) - 10 * s, ay = (Nav.active != null ? 96 : 14) * s;
+            if (bd && fadeEdge == 1 && fadeLen > 0) {
+                // Cobalto: antes del difuminado (si no, queda detrás de la tarjeta del reproductor) y un poco más
+                // arriba para no rozar los botones de la esquina
+                ax = Math.max(12 * s, w - fadeLen * 0.72f - text.measureText(attr));
+                if (Nav.active == null) ay = 13 * s;
+            }
+            c.drawText(attr, ax, ay, text);
         }
         if (bd) c.drawPath(corners, back);
         else {

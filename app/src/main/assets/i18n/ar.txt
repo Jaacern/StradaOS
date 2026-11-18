@@ -1119,6 +1119,4 @@ Aplicar	تطبيق
 Versión de prueba: se puede aplicar sin código.	نسخة تجريبية: يمكن تطبيقها دون رمز.
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	قريبًا مع تبرع. تبقى كل الميزات مجانية.
 Cobalto	كوبالت
-Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, un deportivo en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	أزرق ليلي في ثلاثة أعمدة: تتلاشى الخريطة حتى مشغّل الموسيقى ذي الغلاف الدائري، وتعرض مركبتك عداد السرعة في الأعلى وسيارة رياضية في الوسط والصيانة في الأسفل. درجة الحرارة فوق الخريطة.
-Foto de tu vehículo en Cobalto	صورة مركبتك في كوبالت
-Apagado: el deportivo de StradaOS. Encendido: la foto que elegiste en Tu vehículo	مطفأ: سيارة StradaOS الرياضية. مشغّل: الصورة التي اخترتها في مركبتك
+Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	أزرق ليلي في ثلاثة أعمدة: تتلاشى الخريطة حتى مشغّل الموسيقى ذي الغلاف الدائري، وتعرض مركبتك عداد السرعة في الأعلى وصورتها في الوسط والصيانة في الأسفل. درجة الحرارة فوق الخريطة.

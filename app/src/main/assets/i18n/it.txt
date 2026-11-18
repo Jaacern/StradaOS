@@ -1119,6 +1119,4 @@ Aplicar	Applica
 Versión de prueba: se puede aplicar sin código.	Versione di prova: si può applicare senza codice.
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Presto disponibile con una donazione. Tutte le funzioni restano gratuite.
 Cobalto	Cobalto
-Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, un deportivo en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Blu notte su tre colonne: la mappa sfuma fino al lettore con la copertina rotonda, e il tuo veicolo mostra il tachimetro in alto, una sportiva al centro e la manutenzione in basso. La temperatura sta sopra la mappa.
-Foto de tu vehículo en Cobalto	Foto del tuo veicolo in Cobalto
-Apagado: el deportivo de StradaOS. Encendido: la foto que elegiste en Tu vehículo	Spento: la sportiva di StradaOS. Acceso: la foto scelta in Il tuo veicolo
+Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Blu notte su tre colonne: la mappa sfuma fino al lettore con la copertina rotonda, e il tuo veicolo mostra il tachimetro in alto, la sua foto al centro e la manutenzione in basso. La temperatura sta sopra la mappa.

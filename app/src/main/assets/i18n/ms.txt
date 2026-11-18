@@ -1119,6 +1119,4 @@ Aplicar	Guna
 Versión de prueba: se puede aplicar sin código.	Versi ujian: boleh digunakan tanpa kod.
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Akan datang dengan derma. Semua ciri kekal percuma.
 Cobalto	Kobalt
-Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, un deportivo en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Biru malam dalam tiga lajur: peta pudar ke pemain dengan kulit bulat, dan kenderaan anda menunjukkan meter laju di atas, kereta sport di tengah dan penyelenggaraan di bawah. Suhu di atas peta.
-Foto de tu vehículo en Cobalto	Foto kenderaan anda dalam Kobalt
-Apagado: el deportivo de StradaOS. Encendido: la foto que elegiste en Tu vehículo	Mati: kereta sport StradaOS. Hidup: foto yang anda pilih dalam Kenderaan anda
+Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Biru malam dalam tiga lajur: peta pudar ke pemain dengan kulit bulat, dan kenderaan anda menunjukkan meter laju di atas, fotonya di tengah dan penyelenggaraan di bawah. Suhu di atas peta.

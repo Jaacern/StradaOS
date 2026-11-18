@@ -1119,6 +1119,4 @@ Aplicar	Appliquer
 Versión de prueba: se puede aplicar sin código.	Version de test : s'applique sans code.
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Bientôt disponible avec un don. Toutes les fonctions restent gratuites.
 Cobalto	Cobalt
-Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, un deportivo en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Bleu nuit sur trois colonnes : la carte se fond jusqu'au lecteur à pochette ronde, et votre véhicule affiche le compteur en haut, une sportive au milieu et l'entretien en bas. La température est au-dessus de la carte.
-Foto de tu vehículo en Cobalto	Photo de votre véhicule dans Cobalt
-Apagado: el deportivo de StradaOS. Encendido: la foto que elegiste en Tu vehículo	Désactivé : la sportive de StradaOS. Activé : la photo choisie dans Votre véhicule
+Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Bleu nuit sur trois colonnes : la carte se fond jusqu'au lecteur à pochette ronde, et votre véhicule affiche le compteur en haut, sa photo au milieu et l'entretien en bas. La température est au-dessus de la carte.

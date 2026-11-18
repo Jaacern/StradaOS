@@ -80,11 +80,17 @@ go pref:speedo=1 4; demo; shot c12-cobalto-analogico
 go pref:speedo=0 4; demo; shot c13-cobalto-digital
 go pref:speedo=2 4
 go tema:claro 7; demo; shot c16-cobalto-claro
+go foto-demo:recorte 5; demo; shot c18-foto-recortada
+go foto-demo:normal 5; demo; shot c19-foto-con-fondo
+go tema:oscuro 6; go foto-demo:recorte 5; demo; shot c18b-foto-recortada-oscuro
+go tema:claro 6
 go ajustes:11 5; adb shell input swipe 600 520 600 80 400; sleep 2; adb shell input swipe 600 520 600 80 400; sleep 2; adb shell input swipe 600 520 600 80 400; sleep 2; shot c17-galeria
 go tema:oscuro 6
 if [ "$API" -ge 18 ]; then
   size 1280x480; demo; shot c20-1280x480
   size 1080x1920; demo; shot c30-vertical
+  go foto-demo: 5; demo; shot c30b-vertical-sin-foto
+  go foto-demo:recorte 5
   go tema:claro 7; demo; shot c31-vertical-claro
   go tema:oscuro 6; size 768x880; demo; shot c32-vertical-bajo
   size 1024x600

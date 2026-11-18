@@ -158,36 +158,43 @@ final class Cobalto {
         @Override public int getOpacity() { return android.graphics.PixelFormat.TRANSLUCENT; }
     }
 
-    private static Bitmap carBmp;
-
-    /** Foto del auto del tema (assets/cobalto_car.png, fondo transparente). Se carga una vez. */
-    static Bitmap car(Context c) {
-        if (carBmp != null && !carBmp.isRecycled()) return carBmp;
-        try {
-            java.io.InputStream in = c.getAssets().open("cobalto_car.png");
-            carBmp = android.graphics.BitmapFactory.decodeStream(in);
-            in.close();
-        } catch (Throwable e) { carBmp = null; }
-        return carBmp;
+    /** Recuadro donde está el dibujo en una foto con fondo transparente (para que el auto llegue de verdad al borde). */
+    static android.graphics.Rect trim(Bitmap b) {
+        int w = b.getWidth(), h = b.getHeight(), minX = w, minY = h, maxX = -1, maxY = -1;
+        int[] row = new int[w];
+        for (int y = 0; y < h; y += 2) {
+            b.getPixels(row, 0, w, 0, y, w, 1);
+            for (int x = 0; x < w; x += 2) {
+                if ((row[x] >>> 24) > 24) {
+                    if (x < minX) minX = x;
+                    if (x > maxX) maxX = x;
+                    if (y < minY) minY = y;
+                    if (y > maxY) maxY = y;
+                }
+            }
+        }
+        if (maxX < minX || maxY < minY) return new android.graphics.Rect(0, 0, w, h);
+        return new android.graphics.Rect(minX, minY, Math.min(w, maxX + 2), Math.min(h, maxY + 2));
     }
 
     /**
-     * El auto pegado a la derecha de la tarjeta y cortado por su borde inclinado, con su sombra en el piso. Se compone
-     * una sola vez en un Bitmap (lienzo por software: ahí sí sirve recortar con un Path, también en Android 4.1).
+     * La foto recortada (fondo transparente) de Tu vehículo pegada a la derecha de la tarjeta, cortada por su borde y
+     * con su sombra en el piso. La vista cubre solo la franja del auto; la forma de la tarjeta se calcula con su alto
+     * completo (cardH) y la posición de la franja (offY). Se compone una vez en un Bitmap (lienzo por software: ahí
+     * sí se puede recortar con un Path, también en Android 4.1).
      */
     static final class CarCut extends View {
         private final Bitmap car;
-        private final float sk, rad, areaTop, areaBottom;
+        private final float sk, rad, cardH, offY;
         private Bitmap out;
 
-        /** areaTop/areaBottom: franja vertical (px) donde va el auto dentro de la tarjeta. */
-        CarCut(Context c, Bitmap car, float sk, float rad, float areaTop, float areaBottom) {
+        CarCut(Context c, Bitmap car, float sk, float rad, float cardH, float offY) {
             super(c);
             this.car = car;
             this.sk = sk;
             this.rad = rad;
-            this.areaTop = areaTop;
-            this.areaBottom = areaBottom;
+            this.cardH = cardH;
+            this.offY = offY;
         }
 
         @Override protected void onSizeChanged(int w, int h, int ow, int oh) {
@@ -195,18 +202,19 @@ final class Cobalto {
             if (w <= 0 || h <= 0 || car == null) return;
             try { out = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888); } catch (Throwable e) { return; }
             Canvas c = new Canvas(out);
-            float e = 4 * (sk > 0 ? 1 : 0);
-            c.clipPath(shape(e, e, w, h - e, sk, rad));
-            float aspect = car.getWidth() / (float) car.getHeight();
-            float ah = Math.max(10, areaBottom - areaTop), cw = w * 1.12f, ch = cw / aspect;
-            if (ch > ah) { ch = ah; cw = ch * aspect; }
-            float left = w - cw * 0.74f, top = areaBottom - ch;   // como la referencia: el auto se sale por la derecha
+            float e = rad / 6;
+            c.clipPath(shape(e, e - offY, w, cardH - e - offY, sk, rad));
+            android.graphics.Rect src = trim(car);
+            float aspect = src.width() / (float) Math.max(1, src.height());
+            float ch = h * 0.94f, cw = ch * aspect;
+            if (cw > w * 1.02f) { cw = w * 1.02f; ch = cw / aspect; }
+            float left = w - cw * 0.90f, top = h - ch;   // se sale un 10 % por la derecha
             Paint p = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.FILTER_BITMAP_FLAG);
-            // sombra: una mancha ancha y suave y otra más oscura justo bajo las ruedas
-            float sy = top + ch * 0.92f;
-            shadow(c, p, left + cw * 0.48f, sy, cw * 0.56f, ch * 0.14f, 0x99000000);
-            shadow(c, p, left + cw * 0.46f, sy, cw * 0.44f, ch * 0.06f, 0xCC000000);
-            c.drawBitmap(car, null, new RectF(left, top, left + cw, top + ch), p);
+            // sombra: una mancha ancha y suave y otra más oscura justo debajo
+            float sy = top + ch * 0.95f;
+            shadow(c, p, left + cw * 0.5f, sy, cw * 0.55f, ch * 0.12f, 0x8C000000);
+            shadow(c, p, left + cw * 0.5f, sy, cw * 0.42f, ch * 0.05f, 0xB3000000);
+            c.drawBitmap(car, src, new RectF(left, top, left + cw, top + ch), p);
         }
 
         private static void shadow(Canvas c, Paint p, float cx, float cy, float rx, float ry, int color) {
@@ -253,7 +261,7 @@ final class Cobalto {
         }
 
         private void card(Canvas c, float l, float t, float rt, float b, float rad) {
-            float sk = Math.min((rt - l) * 0.22f, (b - t) * 0.15f);
+            float sk = portrait ? 0 : Math.min((rt - l) * 0.22f, (b - t) * 0.15f);   // en vertical, rectas
             Path path = shape(l, t, rt, b, sk, rad * 1.3f);
             p.setStyle(Paint.Style.FILL);
             p.setShader(new LinearGradient(l, t, rt, t, glassTop(light), glassBottom(light) & 0x30FFFFFF, Shader.TileMode.CLAMP));

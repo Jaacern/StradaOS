@@ -1119,6 +1119,4 @@ Aplicar	Uygula
 Versión de prueba: se puede aplicar sin código.	Test sürümü: kod olmadan uygulanabilir.
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Yakında bağışla. Tüm özellikler ücretsiz kalır.
 Cobalto	Kobalt
-Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, un deportivo en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Üç sütunda gece mavisi: harita yuvarlak kapaklı oynatıcıya doğru solar; aracın üstte hız göstergesini, ortada bir spor arabayı ve altta bakımı gösterir. Sıcaklık haritanın üstündedir.
-Foto de tu vehículo en Cobalto	Kobalt'ta aracının fotoğrafı
-Apagado: el deportivo de StradaOS. Encendido: la foto que elegiste en Tu vehículo	Kapalı: StradaOS spor arabası. Açık: Aracın bölümünde seçtiğin fotoğraf
+Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Üç sütunda gece mavisi: harita yuvarlak kapaklı oynatıcıya doğru solar; aracın üstte hız göstergesini, ortada fotoğrafını ve altta bakımı gösterir. Sıcaklık haritanın üstündedir.

@@ -703,6 +703,25 @@ public class Main extends Activity {
                     applyPremium(v.length() > 13 ? v.substring(13) : null);
                 }
                 else if ("solo-mapa-anim".equals(v)) toggleMapOnly();
+                else if (v.startsWith("foto-demo:")) {
+                    // foto-demo:recorte (fondo transparente), foto-demo:normal (con fondo), «foto-demo:» la quita
+                    String k = v.substring(10);
+                    if (k.length() == 0) CarPhoto.delete(this);
+                    else {
+                        Bitmap b = Bitmap.createBitmap(600, 260, Bitmap.Config.ARGB_8888);
+                        android.graphics.Canvas cv = new android.graphics.Canvas(b);
+                        if ("normal".equals(k)) cv.drawColor(0xFF8899AA);
+                        android.graphics.Paint pp = new android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG);
+                        pp.setColor(0xFFC0392B);
+                        cv.drawRoundRect(new android.graphics.RectF(40, 110, 560, 200), 40, 40, pp);
+                        cv.drawRoundRect(new android.graphics.RectF(170, 50, 430, 140), 50, 50, pp);
+                        pp.setColor(0xFF111111);
+                        cv.drawCircle(160, 200, 42, pp);
+                        cv.drawCircle(440, 200, 42, pp);
+                        CarPhoto.save(this, b);
+                    }
+                    rebuild();
+                }
                 else if (v.startsWith("solo-mapa:")) {
                     prefs.edit().putBoolean("prem_map_only", v.endsWith("1")).apply();
                     rebuild();
@@ -3959,7 +3978,7 @@ public class Main extends Activity {
 
     private void buildCobMusic(float x, float y, float w, float hh) {
         final FrameLayout card = new FrameLayout(this);
-        final float sk = cobSkew(w, hh);
+        final float sk = vertical ? 0 : cobSkew(w, hh);   // en vertical, rectas (mismas luces y línea)
         card.setBackground(new Cobalto.SkewCard(LIGHT, 24 * s, sk * s, s));
         place(board, card, x, y, w, hh);
         premHeadViews.add(card);
@@ -4027,13 +4046,27 @@ public class Main extends Activity {
     /** Vehículo: velocímetro arriba (digital, analógico o mixto), el auto en el medio y el mantenimiento abajo. */
     private void buildCobCar(float x, float y, float w, float hh) {
         FrameLayout card = new FrameLayout(this);
-        final float sk = cobSkew(w, hh);
+        final float sk = vertical ? 0 : cobSkew(w, hh);
         card.setBackground(new Cobalto.SkewCard(LIGHT, 24 * s, sk * s, s));
         place(board, card, x, y, w, hh);
         premHeadViews.add(card);
         float m = 14;
+        // nombre del vehículo y su etiqueta en el color de acento (la de Tu vehículo, como en el inicio de siempre)
+        LinearLayout nameRow = new LinearLayout(this);
+        nameRow.setGravity(Gravity.CENTER_VERTICAL);
         carTv = tv(prefs.getString("car_name", "Mi vehículo"), 12, MUTED, true);
-        place(card, carTv, m + 8, 16, w - 2 * m - 80, 16);
+        carTv.setMaxWidth((int) ((w - 2 * m - 80) * 0.6f * s));
+        nameRow.addView(carTv);
+        String tag = prefs.getString("car_tag", "").trim();
+        TextView chip = tv(tag, 10, Color.WHITE, true);
+        chip.setPadding((int) (7 * s), (int) (2 * s), (int) (7 * s), (int) (2 * s));
+        chip.setBackground(round(RED, 7));
+        LinearLayout.LayoutParams clp = new LinearLayout.LayoutParams(-2, -2);
+        clp.leftMargin = (int) (8 * s);
+        nameRow.addView(chip, clp);
+        if (tag.length() == 0) chip.setVisibility(View.GONE);
+        chipTv = chip;
+        place(card, nameRow, m + 8, 13, w - 2 * m - 80, 22);
         LinearLayout g = new LinearLayout(this);
         g.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
         gpsDot = new View(this);
@@ -4068,20 +4101,52 @@ public class Main extends Activity {
             float gx = sk * (top + gh / 2) / hh;
             place(card, sv, 10 + gx, top, w - 20 - gx, gh);
         }
-        // el auto: el deportivo de StradaOS o, si se elige en Pantalla de inicio, la foto de Tu vehículo
+        // la foto de Tu vehículo (como el inicio de siempre). Recortada (fondo transparente): pegada a la derecha,
+        // cortada por el borde de la tarjeta y con sombra. Con fondo: recuadro redondeado. Sin foto: tocar para ponerla.
         float cy = top + gh + (carSpeed ? 4 : 0), ch = (oilHome ? stripY - 8 : hh - 12) - cy;
-        Bitmap photo = prefs.getBoolean("prem_car_photo", false) ? CarPhoto.load(this) : null;
+        float px0 = sk * (cy + ch) / hh + m, pw = w - m - px0;
+        final boolean oilTap = oilHome;
+        View.OnClickListener cardTap = new View.OnClickListener() { public void onClick(View v) {
+            if (oilTap) badgeMenu(); else showSettings(C_VEHICLE);
+        }};
+        View.OnLongClickListener photoLong = new View.OnLongClickListener() {
+            public boolean onLongClick(View v) { photoMenu(); return true; }
+        };
+        Bitmap photo = CarPhoto.load(this);
         if (photo != null) {
-            ImageView car = new ImageView(this);
             boolean cut = false;
             try { cut = CarPhoto.hasTransparency(photo); } catch (Throwable ignored) { }
-            if (cut) car.setImageBitmap(photo);
-            else car.setImageBitmap(CarPhoto.cardCrop(photo, (int) ((w - 2 * m) * s), (int) (ch * s), 12 * s));
-            car.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            place(card, car, m, cy, w - 2 * m, ch);
+            View pv;
+            if (cut) {
+                pv = new Cobalto.CarCut(this, photo, sk * s, 24 * s, hh * s, cy * s);
+                place(card, pv, 0, cy, w, ch);
+            } else {
+                ImageView car = new ImageView(this);
+                car.setImageBitmap(CarPhoto.cardCrop(photo, (int) (pw * s), (int) (ch * s), 16 * s));
+                car.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                place(card, car, px0, cy, pw, ch);
+                pv = car;
+            }
+            pv.setOnClickListener(cardTap);
+            pv.setOnLongClickListener(photoLong);
         } else {
-            // el auto del tema pegado a la derecha, cortado por el borde inclinado de la tarjeta, con su sombra
-            place(card, new Cobalto.CarCut(this, Cobalto.car(this), sk * s, 24 * s, cy * s, (cy + ch) * s), 0, 0, w, hh);
+            LinearLayout ph = new LinearLayout(this);
+            ph.setOrientation(LinearLayout.VERTICAL);
+            ph.setGravity(Gravity.CENTER);
+            ph.setBackground(round(Prem.soft(LIGHT), 16));
+            float is = Math.min(56, ch * 0.45f);
+            ImageView ic = icon("directions_car", is);
+            ic.setAlpha(0.4f);
+            ph.addView(ic, new LinearLayout.LayoutParams((int) (is * s), (int) (is * s)));
+            TextView t = tv("Toca para poner la foto de tu vehículo", 12, MUTED, false);
+            t.setSingleLine(false);
+            t.setMaxLines(2);
+            t.setGravity(Gravity.CENTER);
+            t.setPadding((int) (10 * s), (int) (4 * s), (int) (10 * s), 0);
+            ph.addView(t, new LinearLayout.LayoutParams(-1, -2));
+            if (ch < 90) t.setVisibility(View.GONE);
+            place(card, ph, px0, cy + 4, pw, ch - 8);
+            ph.setOnClickListener(new View.OnClickListener() { public void onClick(View v) { pickPhoto(); } });
         }
         float ox = sk * (stripY + stripH) / hh + m;   // la barrita del mantenimiento sigue el borde inclinado
         if (oilHome) premOilStrip(card, ox, stripY, w - ox - m, stripH);
@@ -7541,10 +7606,6 @@ public class Main extends Activity {
             String pid = prefs.getString("premium_theme", Aurora.ID);
             LinearLayout r = rowBase(pn, I18n.t(Prem.name(pid)) + " · " + I18n.t("En uso"), "El tema arma la pantalla de inicio. Las tarjetas, la barra y el velocímetro de aquí se usan otra vez al quitarlo en Personalización.");
             r.setOnClickListener(new View.OnClickListener() { public void onClick(View v) { showSettings(C_STYLE); } });
-            if (Cobalto.ID.equals(pid))
-                toggle(pn, "Foto de tu vehículo en Cobalto", "Apagado: el deportivo de StradaOS. Encendido: la foto que elegiste en Tu vehículo", prefs.getBoolean("prem_car_photo", false), new IntCb() { public void on(int i) {
-                    prefs.edit().putBoolean("prem_car_photo", i == 1).apply(); rebuild();
-                }});
         }
         if (boxW > 0 && canVertical(boxW, boxH)) {
             // Solo en pantallas casi cuadradas o verticales (en las horizontales no tiene sentido).

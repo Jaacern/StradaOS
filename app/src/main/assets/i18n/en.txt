@@ -1142,6 +1142,4 @@ Aplicar	Apply
 Versión de prueba: se puede aplicar sin código.	Test version: can be applied without a code.
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Coming soon with a donation. All features stay free.
 Cobalto	Cobalt
-Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, un deportivo en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Night blue in three columns: the map fades into the player with a round cover, and your vehicle shows the speedometer on top, a sports car in the middle and maintenance below. The temperature sits above the map.
-Foto de tu vehículo en Cobalto	Your vehicle photo in Cobalt
-Apagado: el deportivo de StradaOS. Encendido: la foto que elegiste en Tu vehículo	Off: the StradaOS sports car. On: the photo you chose in Your vehicle
+Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Night blue in three columns: the map fades into the player with a round cover, and your vehicle shows the speedometer on top, its photo in the middle and maintenance below. The temperature sits above the map.

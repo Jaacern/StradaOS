@@ -706,7 +706,7 @@ public class Main extends Activity {
                 else if (v.startsWith("foto-demo:")) {
                     // foto-demo:recorte (fondo transparente), foto-demo:normal (con fondo), «foto-demo:» la quita
                     String k = v.substring(10);
-                    if (k.length() == 0) CarPhoto.delete(this);
+                    if (k.length() == 0) CarPhoto.delete(Main.this);
                     else {
                         Bitmap b = Bitmap.createBitmap(600, 260, Bitmap.Config.ARGB_8888);
                         android.graphics.Canvas cv = new android.graphics.Canvas(b);
@@ -718,7 +718,7 @@ public class Main extends Activity {
                         pp.setColor(0xFF111111);
                         cv.drawCircle(160, 200, 42, pp);
                         cv.drawCircle(440, 200, 42, pp);
-                        CarPhoto.save(this, b);
+                        CarPhoto.save(Main.this, b);
                     }
                     rebuild();
                 }

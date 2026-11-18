@@ -14,6 +14,9 @@ final class Prem {
     static String style = Aurora.ID;
 
     static boolean known(String id) { return Aurora.ID.equals(id) || Cobalto.ID.equals(id); }
+
+    /** Temas premium que se regalan a todos (lanzamiento de la 2.24). Los que vengan después se desbloquean con una donación (Fase 3). */
+    static boolean free(String id) { return Aurora.ID.equals(id) || Cobalto.ID.equals(id); }
     static boolean cob() { return Cobalto.ID.equals(style); }
 
     static String name(String id) { return Cobalto.ID.equals(id) ? "Cobalto" : "Aurora"; }

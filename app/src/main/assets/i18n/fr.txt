@@ -1120,3 +1120,5 @@ Versión de prueba: se puede aplicar sin código.	Version de test : s'applique s
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Bientôt disponible avec un don. Toutes les fonctions restent gratuites.
 Cobalto	Cobalt
 Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Bleu nuit sur trois colonnes : la carte se fond jusqu'au lecteur à pochette ronde, et votre véhicule affiche le compteur en haut, sa photo au milieu et l'entretien en bas. La température est au-dessus de la carte.
+Gratis	Gratuit
+Gratis para todos. Los próximos temas premium se desbloquearán con una donación.	Gratuit pour tous. Les prochains thèmes premium se débloqueront avec un don.

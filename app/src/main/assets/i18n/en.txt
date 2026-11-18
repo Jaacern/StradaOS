@@ -1143,3 +1143,5 @@ Versión de prueba: se puede aplicar sin código.	Test version: can be applied w
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Coming soon with a donation. All features stay free.
 Cobalto	Cobalt
 Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Night blue in three columns: the map fades into the player with a round cover, and your vehicle shows the speedometer on top, its photo in the middle and maintenance below. The temperature sits above the map.
+Gratis	Free
+Gratis para todos. Los próximos temas premium se desbloquearán con una donación.	Free for everyone. Upcoming premium themes will be unlocked with a donation.

@@ -1120,3 +1120,5 @@ Versión de prueba: se puede aplicar sin código.	Versione di prova: si può app
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Presto disponibile con una donazione. Tutte le funzioni restano gratuite.
 Cobalto	Cobalto
 Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Blu notte su tre colonne: la mappa sfuma fino al lettore con la copertina rotonda, e il tuo veicolo mostra il tachimetro in alto, la sua foto al centro e la manutenzione in basso. La temperatura sta sopra la mappa.
+Gratis	Gratis
+Gratis para todos. Los próximos temas premium se desbloquearán con una donación.	Gratis per tutti. I prossimi temi premium si sbloccheranno con una donazione.

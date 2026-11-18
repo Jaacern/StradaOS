@@ -663,9 +663,10 @@ public class Main extends Activity {
                 else if ("cajon".equals(v)) openDrawer();
                 else if ("ocultas".equals(v)) manageHidden(null);
                 else if ("salir-fabrica".equals(v)) openFactoryLauncher();
-                else if ("pista-demo".equals(v)) {
+                else if ("pista-demo".equals(v) || v.startsWith("pista-demo:")) {
                     // canción de ejemplo con duración y posición, para ver la línea de tiempo en las capturas
-                    curTitle = "Canción de prueba"; curArtist = "StradaOS"; curSource = "Bluetooth";
+                    // («pista-demo:Night_Drive» cambia el título; «_» = espacio)
+                    curTitle = v.length() > 11 ? v.substring(11).replace('_', ' ') : "Canción de prueba"; curArtist = "StradaOS"; curSource = "Bluetooth";
                     durMs = 215000; posBaseMs = 68000; posBaseAt = SystemClock.elapsedRealtime(); posKnown = true; playingState = false;
                     // carátula de ejemplo (degradado con una nota), sin portadas reales
                     int az = 400;
@@ -684,6 +685,7 @@ public class Main extends Activity {
                     applyTheme(); applyAccent(); rebuild();
                 }
                 else if ("nav-buscar".equals(v)) openNavSearch();
+                else if ("nav-salir".equals(v)) stopInternalNav();
                 else if (v.startsWith("nav-ir:")) {
                     // nav-ir:lat,lon,nombre — solo para capturas de la revisión
                     String[] a = v.substring(7).split(",");
@@ -720,6 +722,12 @@ public class Main extends Activity {
                         cv.drawCircle(440, 200, 42, pp);
                         CarPhoto.save(Main.this, b);
                     }
+                    rebuild();
+                }
+                else if (v.startsWith("foto-vacia:")) {
+                    // imágenes promocionales: en Cobalto, el recuadro de la foto sin el aviso «Toca para poner…»
+                    // (se pone la foto al armar la imagen); su posición queda en logcat (StradaPromo)
+                    emptyPhotoSlot = v.endsWith("1");
                     rebuild();
                 }
                 else if (v.startsWith("solo-mapa:")) {
@@ -3688,6 +3696,9 @@ public class Main extends Activity {
     /** Android 4.x: pantallas de carro de gama baja. Animaciones un poco más largas y con capas. */
     private static boolean slowScreen() { return SDK < 21; }
 
+    /** Solo para las capturas promocionales (gancho «foto-vacia:1»). */
+    private static boolean emptyPhotoSlot;
+
     /** Duración de una animación de Aurora: un 40 % más larga en pantallas lentas para que se aprecie. */
     private static long dur(long ms) { return slowScreen() ? ms * 7 / 5 : ms; }
 
@@ -3839,9 +3850,10 @@ public class Main extends Activity {
         return id != null && premiumUnlocked(id);
     }
 
-    /** Fase 2: solo en StradaOS Prueba y sin código. Fase 3: código atado al ID de la pantalla o archivo por USB. */
+    /** Aurora y Cobalto son gratis para todos desde la 2.24. Los temas siguientes: en StradaOS Prueba sin código
+     *  y, en la versión normal, con el código atado al ID de la pantalla (Fase 3). */
     private boolean premiumUnlocked(String id) {
-        return Prem.known(id) && getPackageName().endsWith(".debug");
+        return Prem.known(id) && (Prem.free(id) || getPackageName().endsWith(".debug"));
     }
 
     /** Tarjeta translúcida con un borde fino de luz. */
@@ -4130,6 +4142,14 @@ public class Main extends Activity {
             }
             pv.setOnClickListener(cardTap);
             pv.setOnLongClickListener(photoLong);
+        } else if (emptyPhotoSlot) {
+            final View slot = new View(this);
+            place(card, slot, px0, cy + 4, pw, ch - 8);
+            slot.postDelayed(new Runnable() { public void run() {
+                int[] l = new int[2];
+                slot.getLocationOnScreen(l);
+                android.util.Log.w("StradaPromo", "hueco " + l[0] + "," + l[1] + "," + slot.getWidth() + "," + slot.getHeight());
+            }}, 2500);
         } else {
             LinearLayout ph = new LinearLayout(this);
             ph.setOrientation(LinearLayout.VERTICAL);
@@ -4633,7 +4653,8 @@ public class Main extends Activity {
         nameRow.setGravity(Gravity.CENTER_VERTICAL);
         TextView nm = tv(Prem.name(id), 16, TEXT, true);
         nameRow.addView(nm, new LinearLayout.LayoutParams(0, -2, 1));
-        TextView badge = tv(inUse ? "En uso" : "Premium", 11, inUse ? 0xFFFFFFFF : RED, true);
+        final boolean free = Prem.free(id);
+        TextView badge = tv(inUse ? "En uso" : free ? "Gratis" : "Premium", 11, inUse ? 0xFFFFFFFF : RED, true);
         badge.setBackground(inUse ? round(RED, 10) : round(RED_DARK, 10));
         badge.setPadding((int) (8 * s), (int) (2 * s), (int) (8 * s), (int) (2 * s));
         nameRow.addView(badge);
@@ -4660,7 +4681,7 @@ public class Main extends Activity {
             info.addView(btn, blp);
             btn.setOnClickListener(new View.OnClickListener() { public void onClick(View v) { applyPremium(inUse ? null : id); } });
             if (!inUse) cell.setOnClickListener(new View.OnClickListener() { public void onClick(View v) { applyPremium(id); } });
-            TextView test = tv("Versión de prueba: se puede aplicar sin código.", 11, MUTED, false);
+            TextView test = tv(free ? "Gratis para todos. Los próximos temas premium se desbloquearán con una donación." : "Versión de prueba: se puede aplicar sin código.", 11, MUTED, false);
             multiLine(test);
             test.setPadding(0, (int) (8 * s), 0, 0);
             info.addView(test);

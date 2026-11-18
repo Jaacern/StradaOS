@@ -1120,3 +1120,5 @@ Versión de prueba: se puede aplicar sin código.	测试版：无需代码即可
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	即将通过捐赠提供。所有功能仍然免费。
 Cobalto	钴蓝
 Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	三栏夜蓝风格：地图渐隐到圆形封面的播放器，车辆卡片上方是车速表、中间是车辆照片、下方是保养。温度显示在地图上方。
+Gratis	免费
+Gratis para todos. Los próximos temas premium se desbloquearán con una donación.	对所有人免费。之后的高级主题将通过捐赠解锁。

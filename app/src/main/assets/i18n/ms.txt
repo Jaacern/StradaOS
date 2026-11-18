@@ -1120,3 +1120,5 @@ Versión de prueba: se puede aplicar sin código.	Versi ujian: boleh digunakan t
 Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Akan datang dengan derma. Semua ciri kekal percuma.
 Cobalto	Kobalt
 Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Biru malam dalam tiga lajur: peta pudar ke pemain dengan kulit bulat, dan kenderaan anda menunjukkan meter laju di atas, fotonya di tengah dan penyelenggaraan di bawah. Suhu di atas peta.
+Gratis	Percuma
+Gratis para todos. Los próximos temas premium se desbloquearán con una donación.	Percuma untuk semua. Tema premium seterusnya akan dibuka dengan derma.

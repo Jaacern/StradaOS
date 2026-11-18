@@ -94,6 +94,7 @@
 - Página: en navegadores internos (Facebook, Instagram, Messenger, TikTok…) muestra una barra y, al tocar Descargar, instrucciones con «Abrir en Chrome» (intent de Android) y copiar enlace. Para probarla en un navegador normal se agrega `?iab=1` a la URL.
 
 ## Historial
+- 2026-11-18: pantalla Vehículo: inventario real del Sorento 2010 por el ELM327 y verificación en vivo (sin MAF, nivel de combustible, aceite ni PID 5E; el consumo sale del MAP), 22 sensores estándar nuevos para el panel/gráficos/«Todos los datos» y conexión TCP atada a la red del escáner para equipos con dos Wi-Fi (internet por una, ELM327 por otra).
 - 2026-11-16: publicada la 2.23.0 (versionCode 56): navegación en el mapa de StradaOS (código base de nothanks91, PR #35), apagada por defecto.
 - 2026-11-16: publicada la 2.22.0 (versionCode 55): pantalla en reposo, orden de apps, tema por amanecer/atardecer, chino, diseño vertical automático y arreglo de la carátula de AA al quitar el cable.
 - 2026-11-15: publicada la 2.21.2 (versionCode 54): Android Auto solo por cable (canción y carátula desde la notificación de Open Headunit) y #30 (sin reintentos del servicio Clinkway en otras marcas). Probada por Andrés en el Picanto con dos celulares.

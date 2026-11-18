@@ -283,6 +283,18 @@ public class LiveMapView extends View {
         step(now);
         boolean snap = Double.isNaN(dLat) || now - lastFixAt > 5000
                 || Math.abs(la - dLat) > 0.003 || Math.abs(lo - dLon) > 0.003;   // ~300 m: salto, no movimiento
+        // detenido (o GPS que repite la misma posición): menos de 3 m y 2° no se anima. Antes cada lectura animaba un
+        // movimiento nulo durante un segundo a 30 cuadros por segundo, y con el auto quieto el mapa nunca dejaba de dibujar.
+        if (!snap && !Double.isNaN(tLat)) {
+            double dy = (la - tLat) * 111320, dx = (lo - tLon) * 111320 * Math.cos(Math.toRadians(la));
+            float db = Float.isNaN(br) || Float.isNaN(tBr) ? 0 : Math.abs(((br - tBr) % 360 + 540) % 360 - 180);
+            if (dx * dx + dy * dy < 9 && db < 2) {
+                lastFixAt = now;
+                int z = speedKmh > 70 ? 15 : speedKmh > 35 ? 16 : 17;
+                if (!userZoom && z != zoom) { zoom = z; invalidate(); }
+                return;
+            }
+        }
         tLat = la;
         tLon = lo;
         if (!Float.isNaN(br)) tBr = br;

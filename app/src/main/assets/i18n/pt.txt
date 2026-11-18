@@ -1085,3 +1085,43 @@ En 150 metros	Em 150 metros
 En 500 pies	Em 500 pés
 En un cuarto de milla	Em um quarto de milha
 Parada intermedia	Parada intermediária
+
+# Veículo (OBD-II)
+Presión del múltiple	Pressão do coletor
+Consumo del motor	Consumo do motor
+Consumo por hora	Consumo por hora
+Panel de datos	Painel de dados
+Datos del panel	Dados do painel
+Datos del motor	Dados do motor
+Cilindrada del motor	Cilindrada do motor
+Cilindrada del motor (litros)	Cilindrada do motor (litros)
+Protocolo	Protocolo
+CAN 11 bits · 500 kbps	CAN 11 bits · 500 kbps
+CAN 29 bits · 500 kbps	CAN 29 bits · 500 kbps
+CAN 11 bits · 250 kbps	CAN 11 bits · 250 kbps
+CAN 29 bits · 250 kbps	CAN 29 bits · 250 kbps
+Escribe un número entre 0,5 y 8	Digite um número entre 0,5 e 8
+Máximo 6 datos	Máximo 6 dados
+Hasta 6 datos del escáner, por ejemplo RPM, velocidad, refrigerante y consumo	Até 6 dados do scanner, por exemplo RPM, velocidade, líquido de arrefecimento e consumo
+Avance del encendido	Avanço da ignição
+Sonda O2 banco 1	Sonda O2 banco 1
+Sonda O2 banco 1 sensor 2	Sonda O2 banco 1 sensor 2
+Tiempo de marcha	Tempo de funcionamento
+Distancia con la luz del motor	Distância com a luz do motor
+EGR comandada	EGR comandada
+Arranques desde borrar códigos	Partidas desde limpar códigos
+Distancia desde borrar códigos	Distância desde limpar códigos
+Presión barométrica	Pressão barométrica
+Catalizador banco 1	Catalisador banco 1
+Catalizador banco 1 sensor 2	Catalisador banco 1 sensor 2
+Carga absoluta	Carga absoluta
+Mezcla comandada	Mistura comandada
+Acelerador relativo	Acelerador relativo
+Acelerador B	Acelerador B
+Pedal D	Pedal D
+Pedal E	Pedal E
+Acelerador comandado	Acelerador comandado
+Tiempo con la luz del motor	Tempo com a luz do motor
+Tiempo desde borrar códigos	Tempo desde limpar códigos
+Mezcla O2 banco 1	Mistura O2 banco 1
+Mezcla O2 banco 1 sensor 2	Mistura O2 banco 1 sensor 2

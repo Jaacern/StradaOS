@@ -1,0 +1,4 @@
+es-cobalto-oscuro-vacio 1629,584,358,303
+es-cobalto-claro-vacio 1629,584,358,303
+en-cobalto-oscuro-vacio 1629,584,358,303
+en-cobalto-claro-vacio 1629,584,358,303

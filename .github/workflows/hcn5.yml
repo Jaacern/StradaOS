@@ -1,0 +1,65 @@
+name: Análisis HCN (#5)
+# Baja los archivos que adjuntó zer0bytz en el issue #5 y muestra en el registro solo lo necesario para
+# hablar con el servicio «sourceinfo» de las pantallas HCN: los métodos de ISourceService/ISourceCallback,
+# los campos de MusicInfo y cómo los usa el launcher de fábrica. No se sube ningún archivo de la marca.
+on:
+  push:
+    branches: [ 'analisis-hcn5' ]
+permissions:
+  contents: read
+jobs:
+  analizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bajar adjuntos
+        run: |
+          mkdir -p z && cd z
+          curl -sSL -o diag.zip https://github.com/user-attachments/files/34583465/HCN_Diagnostics_Offline_AA_Retry.zip
+          curl -sSL -o dev.zip https://github.com/user-attachments/files/34583464/HCN_SourceInfo_Developer_Package.zip
+          ls -la; file *.zip
+          mkdir -p diag dev
+          unzip -q -o diag.zip -d diag || true
+          unzip -q -o dev.zip -d dev || true
+          echo "===== ARCHIVOS"; find diag dev -type f -printf '%s\t%p\n' | sort -k2
+      - name: Diagnósticos de texto
+        run: |
+          cd z/diag
+          find . -type f \( -iname '*.txt' -o -iname '*.log' -o -iname '*.md' \) | while read f; do
+            echo "=================== $f"; head -c 20000 "$f"; echo
+          done
+          cd ../dev
+          find . -type f \( -iname '*.txt' -o -iname '*.log' -o -iname '*.md' -o -iname '*.aidl' \) | while read f; do
+            echo "=================== $f"; head -c 20000 "$f"; echo
+          done
+      - name: Herramientas
+        run: |
+          curl -sSL -o jadx.zip "$(curl -s https://api.github.com/repos/skylot/jadx/releases/latest | grep -o 'https://[^"]*jadx-[0-9.]*\.zip' | head -1)"
+          unzip -q jadx.zip -d jadx && chmod +x jadx/bin/jadx
+          curl -sSL -o vdex.zip https://github.com/anestisb/vdexExtractor/archive/refs/heads/master.zip && unzip -q vdex.zip
+          (cd vdexExtractor-master && ./make.sh gcc >/dev/null 2>&1 && ls bin) || echo "vdexExtractor no compiló"
+      - name: Sacar DEX de los vdex/odex/apk/jar
+        run: |
+          mkdir -p dex
+          find z/dev -type f \( -iname '*.vdex' \) | while read f; do
+            ./vdexExtractor-master/bin/vdexExtractor -i "$f" -o dex/ 2>&1 | tail -3 || true
+          done
+          find z/dev -type f \( -iname '*.dex' -o -iname '*.apk' -o -iname '*.jar' \) -exec cp {} dex/ \; 2>/dev/null || true
+          ls -la dex
+      - name: Buscar el servicio sourceinfo
+        run: |
+          mkdir -p out
+          for f in dex/*; do
+            if strings -a "$f" | grep -q 'sourceservice'; then
+              echo "=== $f menciona sourceservice"
+              ./jadx/bin/jadx -q -d "out/$(basename $f)" --no-res "$f" >/dev/null 2>&1 || true
+            fi
+          done
+          echo "===== CLASES android.sourceservice"
+          find out -path '*android/sourceservice/*.java' | sort | while read j; do
+            echo "=================== $j"; cat "$j"
+          done
+          echo "===== QUIÉN LAS USA (fuera del paquete)"
+          grep -rln 'sourceservice\|SourceInfo\|MusicInfo' out --include=*.java | grep -v 'android/sourceservice/' | head -20 | while read j; do
+            echo "=================== $j"
+            grep -n -B3 -A25 'SourceInfo\|MusicInfo\|getMusicInfo\|OnEventListener' "$j" | head -260
+          done

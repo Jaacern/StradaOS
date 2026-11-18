@@ -37,11 +37,13 @@ jobs:
           done
       - name: Herramientas
         run: |
-          curl -sSL -o jadx.zip "$(curl -s https://api.github.com/repos/skylot/jadx/releases/latest | grep -o 'https://[^"]*jadx-[0-9.]*\.zip' | head -1)"
-          unzip -q jadx.zip -d jadx && chmod +x jadx/bin/jadx
+          U=$(curl -s -H "Authorization: Bearer ${{ github.token }}" https://api.github.com/repos/skylot/jadx/releases/latest | grep -o 'https://[^"]*/jadx-[0-9.]*\.zip' | head -1)
+          echo "jadx: $U"; curl -sSL -o jadx.zip "$U"
+          unzip -q jadx.zip -d jadx && chmod +x jadx/bin/jadx && ./jadx/bin/jadx --version
           curl -sSL -o vdex.zip https://github.com/anestisb/vdexExtractor/archive/refs/heads/master.zip && unzip -q vdex.zip
           sudo apt-get install -y -q zlib1g-dev >/dev/null 2>&1 || true
-          (cd vdexExtractor-master && ./make.sh gcc 2>&1 | tail -15; ls -la bin) || echo "vdexExtractor no compiló"
+          sed -i 's/-Werror//g' vdexExtractor-master/src/Makefile* 2>/dev/null || true
+          (cd vdexExtractor-master && ./make.sh gcc 2>&1 | tail -6; ls -la bin) || echo "vdexExtractor no compiló"
       - name: Sacar DEX de los vdex/odex/apk/jar
         run: |
           mkdir -p dex
@@ -62,9 +64,12 @@ jobs:
           for f in dex/*; do
             if strings -a "$f" | grep -q 'sourceservice'; then
               echo "=== $f menciona sourceservice"
-              ./jadx/bin/jadx -q -d "out/$(basename $f)" --no-res "$f" >/dev/null 2>&1 || true
+              ./jadx/bin/jadx -q -j 2 -d "out/$(basename $f)" --no-res "$f" 2>&1 | tail -3 || true
             fi
           done
+          echo "===== LLAMADAS a android.sourceservice (dexdump)"
+          DD=$(ls $ANDROID_HOME/build-tools/*/dexdump | tail -1)
+          for f in dex/*; do "$DD" -d "$f" 2>/dev/null | grep -o 'Landroid/sourceservice/[A-Za-z$]*;\.[A-Za-z_$<>]*:[^ ]*' ; done | sort | uniq -c | sort -rn | head -80
           echo "===== CLASES android.sourceservice"
           find out -path '*android/sourceservice/*.java' | sort | while read j; do
             echo "=================== $j"; cat "$j"

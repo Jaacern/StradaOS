@@ -86,3 +86,12 @@ jobs:
           done
           echo "===== registerBtEvent / onMetadataChanged / acciones"
           grep -rn 'registerBtEvent\|registerMusicEvent\|IntentFilter\|addAction\|"com\.\(autochips\|hcn\|zjinnova\)[^"]*"\|MediaController\|MediaSessionManager\|getService("sourceinfo")\|"sourceinfo"' out/MtkLauncher3_classes.dex --include=*.java | grep -v '/theme/' | head -80
+      - name: Cliente Bluetooth de Autochips (lo que usa el launcher)
+        run: |
+          ls out/MtkLauncher3_classes.dex/sources/com/autochips/bluetooth/ 2>/dev/null | head -60
+          for n in AvrcpControllerProfile LocalBluetoothManager LocalBluetoothProfileManager; do
+            find out/MtkLauncher3_classes.dex -path "*com/autochips/bluetooth/$n.java" | head -1 | while read j; do echo "=================== $j"; head -c 14000 "$j"; done
+          done
+          echo "===== AIDL de com.autochips.bluetooth (descriptores y transacciones)"
+          grep -rhn 'DESCRIPTOR = \|TRANSACTION_[A-Za-z]* = ' out/MtkLauncher3_classes.dex/sources/com/autochips 2>/dev/null | head -120
+          grep -rln 'bindService\|setAction\|ComponentName' out/MtkLauncher3_classes.dex/sources/com/autochips 2>/dev/null | head -10 | while read j; do echo "== $j"; grep -n -A3 'bindService\|new Intent\|ComponentName' "$j" | head -30; done

@@ -1085,6 +1085,7 @@ En 150 metros	Em 150 metros
 En 500 pies	Em 500 pés
 En un cuarto de milla	Em um quarto de milha
 Parada intermedia	Parada intermediária
+<<<<<<< HEAD
 
 # Veículo (OBD-II)
 Presión del múltiple	Pressão do coletor
@@ -1125,3 +1126,77 @@ Tiempo con la luz del motor	Tempo com a luz do motor
 Tiempo desde borrar códigos	Tempo desde limpar códigos
 Mezcla O2 banco 1	Mistura O2 banco 1
 Mezcla O2 banco 1 sensor 2	Mistura O2 banco 1 sensor 2
+=======
+# 2.24: Personalización (temas)
+Personalización	Personalização
+Cambia el aspecto de la pantalla de inicio con un toque. Puedes seguir ajustando cada detalle en las demás secciones.	Mude a aparência da tela inicial com um toque. Você pode ajustar cada detalhe nas outras seções.
+Temas gratis	Temas grátis
+Temas premium	Temas premium
+Próximamente	Em breve
+Temas exclusivos para quienes apoyan StradaOS con una donación. Todas las funciones siguen siendo gratis.	Temas exclusivos para quem apoia o StradaOS com uma doação. Todas as funções continuam grátis.
+En uso	Em uso
+Tema aplicado:	Tema aplicado:
+Clásico	Clássico
+Música a la izquierda	Música à esquerda
+Mapa amplio	Mapa amplo
+Minimalista	Minimalista
+Vehículo a la izquierda, mapa en el centro y música a la derecha	Veículo à esquerda, mapa no centro e música à direita
+Mapa arriba; debajo, vehículo a la izquierda y música a la derecha	Mapa em cima; embaixo, veículo à esquerda e música à direita
+Música a la izquierda, mapa en el centro y vehículo a la derecha	Música à esquerda, mapa no centro e veículo à direita
+Mapa arriba; debajo, música a la izquierda y vehículo a la derecha	Mapa em cima; embaixo, música à esquerda e veículo à direita
+Sin tarjeta del vehículo: mapa más ancho, velocímetro abajo a la izquierda y música a la derecha	Sem cartão do veículo: mapa mais largo, velocímetro embaixo à esquerda e música à direita
+Sin tarjeta del vehículo: mapa más alto con el velocímetro abajo a la izquierda y la música a lo ancho	Sem cartão do veículo: mapa mais alto com o velocímetro embaixo à esquerda e a música na largura toda
+Música a la izquierda, velocímetro abajo a la derecha, panel de conexión plegado y barra compacta	Música à esquerda, velocímetro embaixo à direita, painel de conexão recolhido e barra compacta
+Mapa casi completo: velocímetro abajo a la derecha, panel de conexión plegado, música a lo ancho y barra compacta	Mapa quase inteiro: velocímetro embaixo à direita, painel de conexão recolhido, música na largura toda e barra compacta
+Cada tema se adapta solo a la orientación de la pantalla.	Cada tema se adapta sozinho à orientação da tela.
+Tema premium	Tema premium
+Aurora en uso	Aurora em uso
+El tema arma la pantalla de inicio. Las tarjetas, la barra y el velocímetro de aquí se usan otra vez al quitarlo en Personalización.	O tema monta a tela inicial. Os cartões, a barra e o velocímetro daqui voltam a ser usados ao removê-lo em Personalização.
+Tema premium quitado	Tema premium removido
+Premium	Premium
+Fondo con un arco de color difuminado y granulado, tarjetas translúcidas, la hora en grande con música, vehículo y clima arriba, el mapa a lo ancho y una barra tipo píldora. El botón «Solo mapa» agranda el mapa.	Fundo com um arco de cor suave e granulado, cartões translúcidos, a hora em destaque com música, veículo e clima em cima, o mapa de ponta a ponta e uma barra em forma de pílula. O botão «Só mapa» amplia o mapa.
+Sigue el modo claro u oscuro de Apariencia.	Segue o modo claro ou escuro de Aparência.
+Quitar el tema premium	Remover o tema premium
+Aplicar	Aplicar
+Versión de prueba: se puede aplicar sin código.	Versão de teste: pode ser aplicado sem código.
+Disponible pronto con una donación. Todas las funciones siguen siendo gratis.	Em breve com uma doação. Todas as funções continuam grátis.
+Cobalto	Cobalto
+Azul noche en tres columnas: el mapa se difumina hasta el reproductor de carátula redonda, y tu vehículo muestra el velocímetro arriba, su foto en el medio y el mantenimiento abajo. La temperatura va sobre el mapa.	Azul noturno em três colunas: o mapa se esfuma até o player de capa redonda, e seu veículo mostra o velocímetro em cima, a foto dele no meio e a manutenção embaixo. A temperatura fica sobre o mapa.
+Gratis	Grátis
+Gratis para todos. Los próximos temas premium se desbloquearán con una donación.	Grátis para todos. Os próximos temas premium serão desbloqueados com uma doação.
+Radar	Radar
++ Añadir parada intermedia	+ Adicionar parada intermediária
+incidente	incidente
+incidentes	incidentes
+incidente en la ruta	incidente na rota
+incidentes en la ruta	incidentes na rota
+Incidentes en la ruta	Incidentes na rota
+Consulta cierres o accidentes una sola vez al calcular ruta (TomTom)	Consulta bloqueios ou acidentes uma vez ao calcular a rota (TomTom)
+Límite y alerta de velocidad	Limite e alerta de velocidade
+Muestra la señal de límite en el mapa y avisa al excederlo	Mostra a placa de limite no mapa e avisa ao ultrapassá-lo
+Tolerancia de exceso	Tolerância de excesso
+Margen sobre el límite antes de activar alerta	Margem acima do limite antes de ativar o alerta
+Sonido al exceder límite	Som ao exceder o limite
+Pitido de alerta cuando superas la tolerancia	Bipe de alerta quando você ultrapassa a tolerância
+Alertas de radares sin conexión	Alertas de radares offline
+Avisa al acercarse a radares del mapa local .map	Avisa ao se aproximar de radares do mapa local .map
+Vía cerrada	Via interditada
+Carril cerrado	Faixa interditada
+Accidente	Acidente
+Obras en la vía	Obras na via
+Tráfico detenido	Trânsito parado
+Incidente en la vía	Incidente na via
+Radar de velocidad adelante	Radar de velocidade à frente
+Brillo de la pantalla	Brilho da tela
+Amanecer y atardecer: se calcula con el GPS, sin internet. Brillo: para pantallas que bajan el brillo al encender las luces	Nascer e pôr do sol: calculado com o GPS, sem internet. Brilho: para telas que diminuem o brilho ao acender os faróis
+Brillo actual	Brilho atual
+Prende y apaga las luces del carro para ver cuánto cambia	Acenda e apague os faróis do carro para ver quanto muda
+Oscuro con brillo menor a	Escuro com brilho abaixo de
+Elige un nivel entre el brillo de día y el de noche	Escolha um nível entre o brilho de dia e o de noite
+Esta pantalla no informa su brillo	Esta tela não informa o brilho
+Países del Golfo	Países do Golfo
+Irlanda del Norte	Irlanda do Norte
+Islas Canarias	Ilhas Canárias
+Tiempo en StradaOS: {}	Tempo no StradaOS: {}
+Último tiempo por Bluetooth: {}	Último tempo pelo Bluetooth: {}
+>>>>>>> e2b8ea612ab93fefdb10496953606e2cd1025685

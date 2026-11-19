@@ -100,6 +100,7 @@
 
 ## Historial
 - 2026-11-18: publicada la 2.24.1 (versionCode 58, commit 0644024): la línea de tiempo sigue los adelantos hechos en el celular con Android Auto, #37 (sin GPS no va al 0,0), #34 (nombres de la lista de mapas), #36 (tema por el brillo de la pantalla) y la navegación traducida (PR #38 + 7 idiomas).
+- 2026-11-18: pantalla Vehículo: inventario real del Sorento 2010 por el ELM327 y verificación en vivo (sin MAF, nivel de combustible, aceite ni PID 5E; el consumo sale del MAP), 22 sensores estándar nuevos para el panel/gráficos/«Todos los datos» y conexión TCP atada a la red del escáner para equipos con dos Wi-Fi (internet por una, ELM327 por otra).
 - 2026-11-17: publicada la 2.24.0 (versionCode 57): Personalización con 4 temas gratis y los temas premium Aurora y Cobalto, gratis para todos. Los próximos temas premium serán con donación; luego, Fase 3.
 - 2026-11-16: publicada la 2.23.0 (versionCode 56): navegación en el mapa de StradaOS (código base de nothanks91, PR #35), apagada por defecto.
 - 2026-11-16: publicada la 2.22.0 (versionCode 55): pantalla en reposo, orden de apps, tema por amanecer/atardecer, chino, diseño vertical automático y arreglo de la carátula de AA al quitar el cable.

@@ -1,0 +1,6 @@
+2026-11-21 03:39:59 · v2.28.1-prueba · Android 5.0.2 (API 21) · unknown Android SDK built for x86
+PRUEBA verificar-apk: propio=true otro=false
+
+2026-11-21 03:41:30 · v2.28.1-prueba · Android 5.0.2 (API 21) · unknown Android SDK built for x86
+PRUEBA odo-sim: ok=true sumo=7.4492188 esperado=7.450246
+

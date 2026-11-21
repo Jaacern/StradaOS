@@ -1,6 +1,6 @@
 {
-  "version": "2.23.0",
-  "notes": "## StradaOS 2.23.0 — Navegación en el mapa de StradaOS\n\n### Nuevo\n- **Navegación integrada (opcional):** Ajustes → Mapa y clima → App de navegación preferida → «En el mapa de StradaOS». Aparece el botón «Ir a…» para buscar una dirección o un lugar, elegir entre rutas alternas y seguir la guía giro a giro en el mapa, con voz (baja la música mientras habla), hora de llegada o tiempo restante, recálculo al desviarte, paradas intermedias, Casa, Trabajo, favoritos y recientes.\n- **Sin internet:** con el mapa sin conexión descargado (.map), busca y calcula la ruta en la pantalla. Esa ruta sale marcada como «aproximada».\n- Opciones: evitar peajes o autopistas, tráfico en vivo con tu propia clave gratis de TomTom y servidor de rutas propio (avanzado). Estas solo aparecen al elegir la navegación de StradaOS.\n- Traducida a los 10 idiomas.\n\nGracias a nothanks91, que escribió el código base (#31, #35).\n\nQuien actualiza no ve ningún cambio: la navegación viene apagada y el botón del mapa sigue abriendo Waze, Maps o la app que hayas elegido.\n",
-  "url": "https://github.com/lordnordic-debug/StradaOS/releases/tag/v2.23.0",
-  "apk": "https://github.com/lordnordic-debug/StradaOS/releases/download/v2.23.0/StradaOS-2.23.0.apk"
+  "version": "2.28.1",
+  "notes": "# StradaOS 2.28.1\n\n- Pequeños ajustes en el desbloqueo de temas y mejoras menores.\n",
+  "url": "https://github.com/lordnordic-debug/StradaOS/releases/tag/v2.28.1",
+  "apk": "https://github.com/lordnordic-debug/StradaOS/releases/download/v2.28.1/StradaOS-2.28.1.apk"
 }

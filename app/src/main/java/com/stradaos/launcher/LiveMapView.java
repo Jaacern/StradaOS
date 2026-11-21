@@ -118,6 +118,75 @@ public class LiveMapView extends View {
     private final Paint routeBack = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint destPin = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path corners = new Path();
+    // Tema Aurora (2.24): el fondo de la pantalla detrás del mapa. Con él se tapan las esquinas (en vez del color
+    // liso, que en Aurora se veía como puntas) y las teselas se dibujan un poco transparentes encima. Barato: es un
+    // rectángulo con un BitmapShader del fondo ya pintado; no hay capas por software ni clipPath.
+    private Bitmap backdrop;
+    private View backHolder;
+    private final Paint back = new Paint(Paint.FILTER_BITMAP_FLAG);
+    private final android.graphics.Matrix backM = new android.graphics.Matrix();
+    private final int[] locA = new int[2], locB = new int[2];
+
+    // Tema Faro (2.25): el mapa en el tono del tema. Mismas teselas que Cobalto, con menos color (gris azulado en
+    // oscuro, suave en claro). Es un filtro de color al dibujar (la GPU lo hace gratis); el tráfico conserva sus colores.
+    private final Paint tileTone = new Paint(Paint.FILTER_BITMAP_FLAG);
+    private boolean toned;
+    void setTone(android.graphics.ColorFilter f) {
+        toned = f != null;
+        tileTone.setColorFilter(f);
+        invalidate();
+    }
+
+    // Tema Faro (2.25): dónde va la atribución de OSM (px; alineada a la izquierda), si no se navega.
+    private float attrX = -1, attrY = -1;
+    void setAttribution(float x, float y) { attrX = x; attrY = y; invalidate(); }
+
+    // Tema Cobalto: el mapa se difumina hacia un borde (1 = derecha, 2 = abajo) hasta quedar en el fondo.
+    private int fadeEdge;
+    private float fadeLen;
+
+    void setFade(int edge, float len) {
+        fadeEdge = edge;
+        fadeLen = len;
+        invalidate();
+    }
+
+    /** Franjas del fondo con opacidad creciente (sin capas ni ComposeShader: barato también en Android 4.1). */
+    private void drawFade(Canvas c, float w, float h) {
+        if (fadeEdge == 0 || fadeLen <= 0) return;
+        int n = 32;
+        float len = Math.min(fadeLen, fadeEdge == 1 ? w : h), step = len / n, e0 = (fadeEdge == 1 ? w : h) - len;
+        for (int i = 0; i < n; i++) {
+            float t = (i + 1f) / n;
+            back.setAlpha(Math.round(255 * t * t * (3 - 2 * t)));   // curva suave
+            // bordes en píxeles enteros y sin pisarse: si se pisan quedan rayitas más oscuras
+            float a0 = Math.round(e0 + i * step), a1 = i == n - 1 ? (fadeEdge == 1 ? w : h) : Math.round(e0 + (i + 1) * step);
+            if (fadeEdge == 1) c.drawRect(a0, 0, a1, h, back);
+            else c.drawRect(0, a0, w, a1, back);
+        }
+        back.setAlpha(255);
+    }
+
+    /** holder: la vista que tiene el fondo estirado a su tamaño. alpha: opacidad de las teselas (1 = como siempre). */
+    void setBackdrop(Bitmap bmp, View holder, float alpha) {
+        backdrop = bmp;
+        backHolder = holder;
+        if (bmp != null) back.setShader(new android.graphics.BitmapShader(bmp, android.graphics.Shader.TileMode.CLAMP, android.graphics.Shader.TileMode.CLAMP));
+        else back.setShader(null);
+        tile.setAlpha(bmp != null ? Math.round(255 * Math.max(0.5f, Math.min(1f, alpha))) : 255);
+        invalidate();
+    }
+
+    /** Ubica el fondo según dónde está el mapa en la ventana (también mientras se anima). */
+    private boolean syncBackdrop() {
+        if (backdrop == null || backHolder == null || backHolder.getWidth() <= 0) return false;
+        getLocationInWindow(locA);
+        backHolder.getLocationInWindow(locB);
+        backM.setScale(backHolder.getWidth() / (float) backdrop.getWidth(), backHolder.getHeight() / (float) backdrop.getHeight());
+        backM.postTranslate(locB[0] - locA[0], locB[1] - locA[1]);
+        back.getShader().setLocalMatrix(backM);
+        return true;
+    }
     private final Path tri = new Path();
     private final Path routePath = new Path();
     private final Rect dst = new Rect();
@@ -326,13 +395,21 @@ public class LiveMapView extends View {
         invalidate();
     }
 
+    /** Faro: acercar (+1) o alejar (-1) con los botones del mapa. */
+    void zoomBy(int d) { userZoom = true; zoom = Math.max(11, Math.min(18, zoom + d)); invalidate(); }
+
+    /** Faro: botón de centrar: vuelve al zoom automático según la velocidad. */
+    void autoZoom() { userZoom = false; zoom = 16; invalidate(); }
+
     /** Pruebas: fija el zoom (14–18). */
     void setZoom(int z) { userZoom = true; zoom = Math.max(10, Math.min(18, z)); invalidate(); }
 
     @Override
     protected void onDraw(Canvas c) {
         float w = getWidth(), h = getHeight();
-        c.drawColor(Main.LIGHT ? 0xFFE8EBF0 : 0xFF15171C);
+        boolean bd = syncBackdrop();
+        if (bd) c.drawRect(0, 0, w, h, back);
+        else c.drawColor(Main.LIGHT ? 0xFFE8EBF0 : 0xFF15171C);
         boolean moving = step(SystemClock.uptimeMillis());
 
         if (!Double.isNaN(dLat)) {
@@ -369,7 +446,9 @@ public class LiveMapView extends View {
                     Bitmap b = get(zoom, wx, ty, fromFile ? L_FILE : L_BASE);
                     if (b != null) {
                         tile.setFilterBitmap(rot || b.getWidth() != dst.width());
-                        c.drawBitmap(b, null, dst, tile);
+                        Paint tp = tile;
+                        if (toned) { tileTone.setAlpha(tile.getAlpha()); tileTone.setFilterBitmap(tile.isFilterBitmap()); tp = tileTone; }
+                        c.drawBitmap(b, null, dst, tp);
                         if (trTpl != null && zoom >= 11) {
                             Bitmap tr = getTraffic(zoom, wx, ty, trPv);
                             if (tr != null) c.drawBitmap(tr, null, dst, tile);
@@ -377,7 +456,7 @@ public class LiveMapView extends View {
                         if (fromFile) anyFile = true;
                         else if (LABELS[provider] != null) {
                             Bitmap l = get(zoom, wx, ty, L_LABELS);
-                            if (l != null) c.drawBitmap(l, null, dst, tile);
+                            if (l != null) c.drawBitmap(l, null, dst, toned ? tileTone : tile);
                         }
                     } else {
                         c.drawLine(dst.left, dst.top, dst.right, dst.top, grid);
@@ -388,12 +467,24 @@ public class LiveMapView extends View {
             drawRoute(c, fx, fy, cx, cy, ts, n);
             if (rot) c.restore();
             drawMarker(c, cx, cy, rot);
+            if (bd) drawFade(c, w, h);
             String attr = anyFile ? I18n.t("© colaboradores de OpenStreetMap") + " · mapsforge"
                     : provider == 5 ? "© Esri, HERE, Garmin, © OpenStreetMap" : provider == 4 ? "© OpenStreetMap, SRTM · © OpenTopoMap" : I18n.t("© colaboradores de OpenStreetMap");
-            c.drawText(attr, w - text.measureText(attr) - 10 * s, (Nav.active != null ? 96 : 14) * s, text);
+            float ax = w - text.measureText(attr) - 10 * s, ay = (Nav.active != null ? 96 : 14) * s;
+            if (attrY >= 0 && Nav.active == null) { ax = attrX; ay = attrY; }
+            if (bd && fadeEdge == 1 && fadeLen > 0) {
+                // Cobalto: antes del difuminado (si no, queda detrás de la tarjeta del reproductor) y un poco más
+                // arriba para no rozar los botones de la esquina
+                ax = Math.max(12 * s, w - fadeLen * 0.72f - text.measureText(attr));
+                if (Nav.active == null) ay = 13 * s;
+            }
+            c.drawText(attr, ax, ay, text);
         }
-        corner.setColor(Main.BG);
-        c.drawPath(corners, corner);
+        if (bd) c.drawPath(corners, back);
+        else {
+            corner.setColor(Main.BG);
+            c.drawPath(corners, corner);
+        }
         if (moving) postInvalidateDelayed(FRAME_MS);
     }
 
